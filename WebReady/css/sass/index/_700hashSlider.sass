@@ -1,0 +1,37 @@
+$container-width: 400px
+$container-height: 284px
+
+@import news
+
+$computed-left: (400px / 2) - ($ni * 18px)
+
+#news
+	height: 350px
+	
+.news-imgs
+	width: 400px
+	height: 284px
+	
+#slider
+	width: 400px
+	height: 284px
+	&btn
+		width: 400px
+		height: 284px
+		top: -284px
+		
+#left, #right
+	font-size: 54px
+	top: 114px
+	width: 60px
+	
+#right
+	right: -275px
+	
+#slidershortcut
+	width: 400px
+	top: -275px
+	
+#numbers
+	li
+		left: $computed-left

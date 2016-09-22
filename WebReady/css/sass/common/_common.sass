@@ -1,0 +1,59 @@
+*
+	box-sizing: border-box
+	color: white
+	margin: 0
+	padding: 0
+	
+#header, #news, #content, #wordlogo, #footer
+	&::after
+		content: ""
+		clear: both
+		display: block
+
+body
+	padding: 0
+	margin: 0
+	width: 100%
+	color: $ts-color
+	font-family: $font-stack
+	line-height: 1.5em
+	background:
+		position: center
+		repeat: repeat
+		color: black
+
+p
+	color: white
+	margin: 1em 0
+	text-indent: 2em
+	
+a
+	color: $ts-color
+	text-decoration: none
+	&:hover
+		color: white
+		
+.col-1, .col-10, .col-12
+	float: left
+	padding: 1px
+	margin: 0
+		
+/*!header*/
+#menu
+	width: 100%
+	background:
+		color: black
+		image: url("../images/backgrounds/menu.png")
+	box-shadow: 0 5px 10px $ts-color
+	
+/*!content*/
+#wordlogo
+	background:
+		image: url("../images/logos/TigerSyndicate_secondary_white.png")
+		repeat: no-repeat
+		position: center
+
+/*!footer*/
+#footer
+	margin: 100px 0
+	text-align: center

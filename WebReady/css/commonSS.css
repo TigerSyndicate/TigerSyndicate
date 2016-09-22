@@ -1,0 +1,511 @@
+@font-face {
+  font-family: razing;
+  src: url(../files/Razing.ttf);
+}
+* {
+  box-sizing: border-box;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#header:after, #news:after, #content:after, #wordlogo:after, #footer:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  color: #ffc70e;
+  font-family: Times New Roman, Century, serif;
+  background-color: black;
+  line-height: 1.5em;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+p {
+  color: white;
+  margin: 1em 0;
+  text-indent: 2em;
+}
+
+a {
+  color: #ffc70e;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+
+.col-1, .col-10, .col-12 {
+  float: left;
+  padding: 1px;
+  margin: 0;
+}
+
+/*!header */
+#menu {
+  width: 100%;
+  background-color: black;
+  background-image: url("../images/backgrounds/menu.png");
+  box-shadow: 0 5px 10px #ffc70e;
+}
+
+/*!content */
+#wordlogo {
+  background-image: url("../images/logos/TigerSyndicate_secondary_white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*!footer */
+#footer {
+  margin: 100px 0;
+  text-align: center;
+}
+
+body {
+  background-image: url("../images/backgrounds/background.png");
+  background-attachment: fixed;
+}
+
+.col-1 {
+  display: inline;
+  width: 8.33%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-12 {
+  width: 100%;
+}
+
+#header {
+  height: 150px;
+}
+
+#menu {
+  height: 90px;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+}
+
+#logo {
+  background-image: url("../images/logos/TigerSyndicate_main_glow.png");
+  background-size: 97px 90px;
+  width: 97px;
+  height: 90px;
+}
+
+#navigation {
+  display: inline-flex;
+  list-style: none;
+  padding: 20px 40px;
+}
+#navigation li {
+  display: inline-flex;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+#navigation li:first-child {
+  border-left: 2px solid white;
+}
+#navigation li:last-child {
+  border-right: 2px solid white;
+}
+#navigation a {
+  color: #ffc70e;
+  font-family: razing;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+#navigation a:hover {
+  color: white;
+}
+
+#m-game, #m-navigation {
+  display: none;
+}
+
+#game-menu {
+  width: 100%;
+  height: 140px;
+  z-index: 98;
+  position: fixed;
+  top: -50px;
+  padding: 20px 0px;
+  background-color: black;
+  background-image: url("../images/backgrounds/gameMenu.png");
+  overflow: hidden;
+  font-size: 0;
+}
+#game-menu-left, #game-menu-right {
+  display: inline;
+  height: 50px;
+  width: 50px;
+  border-right: 6px solid #ffc70e;
+  border-top: 6px solid #ffc70e;
+  position: fixed;
+  top: 135px;
+  z-index: 99;
+  opacity: 0;
+}
+#game-menu-left {
+  left: 30px;
+  transform: rotate(225deg);
+}
+#game-menu-right {
+  right: 30px;
+  transform: rotate(45deg);
+}
+
+#game-item-parent {
+  display: inline-flex;
+  width: 5170px;
+  list-style: none;
+  padding: 0px 100px;
+}
+#game-item-parent li {
+  background-image: url("../images/logos/all_game_logos+dark.png");
+  background-repeat: no-repeat;
+  background-size: 4540px 200px;
+  height: 100px;
+  margin: 0px 15px;
+}
+
+#bladesoul {
+  width: 200px;
+}
+#bladesoul:hover {
+  background-position: 0px -100px;
+}
+
+#brawlhalla {
+  width: 355px;
+  background-position: -200px 0px;
+}
+#brawlhalla:hover {
+  background-position: -200px -100px;
+}
+
+#companyofheroes {
+  width: 245px;
+  background-position: -555px 0px;
+}
+#companyofheroes:hover {
+  background-position: -555px -100px;
+}
+
+#counterstrikego {
+  width: 430px;
+  background-position: -800px 0px;
+}
+#counterstrikego:hover {
+  background-position: -800px -100px;
+}
+
+#darksouls3 {
+  width: 515px;
+  background-position: -1230px 0px;
+}
+#darksouls3:hover {
+  background-position: -1230px -100px;
+}
+
+#destiny {
+  width: 315px;
+  background-position: -1745px 0px;
+}
+#destiny:hover {
+  background-position: -1745px -100px;
+}
+
+#dota2 {
+  width: 230px;
+  background-position: -2060px 0px;
+}
+#dota2:hover {
+  background-position: -2060px -100px;
+}
+
+#hearthstone {
+  width: 255px;
+  background-position: -2290px 0px;
+}
+#hearthstone:hover {
+  background-position: -2290px -100px;
+}
+
+#heroesofthestorm {
+  width: 160px;
+  background-position: -2545px 0px;
+}
+#heroesofthestorm:hover {
+  background-position: -2545px -100px;
+}
+
+#leagueoflegends {
+  width: 255px;
+  background-position: -2705px 0px;
+}
+#leagueoflegends:hover {
+  background-position: -2705px -100px;
+}
+
+#overwatch {
+  width: 550px;
+  background-position: -2960px 0px;
+}
+#overwatch:hover {
+  background-position: -2960px -100px;
+}
+
+#starcraft2 {
+  width: 185px;
+  background-position: -3510px 0px;
+}
+#starcraft2:hover {
+  background-position: -3510px -100px;
+}
+
+#streetfighter5 {
+  width: 135px;
+  background-position: -3695px 0px;
+}
+#streetfighter5:hover {
+  background-position: -3695px -100px;
+}
+
+#warframe {
+  width: 505px;
+  background-position: -3830px 0px;
+}
+#warframe:hover {
+  background-position: -3830px -100px;
+}
+
+#worldofwarcraft {
+  width: 205px;
+  background-position: -4335px 0px;
+}
+#worldofwarcraft:hover {
+  background-position: -4335px -100px;
+}
+
+@-webkit-keyframes fSlideDown {
+  from {
+    box-shadow: 0px 5px 10px transparent;
+  }
+  to {
+    box-shadow: 0px 5px 10px #ffc70e;
+  }
+}
+@-moz-keyframes fSlideDown {
+  from {
+    box-shadow: 0px 5px 10px transparent;
+  }
+  to {
+    box-shadow: 0px 5px 10px #ffc70e;
+  }
+}
+@-o-keyframes fSlideDown {
+  from {
+    box-shadow: 0px 5px 10px transparent;
+  }
+  to {
+    box-shadow: 0px 5px 10px #ffc70e;
+  }
+}
+@keyframes fSlideDown {
+  from {
+    box-shadow: 0px 5px 10px transparent;
+  }
+  to {
+    box-shadow: 0px 5px 10px #ffc70e;
+  }
+}
+@-webkit-keyframes fSlideUp {
+  from {
+    box-shadow: 0px 5px 10px #ffc70e;
+  }
+  to {
+    box-shadow: 0px 5px 10px transparent;
+  }
+}
+@-moz-keyframes fSlideUp {
+  from {
+    box-shadow: 0px 5px 10px #ffc70e;
+  }
+  to {
+    box-shadow: 0px 5px 10px transparent;
+  }
+}
+@-o-keyframes fSlideUp {
+  from {
+    box-shadow: 0px 5px 10px #ffc70e;
+  }
+  to {
+    box-shadow: 0px 5px 10px transparent;
+  }
+}
+@keyframes fSlideUp {
+  from {
+    box-shadow: 0px 5px 10px #ffc70e;
+  }
+  to {
+    box-shadow: 0px 5px 10px transparent;
+  }
+}
+.mySlideDown {
+  -webkit-animation: fSlideDown 2s;
+  -moz-animation: fSlideDown 2s;
+  -o-animation: fSlideDown 2s;
+  animation: fSlideDown 2s;
+}
+
+.mySlideUp {
+  -webkit-animation: fSlideUp 1s;
+  -moz-animation: fSlideUp 1s;
+  -o-animation: fSlideUp 1s;
+  animation: fSlideUp 1s;
+}
+
+.finalboxshadow {
+  box-shadow: 0 5px 10px #ffc70e;
+}
+
+#wordlogo {
+  background-size: auto 170px;
+  height: 170px;
+}
+
+h3 {
+  margin: 30px 0;
+  text-align: center;
+  font-family: razing;
+  font-size: 2.75em;
+}
+
+#footer {
+  padding: 0 8%;
+}
+
+#bootstrap-icons {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+}
+#bootstrap-icons li {
+  padding: 20px;
+}
+#bootstrap-icons i {
+  font-size: 20px;
+}
+
+.fa {
+  color: #ffc70e;
+}
+.fa:hover {
+  color: white;
+}
+
+#discord {
+  background-image: url("../images/discord-icon-orange.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 1px;
+}
+#discord:hover {
+  background-image: url("../images/discord-icon-colored.png");
+}
+
+#facebook:hover {
+  color: #3961bb;
+}
+
+#youtube:hover {
+  color: #de2925;
+}
+
+#steam:hover {
+  color: dimgray;
+}
+
+#googleplus:hover {
+  color: #ea4335;
+}
+
+#paypal:hover {
+  color: #3b57f0;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-image: url("../images/backgrounds/m-background.png");
+    background-attachment: scroll;
+  }
+
+  #header {
+    height: 150px;
+  }
+
+  #menu {
+    height: 70px;
+    display: block;
+    position: static;
+    z-index: 0;
+  }
+
+  #logo {
+    background-image: url("../images/logos/m-TigerSyndicate_main_glow.png");
+    background-size: 76px 70px;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+  }
+
+  #navigation {
+    display: none;
+  }
+
+  #m-game, #m-navigation {
+    position: relative;
+    top: -70px;
+    display: inline;
+    font-size: 50px;
+    float: right;
+    margin: 10px;
+    color: #FFFFFF;
+    z-index: 1;
+  }
+  #m-game:hover, #m-navigation:hover {
+    text-shadow: 0 0 3px white;
+  }
+
+  #game-menu, #game-menu-left, #game-menu-right, #m-game {
+    display: none;
+  }
+
+  #wordlogo {
+    background-size: auto 120px;
+    height: 120px;
+  }
+
+  #footer {
+    padding: 0 5%;
+  }
+
+  #bootstrap-icons {
+    display: none;
+  }
+}

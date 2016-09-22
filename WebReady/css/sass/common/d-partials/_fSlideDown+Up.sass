@@ -1,0 +1,41 @@
+$clear: rgba(0, 0, 0, 0)
+
+=from-to($from-color, $to-color)
+	from
+		box-shadow: 0px 5px 10px $from-color
+	to
+		box-shadow: 0px 5px 10px $to-color
+		
+@-webkit-keyframes fSlideDown
+	+from-to($clear, $ts-color)
+@-moz-keyframes fSlideDown
+	+from-to($clear, $ts-color)
+@-o-keyframes fSlideDown
+	+from-to($clear, $ts-color)
+@keyframes fSlideDown
+	+from-to($clear, $ts-color)
+		
+@-webkit-keyframes fSlideUp
+	+from-to($ts-color, $clear)
+@-moz-keyframes fSlideUp
+	+from-to($ts-color, $clear)
+@-o-keyframes fSlideUp
+	+from-to($ts-color, $clear)
+@keyframes fSlideUp
+	+from-to($ts-color, $clear)
+	
+=animation($direction, $second)
+	-webkit-animation: $direction $second
+	-moz-animation: $direction $second
+	-o-animation: $direction $second
+	animation: $direction $second
+		
+.mySlideDown
+	+animation(fSlideDown, 2s)
+		
+.mySlideUp
+	+animation(fSlideUp, 1s)
+		
+.finalboxshadow
+	box-shadow: 0 5px 10px $ts-color
+	
