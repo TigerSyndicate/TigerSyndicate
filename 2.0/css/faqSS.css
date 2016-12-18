@@ -1,0 +1,31 @@
+@font-face {
+  font-family: razing;
+  src: url(../files/Razing.ttf);
+}
+.col-1 {
+  width: 20%;
+}
+.col-10 {
+  width: 60%;
+}
+
+qm, ans {
+  display: block;
+  margin-top: 35px;
+}
+qm::before, ans::before {
+  content: "Q:";
+  color: #ffc70e;
+  letter-spacing: 5px;
+  font-family: razing;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+ans {
+  margin-top: 5px;
+}
+ans::before {
+  content: "A:";
+  margin-left: 5px;
+}
