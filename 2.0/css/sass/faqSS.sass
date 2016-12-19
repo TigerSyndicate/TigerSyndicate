@@ -1,0 +1,25 @@
+@import variables
+
+.col-1
+	width: 20%
+	&0
+		width: 60%
+		
+qm
+	display: block
+	margin-top: 35px
+	&::before
+		content: "Q:"
+		color: $ts-color
+		letter-spacing: 5px
+		font:
+			family: $ts-font
+			weight: bold
+			size: 1.5em
+			
+ans
+	@extend qm
+	margin-top: 5px
+	&::before
+		content: "A:"
+		margin-left: 5px
