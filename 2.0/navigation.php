@@ -1,3 +1,4 @@
+<!--a mobile page-->
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
