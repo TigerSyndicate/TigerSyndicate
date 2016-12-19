@@ -34,6 +34,6 @@
 		</div>
 		<!--End of Content-->
 		<?php include 'footer.php';?>
-		<?php include 'js.php';?>
+		<?php include 'scripts.php';?>
 	</body>
 </html>
