@@ -7,6 +7,7 @@
 * game pages: 
     * Come up with a better way than having html(php) pages for each and every game.
     * Thinking of something like jQuery filter; labeling all html tags with respective game name as the class and filter them
+    * use iframes instead
 * game menu:
     * on click, the game menu skips ahead a bit
 * preloader
