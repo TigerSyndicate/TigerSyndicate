@@ -155,9 +155,97 @@ a:hover {
   color: white;
 }
 
-#exitNav{
+#exitNav {
   height: 100%;
-	float: right;
+  float: right;
+}
+
+.gamesbtn, .gameTitle {
+  background-image: url("../imgs/gameLogos.png");
+  background-repeat: no-repeat;
+  background-size: 4540px 200px;
+  height: 100px;
+  margin: 30px auto;
+  display: block;
+  border-bottom: 4px solid #ffc70e;
+}
+.gamesbtn:hover, .gameTitle:hover {
+  border-bottom: 4px solid white;
+}
+
+#BladeAndSoul {
+  width: 200px;
+  background-position: 0px -100px;
+}
+
+#Brawlhalla {
+  width: 355px;
+  background-position: -200px -100px;
+}
+
+#CompanyOfHeroes {
+  width: 245px;
+  background-position: -555px -100px;
+}
+
+#CounterStrikeGO {
+  width: 430px;
+  background-position: -800px -100px;
+}
+
+#DarkSoulsIII {
+  width: 515px;
+  background-position: -1230px -100px;
+}
+
+#Destiny {
+  width: 315px;
+  background-position: -1745px -100px;
+}
+
+#Dota2 {
+  width: 230px;
+  background-position: -2060px -100px;
+}
+
+#Hearthstone {
+  width: 255px;
+  background-position: -2290px -100px;
+}
+
+#HeroesOfTheStorm {
+  width: 160px;
+  background-position: -2545px -100px;
+}
+
+#LeagueOfLegends {
+  width: 255px;
+  background-position: -2705px -100px;
+}
+
+#Overwatch {
+  width: 550px;
+  background-position: -2960px -100px;
+}
+
+#StarCraftII {
+  width: 185px;
+  background-position: -3510px -100px;
+}
+
+#StreetFighterV {
+  width: 135px;
+  background-position: -3695px -100px;
+}
+
+#Warframe {
+  width: 505px;
+  background-position: -3830px -100px;
+}
+
+#WorldOfWarcraft {
+  width: 205px;
+  background-position: -4335px -100px;
 }
 
 /*Mobiles - screen width less than 880px */
@@ -193,6 +281,70 @@ a:hover {
 
   #footer {
     margin: 60px 0 90px;
+  }
+}
+/*Mobiles - screen width less than 620px */
+@media screen and (max-width: 620px) {
+  .gamesbtn, .gameTitle {
+    background-image: url("../imgs/m_gameLogos.png");
+    background-size: 2075px 100px;
+  }
+
+  #BladeAndSoul, #Dota2, #HeroesOfTheStorm, #StarCraftII, #StreetFighterV, #WorldOfWarcraft {
+    background-image: url("../imgs/gameLogos.png");
+    background-size: 4540px 200px;
+  }
+
+  #Brawlhalla {
+    width: 240px;
+    height: 65px;
+    background-position: 0px;
+  }
+
+  #CompanyOfHeroes {
+    width: 200px;
+    height: 52px;
+    background-position: -240px;
+  }
+
+  #CounterStrikeGO {
+    width: 235px;
+    height: 70px;
+    background-position: -440px;
+  }
+
+  #DarkSoulsIII {
+    width: 230px;
+    height: 50px;
+    background-position: -675px;
+  }
+
+  #Destiny {
+    width: 230px;
+    height: 80px;
+    background-position: -905px;
+  }
+
+  #Hearthstone {
+    width: 240px;
+    background-position: -1135px;
+  }
+
+  #LeagueOfLegends {
+    width: 240px;
+    background-position: -1375px;
+  }
+
+  #Overwatch {
+    width: 225px;
+    height: 50px;
+    background-position: -1615px;
+  }
+
+  #Warframe {
+    width: 235px;
+    height: 43px;
+    background-position: -1840px;
   }
 }
 /*Mobiles - screen width less than 450px */
