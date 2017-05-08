@@ -167,9 +167,12 @@ a:hover {
   height: 100px;
   margin: 30px auto;
   display: block;
+}
+
+.gamesbtn {
   border-bottom: 4px solid #ffc70e;
 }
-.gamesbtn:hover, .gameTitle:hover {
+.gamesbtn:hover {
   border-bottom: 4px solid white;
 }
 
