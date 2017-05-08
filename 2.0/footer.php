@@ -27,7 +27,7 @@
 				<i class="fa fa-question" title="FAQs" alt="FAQs"></i></a></li>
 		</ul>
 		<br />
-		&copy 2016 <a href="index.php">Tiger Syndicate</a>
+		&copy; 2016 <a href="index.php">Tiger Syndicate</a>
 		<br />
 		<a href="">Web Designers</a>
 </div>
