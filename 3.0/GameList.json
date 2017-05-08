@@ -1,0 +1,14 @@
+{
+    "GameList": [
+        {   
+            "title" :   "Blade & Soul",
+            "id"    :   "BladeAndSoul"
+        },{ 
+            "title" :   "Brawlhalla",
+            "id"    :   "Brawlhalla"
+        },{
+            "title" :   "Company of Heroes",
+            "id"    :   "CompanyOfHeroes"
+        }
+    ]
+}
