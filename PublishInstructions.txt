@@ -1,1 +1,8 @@
 # Publishing Instructions
+
+## git branch gh-pages master -f
+## git checkout gh-pages
+## << edit repo >>
+## git add .
+## git commit -m 'msg'
+## git push origin gh-pages
