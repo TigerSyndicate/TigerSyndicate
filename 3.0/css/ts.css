@@ -251,6 +251,17 @@ a:hover {
   background-position: -4335px -100px;
 }
 
+.memberCard {
+  margin: 40px;
+  padding: 20px;
+}
+
+.memberImg {
+  margin: 10px;
+  border: 5px solid #ffc70e;
+  box-shadow: 5px 5px 10px #ffc70e;
+}
+
 /*Mobiles - screen width less than 880px */
 @media screen and (max-width: 880px) {
   body {
@@ -360,15 +371,7 @@ a:hover {
 }
 /*Mobiles - screen width less than 450px */
 @media screen and (max-width: 450px) {
-  .col-1 {
-    width: 2.5%;
-  }
-
   .col-5 {
     width: 80%;
-  }
-
-  .col-10 {
-    width: 95%;
   }
 }

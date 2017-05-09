@@ -27,7 +27,7 @@
 		<!--Header-->
 		<div id="header" class="col-12">
 			<!--Tiger Syndicate logo-->
-			<a href=""><div id="logo" title="Tiger Syndicate"></div></a>
+			<a href="" data-page="home"><div id="logo" title="Tiger Syndicate"></div></a>
 			<!--Nav button-->
 			<a id="nav"><i class="fa fa-bars" id="menuBurger" aria-hidden="true" title="Menu"></i></a>
 		</div>
@@ -35,13 +35,13 @@
 		<!--Nav Panel-->
 		<div id="navOverlay" class="col-12">
 			<div id="navPanel" class="col-5">
-				<a class="navbtn" data-role="home" title="Home" href="">Home</a>
-				<a class="navbtn" data-role="teams" title="Teams" href="#teams">Teams</a>
-				<a class="navbtn" data-role="null" title="Gallery" href="https://www.instagram.com/" target="_blank">Gallery</a>
-				<a class="navbtn" data-role="null" title="Donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W5QEEKGGKUX3C" target="_blank">Donate</a>
-				<a class="navbtn" data-role="merch" title="Merch" href="#merch">Merch</a>
-				<a class="navbtn" data-role="contacts" title="Contacts" href="#contacts" >Contacts</a>
-				<a class="navbtn" data-role="faq" title="FAQ" href="#faq">FAQ</a>
+				<a class="navbtn" data-page="home" title="Home" href="">Home</a>
+				<a class="navbtn" data-page="teams" title="Teams" href="#teams">Teams</a>
+				<a class="navbtn" data-page="null" title="Gallery" href="https://www.instagram.com/" target="_blank">Gallery</a>
+				<a class="navbtn" data-page="null" title="Donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W5QEEKGGKUX3C" target="_blank">Donate</a>
+				<a class="navbtn" data-page="merch" title="Merch" href="#merch">Merch</a>
+				<a class="navbtn" data-page="contacts" title="Contacts" href="#contacts" >Contacts</a>
+				<a class="navbtn" data-page="faq" title="FAQ" href="#faq">FAQ</a>
 			</div>
 			<div id="exitNav" class="col-7"></div>
 		</div>
@@ -77,13 +77,14 @@
 			<div class="col-1"></div>
 			<div class="col-10">
 				<hr/><br/>
-				&copy; 2017 <a href="" title="Tiger Syndicate">Tiger Syndicate</a>
+				&copy; 2017 <a href="" data-page="home" title="Tiger Syndicate">Tiger Syndicate</a>
 			</div>
 			<div class="col-1"></div>
 		</div>
 		
 		<!--Scripts-->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script type="text/javascript" src="functions.js"></script>
 		<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>
