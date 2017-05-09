@@ -1,7 +1,7 @@
 $(function(){
     var content = $("#content");
-    var contentTitle = $("#content div:first-child");
-    var innerContent = $("#content .col-10");
+    var contentTitle = $("#contentTitle");
+    var innerContent = $("#innerContent");
     
     //Toggle open nav panel
     $("#nav, #exitNav").on("click", function(){
@@ -13,7 +13,7 @@ $(function(){
         var clickedNavBtn = $(".navbtn:focus").data("role");
         
         ToggleNavOverlay();
-            
+        
         if(clickedNavBtn === "teams"){
             EmptyInnerContent();
             DisplayGames();
@@ -37,24 +37,28 @@ $(function(){
         console.log(clickedGamesBtn);
     });*/
     
-    $(document).on("click", function(element){
-        if( isGamesBtn(element) ){
-            ChangeContentTitle(element);
+    
+    $(document).mouseup(function(event){
+        console.log(event.target);
+        if( isGamesBtn(event.target) ){
+            EmptyContentTitle();
+            ChangeContentTitle(event.target);
             EmptyInnerContent();
         }
+        
         //console.log(element.target);
     });
     
     function isGamesBtn(element){
-        if(element.target.className === "gamesbtn")
+        if(element.className === "gamesbtn")
             return true;
         return false;
     }
     
     function ChangeContentTitle(element){
-        contentTitle.addClass("gameTitle");
-        contentTitle.attr("id", element.target.attributes.getNamedItem("id").nodeValue);
-        console.log("title changed");
+        var id = element.getAttribute("id");
+        var title = element.getAttribute("title");
+        contentTitle.append('<div class="gameTitle" id="' + id + '" title="' + title + '"></div>');
     }
     
     
@@ -64,7 +68,7 @@ $(function(){
         }).done(function(data){
             $.each(data.GameList, function(i, item){
                 //console.log('<div class="gamesbtn" id="' + item.id + '">' + item.title + '</div>');
-                innerContent.append('<div class="gamesbtn" id="' + item.id + '"></div>');
+                innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '"/>');
                 //innerContent.append('<div class="gamesbtn" id="' + item.id + '">' + item.title + '</div>');
             });
        });
@@ -94,6 +98,10 @@ $(function(){
     
     function EmptyContent(){
         content.empty();
+    }
+    
+    function EmptyContentTitle(){
+        contentTitle.empty();
     }
     
     function EmptyInnerContent(){

@@ -45,7 +45,7 @@ body {
   font-family: Times New Roman, Century, serif;
   line-height: 1.5em;
   background-color: black;
-  background-image: url("../imgs/bg/bg.png");
+  background-image: url("../imgs/bg/bg3.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
@@ -288,6 +288,14 @@ a:hover {
 }
 /*Mobiles - screen width less than 620px */
 @media screen and (max-width: 620px) {
+  .col-1 {
+    width: 5%;
+  }
+
+  .col-10 {
+    width: 90%;
+  }
+
   .gamesbtn, .gameTitle {
     background-image: url("../imgs/m_gameLogos.png");
     background-size: 2075px 100px;
@@ -352,7 +360,15 @@ a:hover {
 }
 /*Mobiles - screen width less than 450px */
 @media screen and (max-width: 450px) {
+  .col-1 {
+    width: 2.5%;
+  }
+
   .col-5 {
     width: 80%;
+  }
+
+  .col-10 {
+    width: 95%;
   }
 }
