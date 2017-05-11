@@ -3,6 +3,13 @@ var content = $("#content");
 var contentTitle = $("#contentTitle");
 var innerContent = $("#innerContent");
 
+function DisplayContacts(){
+    ChangeContentTitle("", "logo2", "Tiger Syndicate");
+    EmptyInnerContent();
+    
+    
+}
+
 function isGamesBtn(element){
     if(element.className === "gamesbtn")
         return true;
@@ -45,10 +52,6 @@ function DisplayMembers(element){
         //empty
     }).done(function(data){
         $.each(data[id], function(i, item){
-            console.log(item);
-            console.log(item.name);
-            console.log(item.img_path);
-            
             var memberCard = '<div class="memberCard">';
             
                 memberCard += '<div class="memberImgContainer">';
@@ -58,9 +61,13 @@ function DisplayMembers(element){
                 else{
                     memberCard += '<img class="memberImg" src="' + item.img_path + '"/>';
                 }
-                memberCard += '</div>';
+                memberCard += '</div>';//end of memberImgContainer div
                 
                 memberCard += '<div class="memberContentContainer">';
+                    memberCard += '<ign>' + item.ign + '</ign>';
+                    memberCard += '<name>' + item.name + '</name>';
+                    memberCard += '<desc>' + item.desc + '</desc>';
+                
                     memberCard += '<div class="memberLinksContainer">';
                     if(item.twitch != "" ){
                         memberCard += '<a href="' + item.twitch + '" target="_blank">';
@@ -82,14 +89,10 @@ function DisplayMembers(element){
                             memberCard += '<div title="Discord" class="discordIcon" aria-hidden="true"></div>';
                         memberCard += '</a>';
                     }
-                    memberCard += '</div>';
-                    
-                    memberCard += '<ign>' + item.ign + '</ign>';
-                    memberCard += '<name>' + item.name + '</name>';
-                    memberCard += '<desc>' + item.desc + '</desc>';
-                memberCard += '</div>';
+                    memberCard += '</div>';//end of memberLinksContainer div
+                memberCard += '</div>';//end of memberContentContainer div
             
-            memberCard += '</div>';
+            memberCard += '</div>';//end of memberCard div
             
             innerContent.append(memberCard);
         });

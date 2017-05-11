@@ -1,5 +1,8 @@
 {
-    "GameList": [
+    "TigerSyndicateInfo":{
+        "contact_email" :   "tigersyndicate@gmail.com"
+    },
+    "GameList":[
         {   
             "title" :   "Blade & Soul",
             "id"    :   "BladeAndSoul"
@@ -56,7 +59,7 @@
             "twitter"   :   "https://twitter.com/",
             "steam"     :   "http://steamcommunity.com/profiles/76561198020009988/",
             "discord"   :   "https://discordapp.com/",
-            "desc"      :   "Supports different ign's in different games; look at Brawlhalla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. "
+            "desc"      :   "Supports different ign's in different games; look at Brawlhalla members. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. "
         },{
             "name"      :   "Hobbes",
             "img_path"  :   "imgs/members/hobbes.png",

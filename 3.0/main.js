@@ -7,7 +7,6 @@ $(function(){
     //Nav links
     $(".navbtn").click(function(){
         var clickedNavBtn = $(".navbtn:focus").data("page");
-        
         ToggleNavOverlay();
         
         if(clickedNavBtn === "teams"){
@@ -17,7 +16,7 @@ $(function(){
             alert("not implemented");
         }
         else if(clickedNavBtn === "contacts"){
-            alert("not implemented");
+            DisplayContacts();
         }
         else if(clickedNavBtn === "faq"){
             alert("not implemented");
