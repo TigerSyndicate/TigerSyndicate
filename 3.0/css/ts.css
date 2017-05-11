@@ -298,14 +298,14 @@ ign {
   color: #ffc70e;
 }
 
-#discordIcon {
+.discordIcon {
   background-image: url("../imgs/socialmedia/discord-icon-white.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-#discordIcon:hover {
+.discordIcon:hover {
   background-image: url("../imgs/socialmedia/discord-icon-orange.png");
 }
 
