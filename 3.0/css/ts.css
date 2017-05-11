@@ -281,12 +281,12 @@ ign {
 }
 
 .memberLinksContainer {
-  display: inline-flex;
+  display: inline;
   margin: 20px 0;
-  font-size: 2em;
+  font-size: 32px;
 }
 
-.fa, #discordIcon {
+.fa, .discordIcon {
   margin: 10px;
 }
 
@@ -303,6 +303,11 @@ ign {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  display: inline-flex;
+  position: relative;
+  top: 15px;
+  width: 32px;
+  height: 32px;
 }
 
 .discordIcon:hover {

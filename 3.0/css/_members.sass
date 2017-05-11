@@ -22,11 +22,11 @@ ign
     margin: 0 0 10px
     
 .memberLinksContainer
-    display: inline-flex
+    display: inline
     margin: 20px 0
-    font-size: 2em
+    font-size: 32px
     
-.fa, #discordIcon
+.fa, .discordIcon
     margin: 10px
     
 .fa
@@ -36,10 +36,17 @@ ign
     color: $main-color
 
 .discordIcon
-    background-image: $discord-white-logo-url
-    background-repeat: no-repeat
-    background-position: center
-    background-size: contain
+    background:
+        image: $discord-white-logo-url
+        repeat: no-repeat
+        position: center
+        size: contain
+    display: inline-flex
+    position: relative
+    top: 15px
+    width: 32px
+    height: 32px
+    
 
 .discordIcon:hover
     background-image: $discord-orange-logo-url
