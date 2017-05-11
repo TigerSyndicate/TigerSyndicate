@@ -1,6 +1,14 @@
 {
     "TigerSyndicateInfo":{
-        "contact_email" :   "tigersyndicate@gmail.com"
+        "contact_email"     :   "tigersyndicate@gmail.com",
+        "donation"          :   "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W5QEEKGGKUX3C",
+        "twitch"            :   "http://www.twitch.tv/",
+        "twitter"           :   "",
+        "facebook"          :   "https://www.facebook.com/",
+        "discord"           :   "https://discordapp.com/",
+        "youtube"           :   "",
+        "steam"             :   "",
+        "google_plus"       :   ""
     },
     "GameList":[
         {   
@@ -78,6 +86,15 @@
             "steam"     :   "http://steamcommunity.com/",
             "discord"   :   "https://discordapp.com/",
             "desc"      :   "Example: This member does not have profile picture, twitch account, nor twitter account."
+        },{
+            "name"      :   "Bob without member info",
+            "img_path"  :   "",
+            "ign"       :   "Mob",
+            "twitch"    :   "",
+            "twitter"   :   "",
+            "steam"     :   "http://steamcommunity.com/",
+            "discord"   :   "https://discordapp.com/",
+            "desc"      :   ""
         }
     ],
     "Brawlhalla":[

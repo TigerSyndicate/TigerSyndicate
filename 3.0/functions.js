@@ -2,11 +2,24 @@ var DataFile = "Data.json";
 var content = $("#content");
 var contentTitle = $("#contentTitle");
 var innerContent = $("#innerContent");
+  
+function GetDataFromFile(){
+    $.getJSON(DataFile, function(json){
+        //empty
+    }).done(function(json){
+        return json;
+    });
+}
 
 function DisplayContacts(){
     ChangeContentTitle("", "logo2", "Tiger Syndicate");
     EmptyInnerContent();
+  
+    var TSI = GetDataFromFile().TigerSyndicateInfo;
+    console.log(TSI);
     
+    var title = "<h2>Contacts</h2>";
+    var emailInfo = "<p>Contact email: " + TSI.contact_email + "</p>";
     
 }
 
@@ -66,7 +79,9 @@ function DisplayMembers(element){
                 memberCard += '<div class="memberContentContainer">';
                     memberCard += '<ign>' + item.ign + '</ign>';
                     memberCard += '<name>' + item.name + '</name>';
-                    memberCard += '<desc>' + item.desc + '</desc>';
+                    if(item.desc != ""){
+                        memberCard += '<desc>' + item.desc + '</desc>';
+                    }
                 
                     memberCard += '<div class="memberLinksContainer">';
                     if(item.twitch != "" ){
