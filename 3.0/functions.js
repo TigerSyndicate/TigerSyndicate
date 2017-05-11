@@ -61,10 +61,6 @@ function DisplayMembers(element){
                 memberCard += '</div>';
                 
                 memberCard += '<div class="memberContentContainer">';
-                    memberCard += '<ign>' + item.ign + '</ign>';
-                    memberCard += '<name>' + item.name + '</name>';
-                    memberCard += '<desc>' + item.desc + '</desc>';
-                
                     memberCard += '<div class="memberLinksContainer">';
                     if(item.twitch != "" ){
                         memberCard += '<a href="' + item.twitch + '" target="_blank">';
@@ -87,6 +83,10 @@ function DisplayMembers(element){
                         memberCard += '</a>';
                     }
                     memberCard += '</div>';
+                    
+                    memberCard += '<ign>' + item.ign + '</ign>';
+                    memberCard += '<name>' + item.name + '</name>';
+                    memberCard += '<desc>' + item.desc + '</desc>';
                 memberCard += '</div>';
             
             memberCard += '</div>';

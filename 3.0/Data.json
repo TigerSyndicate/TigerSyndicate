@@ -56,7 +56,7 @@
             "twitter"   :   "https://twitter.com/",
             "steam"     :   "http://steamcommunity.com/profiles/76561198020009988/",
             "discord"   :   "https://discordapp.com/",
-            "desc"      :   "Supports different ign's in different games. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. Integer vulputate odio ut gravida accumsan. Maecenas facilisis sed ante non condimentum. Donec egestas orci in ligula bibendum, et sodales lorem egestas. Integer in tincidunt nulla, eu porttitor nibh. Phasellus et velit hendrerit, ultrices massa non, semper justo. Praesent rutrum nisi vitae dapibus lacinia."
+            "desc"      :   "Supports different ign's in different games; look at Brawlhalla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. "
         },{
             "name"      :   "Hobbes",
             "img_path"  :   "imgs/members/hobbes.png",
@@ -65,7 +65,7 @@
             "twitter"   :   "https://twitter.com/",
             "steam"     :   "",
             "discord"   :   "https://discordapp.com/",
-            "desc"      :   "Example: This member does not have a steam link. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. Integer vulputate odio ut gravida accumsan. Maecenas facilisis sed ante non condimentum. Donec egestas orci in ligula bibendum, et sodales lorem egestas. Integer in tincidunt nulla, eu porttitor nibh. Phasellus et velit hendrerit, ultrices massa non, semper justo. Praesent rutrum nisi vitae dapibus lacinia."
+            "desc"      :   "Example: This member does not have a steam link. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. Integer vulputate odio ut gravida accumsan. Maecenas facilisis sed ante non condimentum. Donec egestas orci in ligula bibendum, et sodales lorem egestas. Integer in tincidunt nulla, eu porttitor nibh."
         },{
             "name"      :   "Bob",
             "img_path"  :   "",
@@ -86,7 +86,7 @@
             "twitter"   :   "https://twitter.com/",
             "steam"     :   "http://steamcommunity.com/profiles/76561198020009988/",
             "discord"   :   "https://discordapp.com/",
-            "desc"      :   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. Integer vulputate odio ut gravida accumsan. Maecenas facilisis sed ante non condimentum. Donec egestas orci in ligula bibendum, et sodales lorem egestas. Integer in tincidunt nulla, eu porttitor nibh. Phasellus et velit hendrerit, ultrices massa non, semper justo. Praesent rutrum nisi vitae dapibus lacinia."
+            "desc"      :   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. Integer vulputate odio ut gravida accumsan. Maecenas facilisis sed ante non condimentum. Donec egestas orci in ligula bibendum, et sodales lorem egestas. Integer in tincidunt nulla, eu porttitor nibh. Phasellus et velit hendrerit, ultrices massa non, semper justo."
         }
     ]
 }
