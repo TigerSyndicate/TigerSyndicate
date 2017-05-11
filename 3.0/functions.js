@@ -68,22 +68,22 @@ function DisplayMembers(element){
                     memberCard += '<div class="memberLinksContainer">';
                     if(item.twitch != "" ){
                         memberCard += '<a href="' + item.twitch + '" target="_blank">';
-                            memberCard += '<i class="fa fa-twitch" title="Twitch" id="twitchIcon" aria-hidden="true"></i>';
+                            memberCard += '<i class="fa fa-twitch" title="Twitch" class="twitchIcon" aria-hidden="true"></i>';
                         memberCard += '</a>';
                     }
                     if(item.twitter != ""){
                         memberCard += '<a href="' + item.twitter + '" target="_blank">';
-                            memberCard += '<i class="fa fa-twitter" title="Twitter" id="twitterIcon" aria-hidden="true"></i>';
+                            memberCard += '<i class="fa fa-twitter" title="Twitter" class="twitterIcon" aria-hidden="true"></i>';
                         memberCard += '</a>';
                     }
                     if(item.steam != ""){
                         memberCard += '<a href="' + item.steam + '" target="_blank">';
-                            memberCard += '<i class="fa fa-steam" title="Steam" id="steamIcon aria-hidden="true""></i>';
+                            memberCard += '<i class="fa fa-steam" title="Steam" class="steamIcon aria-hidden="true""></i>';
                         memberCard += '</a>';
                     }
                     if(item.discord != ""){
                         memberCard += '<a href="' + item.discord + '" target="_blank">';
-                            memberCard += '<div title="Discord" id="discordIcon aria-hidden="true""></div>';
+                            memberCard += '<div title="Discord" class="discordIcon" aria-hidden="true"></div>';
                         memberCard += '</a>';
                     }
                     memberCard += '</div>';
