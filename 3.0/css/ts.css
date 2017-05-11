@@ -283,10 +283,14 @@ ign {
 .memberLinksContainer {
   display: inline-flex;
   margin: 20px 0;
+  font-size: 2em;
+}
+
+.fa, #discordIcon {
+  margin: 10px;
 }
 
 .fa {
-  font-size: 1.75em;
   color: white;
 }
 
@@ -413,13 +417,28 @@ ign {
   }
 
   .memberCard {
-    margin: 20px;
+    display: block;
+    margin: 30px 20px;
     padding: 15px;
+  }
+
+  .memberImg {
+    display: flex;
+    margin: auto;
   }
 }
 /*Mobiles - screen width less than 450px */
 @media screen and (max-width: 450px) {
   .col-5 {
     width: 80%;
+  }
+
+  .memberImg {
+    width: 100px;
+    height: 100px;
+  }
+
+  ign {
+    font-size: 1.25em;
   }
 }
