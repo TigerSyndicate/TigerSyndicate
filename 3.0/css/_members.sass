@@ -1,7 +1,42 @@
 .memberCard
-    margin: 40px 20px
+    display: flex
+    margin: 40px
     padding: 20px
+    background-color: rgba(0,0,0,0.6)
+    box-shadow: 0 0 5px $main-color
+    
+.memberImgContainer
+    margin: 10px
     
 .memberImg
-    margin: 10px
-    box-shadow: 0 0 10px $main-color
+    border: 1px solid $main-color
+    
+.memberContentContainer
+    margin: 20px
+    
+ign, name, desc
+    display: flex
+    
+ign
+    font-size: 1.5em
+    margin: 0 0 10px
+    
+.memberLinksContainer
+    display: inline-flex
+    margin: 20px 0
+    font-size: 1.75em
+    
+.fa
+    color: white
+    
+.fa:hover
+    color: $main-color
+
+#discordIcon
+    background-image: $discord-white-logo-url
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+
+#discordIcon:hover
+    background-image: $discord-orange-logo-url

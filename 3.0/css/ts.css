@@ -136,7 +136,7 @@ a:hover {
 }
 
 #navPanel a:last-child {
-  margin: 0 0 300px;
+  margin: 0 0 200px;
 }
 
 .navbtn {
@@ -252,14 +252,57 @@ a:hover {
 }
 
 .memberCard {
+  display: flex;
   margin: 40px;
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 5px #ffc70e;
+}
+
+.memberImgContainer {
+  margin: 10px;
 }
 
 .memberImg {
-  margin: 10px;
-  border: 5px solid #ffc70e;
-  box-shadow: 5px 5px 10px #ffc70e;
+  border: 1px solid #ffc70e;
+}
+
+.memberContentContainer {
+  margin: 20px;
+}
+
+ign, name, desc {
+  display: flex;
+}
+
+ign {
+  font-size: 1.5em;
+  margin: 0 0 10px;
+}
+
+.memberLinksContainer {
+  display: inline-flex;
+  margin: 20px 0;
+}
+
+.fa {
+  font-size: 1.75em;
+  color: white;
+}
+
+.fa:hover {
+  color: #ffc70e;
+}
+
+#discordIcon {
+  background-image: url("../imgs/socialmedia/discord-icon-white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#discordIcon:hover {
+  background-image: url("../imgs/socialmedia/discord-icon-orange.png");
 }
 
 /*Mobiles - screen width less than 880px */
@@ -297,8 +340,8 @@ a:hover {
     margin: 60px 0 90px;
   }
 }
-/*Mobiles - screen width less than 620px */
-@media screen and (max-width: 620px) {
+/*Mobiles - screen width less than 680px */
+@media screen and (max-width: 680px) {
   .col-1 {
     width: 5%;
   }
@@ -367,6 +410,11 @@ a:hover {
     width: 235px;
     height: 43px;
     background-position: -1840px;
+  }
+
+  .memberCard {
+    margin: 20px;
+    padding: 15px;
   }
 }
 /*Mobiles - screen width less than 450px */
