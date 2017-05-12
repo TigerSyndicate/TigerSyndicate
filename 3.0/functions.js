@@ -20,7 +20,7 @@ function DisplayFAQ(){
         var faqContainer = '<div id="faqContainer">';
         faqContainer += '<h2>Frequently Asked Questions</h2>';
         
-        $.each(data.GameList, function(i, item){
+        $.each(data.FAQ, function(i, item){
             faqContainer += '<p>Q: ' + item.Q + '</p>';
             faqContainer += '<p>A: ' + item.A + '</p>';
         });
@@ -47,7 +47,7 @@ function DisplayContact(){
         
         //paypal's donate button
         //to-do
-        var paypal_temporary = '<div class="donateContainer"><p>*"Need paypal\'s donate html button code through the account.**</p></div>';
+        var paypal_temporary = '<div class="donateContainer"><h2>Donate</h2><p>*"Need paypal\'s donate html button code through the account.**</p></div>';
         innerContent.append(paypal_temporary);
         //innerContent.append(*paypal string*);
         
