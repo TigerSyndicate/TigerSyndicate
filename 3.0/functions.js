@@ -31,7 +31,7 @@ function DisplayContact(){
         //innerContent.append(*paypal string*);
         
         
-        var connectWithUsContainer = '<div id="connectWithUsContainer"></div>';
+        var connectWithUsContainer = '<div id="connectWithUsContainer">';
         connectWithUsContainer += '<h2>Connect with us</h2>';
         var socialIcons = "";
         if(TSI.twitch != ""){
