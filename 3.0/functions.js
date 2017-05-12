@@ -12,6 +12,23 @@ function GetJson(lambdaFunction){
     });
 }
 
+function DisplayFAQ(){
+    ChangeContentTitle("", "logo2", "Tiger Syndicate");
+    EmptyInnerContent();
+    
+    var lamdaFunction = function(data){
+        var faqContainer = '<div id="faqContainer">';
+        $.each(data.GameList, function(i, item){
+            faqContainer += '<p>Q: ' + item.Q + '</p>';
+            faqContainer += '<p>A: ' + item.A + '</p>';
+        });
+        faqContainer += '</div>';
+    }
+    
+    GetJson(lamdaFunction);
+}
+
+
 function DisplayContact(){
     ChangeContentTitle("", "logo2", "Tiger Syndicate");
     EmptyInnerContent();
@@ -20,7 +37,7 @@ function DisplayContact(){
         var TSI = data.TigerSyndicateInfo;
         
         var contactUsContainer = '<div id="contactContainer">';
-        contactUsContainer += '<h2>Contact Us</h2>';
+        contactUsContainer += '<h2>Contact us</h2>';
         contactUsContainer += '<p>Email us at <a href="mailto:' + TSI.contact_email + '" target="_top">' + TSI.contact_email + '</a></p>';
         contactUsContainer += '</div>';
         innerContent.append(contactUsContainer);
@@ -28,6 +45,8 @@ function DisplayContact(){
         
         //paypal's donate button
         //to-do
+        var paypal_temporary = '<div class="donateContainer"><p>*"Need paypal\'s donate html button code through the account.**</p></div>';
+        innerContent.append(paypal_temporary);
         //innerContent.append(*paypal string*);
         
         

@@ -10,6 +10,30 @@
         "steam"             :   "http://steamcommunity.com/groups/TigerSyndicate",
         "google_plus"       :   "https://plus.google.com/u/0/b/108420156032489249078/108420156032489249078/videos"
     },
+    "FAQ":[
+        {
+            "Q"     :   "Is Tiger Syndicate free to join?",
+            "A"     :   "Yes"
+        },{
+            "Q"     :   "How can I become a team member?",
+            "A"     :   "**answer**"
+        },{
+            "Q"     :   "question #3",
+            "A"     :   "answer #3"
+        },{
+            "Q"     :   "question #4",
+            "A"     :   "answer #4"
+        },{
+            "Q"     :   "question #5",
+            "A"     :   "answer #5"
+        },{
+            "Q"     :   "question #6",
+            "A"     :   "answer #6"
+        },{
+            "Q"     :   "question x",
+            "A"     :   "answer x"
+        }
+    ],
     "GameList":[
         {   
             "title" :   "Blade & Soul",

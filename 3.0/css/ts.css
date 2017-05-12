@@ -161,12 +161,19 @@ a:hover {
 }
 
 #contactContainer, #connectWithUsContainer {
-  margin: 20px 0;
+  margin: 0 0 50px;
+}
+
+#contactContainer > h2, #connectWithUsContainer > h2{
+  margin: 0 0;
+}
+
+#connectWithUsContainer > a{
+  font-size: 32px;
 }
 
 .fa, .discordIcon {
   margin: 10px;
-  font-size: 32px;
 }
 
 .fa {
@@ -316,6 +323,7 @@ ign {
 .memberLinksContainer {
   display: inline;
   margin: 20px 0;
+  font-size: 32px;
 }
 
 /*Mobiles - screen width less than 880px */
