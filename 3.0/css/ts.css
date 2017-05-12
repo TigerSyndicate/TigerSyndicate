@@ -160,15 +160,14 @@ a:hover {
   float: right;
 }
 
-#contactContainer, #connectWithUsContainer {
-  margin: 0 0 50px;
+#contactContainer, #connectWithUsContainer, #donateContainer, #faqContainer {
+  margin: 50px 0;
 }
-
-#contactContainer > h2, #connectWithUsContainer > h2{
+#contactContainer > h2, #connectWithUsContainer > h2, #donateContainer > h2, #faqContainer > h2 {
   margin: 0 0;
 }
 
-#connectWithUsContainer > a{
+#connectWithUsContainer > a {
   font-size: 32px;
 }
 

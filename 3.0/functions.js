@@ -18,6 +18,8 @@ function DisplayFAQ(){
     
     var lamdaFunction = function(data){
         var faqContainer = '<div id="faqContainer">';
+        faqContainer += '<h2>Frequently Asked Questions</h2>';
+        
         $.each(data.GameList, function(i, item){
             faqContainer += '<p>Q: ' + item.Q + '</p>';
             faqContainer += '<p>A: ' + item.A + '</p>';

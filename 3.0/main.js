@@ -19,7 +19,7 @@ $(function(){
             DisplayContact();
         }
         else if(clickedNavBtn === "faq"){
-            alert("not implemented");
+            DisplayFAQ();
         }
     });
 });
