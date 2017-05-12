@@ -164,8 +164,11 @@ a:hover {
   margin: 20px 0;
 }
 
-.fa, .discordIcon {
+#connectWithUsContainer {
   font-size: 32px;
+}
+
+.fa, .discordIcon {
   margin: 10px;
 }
 
@@ -316,6 +319,7 @@ ign {
 .memberLinksContainer {
   display: inline;
   margin: 20px 0;
+  font-size: 32px;
 }
 
 /*Mobiles - screen width less than 880px */
