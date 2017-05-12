@@ -25,6 +25,8 @@ function DisplayFAQ(){
             faqContainer += '<p>A: ' + item.A + '</p>';
         });
         faqContainer += '</div>';
+        
+        innerContent.append(faqContainer);
     }
     
     GetJson(lamdaFunction);
