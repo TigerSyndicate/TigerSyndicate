@@ -24,14 +24,17 @@ function DisplayContact(){
         var email = '<p>Email us at <a href="mailto:' + TSI.contact_email + '" target="_top">' + TSI.contact_email + '</a></p>';
         contactUsContainer.append(title);
         contactUsContainer.append(email);
+        innerContent.append(contactUsContainer);
+        
         
         //paypal's donate button
         //to-do
+        //innerContent.append(*paypal string*);
+        
         
         var connectWithUsContainer = '<div id="connectWithUsContainer"></div>';
         var title2 = '<h2>Connect with us</h2>';
         connectWithUsContainer.append(title2);
-        
         var socialIcons;
         if(TSI.twitch != ""){
             socialIcons += '<a href="' + TSI.twitch + '" target="_blank">';
@@ -69,8 +72,7 @@ function DisplayContact(){
             socialIcons += '</a>';
         }
         connectWithUsContainer.append(socialIcons);
-        
-        
+        innerContent.append(connectWithUsContainer);
     };
     
     GetJson(lambdaFunction);
