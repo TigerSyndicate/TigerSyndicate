@@ -19,11 +19,10 @@ function DisplayContact(){
     var lambdaFunction = function(data){
         var TSI = data.TigerSyndicateInfo;
         
-        var contactUsContainer = '<div id="contactContainer"></div>';
-        var title = '<h2>Contact Us</h2>';
-        var email = '<p>Email us at <a href="mailto:' + TSI.contact_email + '" target="_top">' + TSI.contact_email + '</a></p>';
-        contactUsContainer.append(title);
-        contactUsContainer.append(email);
+        var contactUsContainer = '<div id="contactContainer">';
+        contactUsContainer += '<h2>Contact Us</h2>';
+        contactUsContainer += '<p>Email us at <a href="mailto:' + TSI.contact_email + '" target="_top">' + TSI.contact_email + '</a></p>';
+        contactUsContainer += '</div>';
         innerContent.append(contactUsContainer);
         
         
@@ -33,9 +32,8 @@ function DisplayContact(){
         
         
         var connectWithUsContainer = '<div id="connectWithUsContainer"></div>';
-        var title2 = '<h2>Connect with us</h2>';
-        connectWithUsContainer.append(title2);
-        var socialIcons;
+        connectWithUsContainer += '<h2>Connect with us</h2>';
+        var socialIcons = "";
         if(TSI.twitch != ""){
             socialIcons += '<a href="' + TSI.twitch + '" target="_blank">';
                 socialIcons += '<i class="fa fa-twitch" title="Twitch" class="twitchIcon" aria-hidden="true"></i>';
@@ -71,7 +69,8 @@ function DisplayContact(){
                 socialIcons += '<i class="fa fa-google-plus" title="Google+" class="google_plusIcon" aria-hidden="true"></i>';
             socialIcons += '</a>';
         }
-        connectWithUsContainer.append(socialIcons);
+        connectWithUsContainer += socialIcons;
+        connectWithUsContainer += '</div>';
         innerContent.append(connectWithUsContainer);
     };
     

@@ -160,6 +160,39 @@ a:hover {
   float: right;
 }
 
+#contactContainer, #connectWithUsContainer {
+  margin: 20px 0;
+}
+
+.fa, .discordIcon {
+  font-size: 32px;
+  margin: 10px;
+}
+
+.fa {
+  color: white;
+}
+
+.fa:hover {
+  color: #ffc70e;
+}
+
+.discordIcon {
+  background-image: url("../imgs/socialmedia/discord-icon-white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-flex;
+  position: relative;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+}
+
+.discordIcon:hover {
+  background-image: url("../imgs/socialmedia/discord-icon-orange.png");
+}
+
 .gamesbtn, .gameTitle {
   background-image: url("../imgs/gameLogos.png");
   background-repeat: no-repeat;
@@ -283,35 +316,6 @@ ign {
 .memberLinksContainer {
   display: inline;
   margin: 20px 0;
-  font-size: 32px;
-}
-
-.fa, .discordIcon {
-  margin: 10px;
-}
-
-.fa {
-  color: white;
-}
-
-.fa:hover {
-  color: #ffc70e;
-}
-
-.discordIcon {
-  background-image: url("../imgs/socialmedia/discord-icon-white.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  display: inline-flex;
-  position: relative;
-  top: 15px;
-  width: 32px;
-  height: 32px;
-}
-
-.discordIcon:hover {
-  background-image: url("../imgs/socialmedia/discord-icon-orange.png");
 }
 
 /*Mobiles - screen width less than 880px */
@@ -441,9 +445,5 @@ ign {
   .memberImg {
     width: 100px;
     height: 100px;
-  }
-
-  ign {
-    font-size: 1.25em;
   }
 }
