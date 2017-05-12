@@ -2,25 +2,78 @@ var DataFile = "Data.json";
 var content = $("#content");
 var contentTitle = $("#contentTitle");
 var innerContent = $("#innerContent");
-  
-function GetDataFromFile(){
-    $.getJSON(DataFile, function(json){
+
+
+function GetJson(lambdaFunction){
+    $.getJSON(DataFile, function(data){
         //empty
-    }).done(function(json){
-        return json;
+    }).done(function(data){
+        lambdaFunction(data);
     });
 }
 
-function DisplayContacts(){
+function DisplayContact(){
     ChangeContentTitle("", "logo2", "Tiger Syndicate");
     EmptyInnerContent();
   
-    var TSI = GetDataFromFile().TigerSyndicateInfo;
-    console.log(TSI);
+    var lambdaFunction = function(data){
+        var TSI = data.TigerSyndicateInfo;
+        
+        var contactUsContainer = '<div id="contactContainer"></div>';
+        var title = '<h2>Contact Us</h2>';
+        var email = '<p>Email us at <a href="mailto:' + TSI.contact_email + '" target="_top">' + TSI.contact_email + '</a></p>';
+        contactUsContainer.append(title);
+        contactUsContainer.append(email);
+        
+        //paypal's donate button
+        //to-do
+        
+        var connectWithUsContainer = '<div id="connectWithUsContainer"></div>';
+        var title2 = '<h2>Connect with us</h2>';
+        connectWithUsContainer.append(title2);
+        
+        var socialIcons;
+        if(TSI.twitch != ""){
+            socialIcons += '<a href="' + TSI.twitch + '" target="_blank">';
+                socialIcons += '<i class="fa fa-twitch" title="Twitch" class="twitchIcon" aria-hidden="true"></i>';
+            socialIcons += '</a>';
+        }
+        if(TSI.twitter != ""){
+            socialIcons += '<a href="' + TSI.twitter + '" target="_blank">';
+                socialIcons += '<i class="fa fa-twitter" title="Twitter" class="twitterIcon" aria-hidden="true"></i>';
+            socialIcons += '</a>';
+        }
+        if(TSI.facebook != ""){
+            socialIcons += '<a href="' + TSI.facebook + '" target="_blank">';
+                socialIcons += '<i class="fa fa-facebook" title="Facebook" class="facebookIcon" aria-hidden="true"></i>';
+            socialIcons += '</a>';
+        }
+        if(TSI.discord != ""){
+            socialIcons += '<a href="' + TSI.discord + '" target="_blank">';
+                socialIcons += '<div title="Discord" class="discordIcon" aria-hidden="true"></div>';
+            socialIcons += '</a>';
+        }
+        if(TSI.youtube != ""){
+            socialIcons += '<a href="' + TSI.youtube + '" target="_blank">';
+                socialIcons += '<i class="fa fa-youtube-play" title="Youtube" class="youtubeIcon" aria-hidden="true"></i>';
+            socialIcons += '</a>';
+        }
+        if(TSI.steam != ""){
+            socialIcons += '<a href="' + TSI.steam + '" target="_blank">';
+                socialIcons += '<i class="fa fa-steam-square" title="Steam" class="steamIcon" aria-hidden="true"></i>';
+            socialIcons += '</a>';
+        }
+        if(TSI.google_plus != ""){
+            socialIcons += '<a href="' + TSI.google_plus + '" target="_blank">';
+                socialIcons += '<i class="fa fa-google-plus" title="Google+" class="google_plusIcon" aria-hidden="true"></i>';
+            socialIcons += '</a>';
+        }
+        connectWithUsContainer.append(socialIcons);
+        
+        
+    };
     
-    var title = "<h2>Contacts</h2>";
-    var emailInfo = "<p>Contact email: " + TSI.contact_email + "</p>";
-    
+    GetJson(lambdaFunction);
 }
 
 function isGamesBtn(element){
@@ -38,9 +91,8 @@ function ChangeContentTitle(className, id, title){
 function ListGames(){
     ChangeContentTitle("", "logo2", "Tiger Syndicate");
     EmptyInnerContent();
-    $.getJSON(DataFile, function(data){
-        //empty
-    }).done(function(data){
+    
+    var lambdaFunction = function(data){
         $.each(data.GameList, function(i, item){
             //console.log('<div class="gamesbtn" id="' + item.id + '">' + item.title + '</div>');
             
@@ -52,7 +104,9 @@ function ListGames(){
             
             //innerContent.append('<div class="gamesbtn" id="' + item.id + '">' + item.title + '</div>');
         });
-   });
+   };
+   
+   GetJson(lambdaFunction);
 }
 
 
@@ -61,9 +115,8 @@ function DisplayMembers(element){
     var title = element.getAttribute("title");
     ChangeContentTitle("gameTitle", id, title);
     EmptyInnerContent();
-    $.getJSON(DataFile, function(data){
-        //empty
-    }).done(function(data){
+    
+    var lambdaFunction = function(data){
         $.each(data[id], function(i, item){
             var memberCard = '<div class="memberCard">';
             
@@ -111,7 +164,9 @@ function DisplayMembers(element){
             
             innerContent.append(memberCard);
         });
-    });
+    };
+    
+    GetJson(lambdaFunction);
 }
 
 function ToggleNavOverlay(){

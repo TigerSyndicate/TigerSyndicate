@@ -15,8 +15,8 @@ $(function(){
         else if(clickedNavBtn === "merch"){
             alert("not implemented");
         }
-        else if(clickedNavBtn === "contacts"){
-            DisplayContacts();
+        else if(clickedNavBtn === "contact"){
+            DisplayContact();
         }
         else if(clickedNavBtn === "faq"){
             alert("not implemented");

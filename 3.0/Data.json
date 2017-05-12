@@ -1,14 +1,14 @@
 {
     "TigerSyndicateInfo":{
-        "contact_email"     :   "tigersyndicate@gmail.com",
+        "contact_email"     :   "contactus@tigersyndicate.com",
         "donation"          :   "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W5QEEKGGKUX3C",
         "twitch"            :   "http://www.twitch.tv/",
-        "twitter"           :   "",
-        "facebook"          :   "https://www.facebook.com/",
-        "discord"           :   "https://discordapp.com/",
-        "youtube"           :   "",
-        "steam"             :   "",
-        "google_plus"       :   ""
+        "twitter"           :   "https://twitter.com/",
+        "facebook"          :   "https://www.facebook.com/TheTigerSyndicate",
+        "discord"           :   "https://discord.gg/0WJQe0bFBIxW0oES",
+        "youtube"           :   "https://www.youtube.com/channel/UCg75nwF0i7_CljnWKnHsFzg",
+        "steam"             :   "http://steamcommunity.com/groups/TigerSyndicate",
+        "google_plus"       :   "https://plus.google.com/u/0/b/108420156032489249078/108420156032489249078/videos"
     },
     "GameList":[
         {   
@@ -89,7 +89,7 @@
         },{
             "name"      :   "Bob without member info",
             "img_path"  :   "",
-            "ign"       :   "Mob",
+            "ign"       :   "Mob without member info",
             "twitch"    :   "",
             "twitter"   :   "",
             "steam"     :   "http://steamcommunity.com/",
