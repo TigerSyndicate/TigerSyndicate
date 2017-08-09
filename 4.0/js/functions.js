@@ -1,6 +1,6 @@
 var TeamsDataFile = "teams.json";
 
-var DataFile = "Data.json";
+var DataFile = "/TigerSyndicate/json/Data.json";
 var content = $("#content");
 var contentTitle = $("#contentTitle");
 var innerContent = $("#innerContent");
@@ -120,15 +120,8 @@ function ListGames(){
     
     var lambdaFunction = function(data){
         $.each(data.GameList, function(i, item){
-            //console.log('<div class="gamesbtn" id="' + item.id + '">' + item.title + '</div>');
-            
-            innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" onclick="DisplayMembers(this)"/>');
-            //innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" onclick="test(this)"/>');
-            //innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '"/>');
-            //innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" onclick="DisplayTeams(' + item.id + ',' + item.title + ')"/>');
-            
-            
-            //innerContent.append('<div class="gamesbtn" id="' + item.id + '">' + item.title + '</div>');
+            //innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" onclick="DisplayMembers(this)"/>');
+            innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" href="/' + item.link + '/"/>')
         });
    };
    

@@ -37,49 +37,64 @@
     "GameList":[
         {   
             "title" :   "Blade & Soul",
-            "id"    :   "BladeAndSoul"
+            "id"    :   "BladeAndSoul",
+            "link"  :   "bladeandsoul"
         },{ 
             "title" :   "Brawlhalla",
-            "id"    :   "Brawlhalla"
+            "id"    :   "Brawlhalla",
+            "link"  :   "brawlhalla"
         },{
             "title" :   "Company of Heroes",
-            "id"    :   "CompanyOfHeroes"
+            "id"    :   "CompanyOfHeroes",
+            "link"  :   "companyofheroes"
         },{
             "title" :   "Counter-Strike: Global Offensive",
-            "id"    :   "CounterStrikeGO"
+            "id"    :   "CounterStrikeGO",
+            "link"  :   "counterstrikego"
         },{
             "title" :   "Dark Souls III",
-            "id"    :   "DarkSoulsIII"
+            "id"    :   "DarkSoulsIII",
+            "link"  :   "darksouls3"
         },{
             "title" :   "Destiny",
-            "id"    :   "Destiny"
+            "id"    :   "Destiny",
+            "link"  :   "destiny"
         },{
             "title" :   "Dota 2",
-            "id"    :   "Dota2"
+            "id"    :   "Dota2",
+            "link"  :   "dota2"
         },{
             "title" :   "Hearthstone",
-            "id"    :   "Hearthstone"
+            "id"    :   "Hearthstone",
+            "link"  :   "hearthstone"
         },{
             "title" :   "Heroes of the Storm",
-            "id"    :   "HeroesOfTheStorm"
+            "id"    :   "HeroesOfTheStorm",
+            "link"  :   "heroesofthestorm"
         },{
             "title" :   "League of Legends",
-            "id"    :   "LeagueOfLegends"
+            "id"    :   "LeagueOfLegends",
+            "link"  :   "leagueoflegends"
         },{
             "title" :   "Overwatch",
-            "id"    :   "Overwatch"
+            "id"    :   "Overwatch",
+            "link"  :   "overwatch"
         },{
             "title" :   "StarCraft II",
-            "id"    :   "StarCraftII"
+            "id"    :   "StarCraftII",
+            "link"  :   "starcraft2"
         },{
             "title" :   "Street Fighter V",
-            "id"    :   "StreetFighterV"
+            "id"    :   "StreetFighterV",
+            "link"  :   "streetfighter5"
         },{
             "title" :   "Warframe",
-            "id"    :   "Warframe"
+            "id"    :   "Warframe",
+            "link"  :   "warframe"
         },{
             "title" :   "World of Warcraft",
-            "id"    :   "WorldOfWarcraft"
+            "id"    :   "WorldOfWarcraft",
+            "link"  :   "worldofwarcraft"
         }
     ],
     "BladeAndSoul":[
