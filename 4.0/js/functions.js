@@ -121,7 +121,8 @@ function ListGames(){
     var lambdaFunction = function(data){
         $.each(data.GameList, function(i, item){
             //innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" onclick="DisplayMembers(this)"/>');
-            innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" href="/' + item.link + '/"/>')
+            //innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" href="/teams/' + item.link + '/"/>');
+            innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" href="/TigerSyndicate/teams/' + item.link + '/"/>');
         });
    };
    
