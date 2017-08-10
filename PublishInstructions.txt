@@ -1,5 +1,7 @@
 # Publishing Instructions
 
+rough outline
+
 ## git branch gh-pages master -f
 ## git checkout gh-pages
 ## << edit repo >>
