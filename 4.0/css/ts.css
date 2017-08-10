@@ -1,6 +1,6 @@
 @font-face {
   font-family: razing;
-  src: url(/TigerSyndicate/files/Razing.ttf); }
+  src: url(/files/Razing.ttf); }
 #preloaderBg {
   width: 100%;
   height: 100%;
@@ -12,7 +12,7 @@
   justify-content: center; }
 
 #preloader {
-  background-image: url("/TigerSyndicate/imgs/loadingIcon.png");
+  background-image: url("/imgs/loadingIcon.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 32px;
@@ -102,7 +102,7 @@ body {
   font-family: Times New Roman, Century, serif;
   line-height: 1.5em;
   background-color: black;
-  background-image: url("/TigerSyndicate/imgs/bg/bg3.png");
+  background-image: url("/imgs/bg/bg3.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat; }
@@ -122,14 +122,14 @@ a {
   height: 90px;
   position: fixed;
   background-color: black;
-  background-image: url("/TigerSyndicate/imgs/bg/headerBg.png");
+  background-image: url("/imgs/bg/headerBg.png");
   box-shadow: 0 5px 10px #ffc70e; }
 
 #header a {
   display: inline-flex; }
 
 #logo {
-  background-image: url("/TigerSyndicate/imgs/logoGlow.png");
+  background-image: url("/imgs/logoGlow.png");
   background-size: 97px 90px;
   background-position: center;
   background-repeat: no-repeat;
@@ -137,7 +137,7 @@ a {
   height: 90px; }
 
 #logo2 {
-  background-image: url("/TigerSyndicate/imgs/logo2White.png");
+  background-image: url("/imgs/logo2White.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 170px;
@@ -171,7 +171,7 @@ a {
   overflow-y: auto;
   height: 100%;
   background-color: black;
-  background-image: url("/TigerSyndicate/imgs/bg/navBg.jpg");
+  background-image: url("/imgs/bg/navBg.jpg");
   box-shadow: 5px 0 10px #ffc70e; }
 
 #navPanel a:first-child {
@@ -222,7 +222,7 @@ a {
   color: #ffc70e; }
 
 .discordIcon {
-  background-image: url("/TigerSyndicate/imgs/socialmedia/discord-icon-white.png");
+  background-image: url("/imgs/socialmedia/discord-icon-white.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -233,10 +233,10 @@ a {
   height: 32px; }
 
 .discordIcon:hover {
-  background-image: url("/TigerSyndicate/imgs/socialmedia/discord-icon-orange.png"); }
+  background-image: url("/imgs/socialmedia/discord-icon-orange.png"); }
 
 .gamesbtn, .gameTitle {
-  background-image: url("/TigerSyndicate/imgs/gameLogos.png");
+  background-image: url("/imgs/gameLogos.png");
   background-repeat: no-repeat;
   background-size: 4540px 200px;
   height: 100px;
@@ -339,7 +339,7 @@ ign {
 /*Mobiles - screen width less than 880px */
 @media screen and (max-width: 880px) {
   body {
-    background-image: url("/TigerSyndicate/imgs/bg/m_bg.png");
+    background-image: url("/imgs/bg/m_bg.png");
     background-attachment: scroll; }
 
   #header {
@@ -349,7 +349,7 @@ ign {
     margin: 10px; }
 
   #logo {
-    background-image: url("/TigerSyndicate/imgs/m_logoGlow.png");
+    background-image: url("/imgs/m_logoGlow.png");
     background-size: 76px 70px;
     width: 70px;
     height: 70px; }
@@ -372,11 +372,11 @@ ign {
     width: 90%; }
 
   .gamesbtn, .gameTitle {
-    background-image: url("/TigerSyndicate/imgs/m_gameLogos.png");
+    background-image: url("/imgs/m_gameLogos.png");
     background-size: 2075px 100px; }
 
   #bladeandsoul, #dota2, #heroesofthestorm, #starcraft2, #streetfighter5, #worldofwarcraft {
-    background-image: url("/TigerSyndicate/imgs/gameLogos.png");
+    background-image: url("/imgs/gameLogos.png");
     background-size: 4540px 200px; }
 
   #brawlhalla {
