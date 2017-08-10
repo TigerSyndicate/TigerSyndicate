@@ -1,5 +1,5 @@
 #!/bin/bash
-#works in master branch only!
+#use in master branch only!
 
 
 echo ""
@@ -59,3 +59,9 @@ echo ""
 echo ">>>  GIT PUSH ORIGIN GH-PAGES -F"
 echo ""
 git push origin gh-pages -f
+
+echo ""
+echo ">>>  GIT CHECKOUT MASTER"
+echo ""
+git checkout master
+

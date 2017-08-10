@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#use only in master branch!
 
 echo ""
 echo ">>>  PUSHING TO MASTER"
