@@ -1,5 +1,5 @@
 #!/bin/bash
-#use in grandmaster branch only!
+#use only in grandmaster branch!
 
 
 echo ""
