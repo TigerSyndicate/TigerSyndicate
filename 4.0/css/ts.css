@@ -42,12 +42,12 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 .rotate {
-  -webkit-animation: rotating 2s linear 300s;
-  -moz-animation: rotating 2s linear 300s;
-  -ms-animation: rotating 2s linear 300s;
-  -o-animation: rotating 2s linear 300s;
-  animation: rotating 2s linear 300s; }
-
+    -webkit-animation: rotating 2s linear 5;
+    -moz-animation: rotating 2s linear 5;
+    -ms-animation: rotating 2s linear 5;
+    -o-animation: rotating 2s linear 5;
+    animation: rotating 2s linear 5;
+}
 @-webkit-keyframes hide {
   to {
     width: 0;
