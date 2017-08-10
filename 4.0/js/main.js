@@ -1,4 +1,6 @@
 $(function(){
+    $("#preloaderbg").css("display","none");
+    
     //Toggle open nav panel
     $("#nav, #exitNav").click(function(){
         ToggleNavOverlay();

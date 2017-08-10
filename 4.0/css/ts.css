@@ -42,12 +42,12 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 .rotate {
-    -webkit-animation: rotating 2s linear 5;
-    -moz-animation: rotating 2s linear 5;
-    -ms-animation: rotating 2s linear 5;
-    -o-animation: rotating 2s linear 5;
-    animation: rotating 2s linear 5;
-}
+  -webkit-animation: rotating 2s linear 5;
+  -moz-animation: rotating 2s linear 5;
+  -ms-animation: rotating 2s linear 5;
+  -o-animation: rotating 2s linear 5;
+  animation: rotating 2s linear 5; }
+
 @-webkit-keyframes hide {
   to {
     width: 0;
@@ -59,10 +59,10 @@
     height: 0;
     overflow: hidden; } }
 .hide {
-  -moz-animation: hide 0s ease-in 5s forwards;
-  -webkit-animation: hide 0s ease-in 5s forwards;
-  -o-animation: hide 0s ease-in 5s forwards;
-  animation: hide 0s ease-in 5s forwards;
+  -moz-animation: hide 0s ease-in 4s forwards;
+  -webkit-animation: hide 0s ease-in 4s forwards;
+  -o-animation: hide 0s ease-in 4s forwards;
+  animation: hide 0s ease-in 4s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
 
