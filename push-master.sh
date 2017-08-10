@@ -12,9 +12,9 @@ then
     git commit -m "update"
     echo ">>>  GIT COMMIT -M 'UPDATE'"
     
-elif [ "$#" -eq 1 ]
+elif [ "$#" -gt 0 ]
 then
-    git commit -m $1
+    git commit -m "$*"
     echo ">>>  GIT COMMIT -M 'CMDLINE MSG'"
     
 else
