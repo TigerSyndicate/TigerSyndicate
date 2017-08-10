@@ -1,9 +1,9 @@
-var GamesDataFile = "/TigerSyndicate/json/games.json";
-var FaqDataFile = "/TigerSyndicate/json/faq.json";
-var OrgInfoDataFile = "/TigerSyndicate/json/organization-info.json";
-var MembersDataFile = "/TigerSyndicate/json/members.json";
+var GamesDataFile = "/json/games.json";
+var FaqDataFile = "/json/faq.json";
+var OrgInfoDataFile = "/json/organization-info.json";
+var MembersDataFile = "/json/members.json";
 
-var DataFile = "/TigerSyndicate/json/data.json";
+var DataFile = "/json/data.json";
 var content = $("#content");
 var contentTitle = $("#contentTitle");
 var innerContent = $("#innerContent");
@@ -125,7 +125,7 @@ function ListGames(){
         $.each(data.GameList, function(i, item){
             //innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" onclick="DisplayMembers(this)"/>');
             //innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" href="/teams/' + item.link + '/"/>');
-            innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" href="/TigerSyndicate/teams/' + item.link + '/"/>');
+            innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" href="/teams/' + item.link + '/"/>');
         });
    };
    

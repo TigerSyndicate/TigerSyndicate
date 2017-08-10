@@ -100,7 +100,7 @@
     "BladeAndSoul":[
         {
             "name"      :   "Calvin",
-            "img_path"  :   "imgs/members/calvin.png",
+            "img_path"  :   "/imgs/members/calvin.png",
             "ign"       :   "Borealis (BladeAndSoul ign)",
             "twitch"    :   "https://www.twitch.tv/",
             "twitter"   :   "https://twitter.com/",
@@ -109,7 +109,7 @@
             "desc"      :   "Supports different ign's in different games; look at Brawlhalla members. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. "
         },{
             "name"      :   "Hobbes",
-            "img_path"  :   "imgs/members/hobbes.png",
+            "img_path"  :   "/imgs/members/hobbes.png",
             "ign"       :   "Hobble",
             "twitch"    :   "https://www.twitch.tv/",
             "twitter"   :   "https://twitter.com/",
@@ -139,7 +139,7 @@
     "Brawlhalla":[
         {
             "name"      :   "Calvin",
-            "img_path"  :   "imgs/members/calvin.png",
+            "img_path"  :   "/imgs/members/calvin.png",
             "ign"       :   "Borealis (Brawlhalla ign)",
             "twitch"    :   "https://www.twitch.tv/",
             "twitter"   :   "https://twitter.com/",
