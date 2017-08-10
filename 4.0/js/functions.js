@@ -1,13 +1,16 @@
-var TeamsDataFile = "teams.json";
+var GamesDataFile = "/TigerSyndicate/json/games.json";
+var FaqDataFile = "/TigerSyndicate/json/faq.json";
+var OrgInfoDataFile = "/TigerSyndicate/json/organization-info.json";
+var MembersDataFile = "/TigerSyndicate/json/members.json";
 
-var DataFile = "/TigerSyndicate/json/Data.json";
+var DataFile = "/TigerSyndicate/json/data.json";
 var content = $("#content");
 var contentTitle = $("#contentTitle");
 var innerContent = $("#innerContent");
 
 
-function GetJson(lambdaFunction){
-    $.getJSON(DataFile, function(data){
+function GetJson(lambdaFunction, dataFile){
+    $.getJSON(dataFile, function(data){
         //empty
     }).done(function(data){
         lambdaFunction(data);
@@ -31,7 +34,7 @@ function DisplayFAQ(){
         innerContent.append(faqContainer);
     }
     
-    GetJson(lamdaFunction);
+    GetJson(lamdaFunction, FaqDataFile);
 }
 
 
@@ -99,7 +102,7 @@ function DisplayContact(){
         innerContent.append(connectWithUsContainer);
     };
     
-    GetJson(lambdaFunction);
+    GetJson(lambdaFunction, OrgInfoDataFile);
 }
 
 function isGamesBtn(element){
@@ -126,7 +129,7 @@ function ListGames(){
         });
    };
    
-   GetJson(lambdaFunction);
+   GetJson(lambdaFunction, GamesDataFile);
 }
 
 
@@ -186,7 +189,7 @@ function DisplayMembers(element){
         });
     };
     
-    GetJson(lambdaFunction);
+    GetJson(lambdaFunction, MembersDataFile);
 }
 
 function ToggleNavOverlay(){

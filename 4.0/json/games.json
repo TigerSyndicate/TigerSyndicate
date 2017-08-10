@@ -1,0 +1,50 @@
+{
+    "GameList":[
+        {   
+            "title" :   "Blade & Soul",
+            "id"    :   "bladeandsoul"
+        },{ 
+            "title" :   "Brawlhalla",
+            "id"    :   "brawlhalla"
+        },{
+            "title" :   "Company of Heroes",
+            "id"    :   "companyofheroes"
+        },{
+            "title" :   "Counter-Strike: Global Offensive",
+            "id"    :   "counterstrikego"
+        },{
+            "title" :   "Dark Souls III",
+            "id"    :   "darksouls3"
+        },{
+            "title" :   "Destiny",
+            "id"    :   "destiny"
+        },{
+            "title" :   "Dota 2",
+            "id"    :   "dota2"
+        },{
+            "title" :   "Hearthstone",
+            "id"    :   "hearthstone"
+        },{
+            "title" :   "Heroes of the Storm",
+            "id"    :   "heroesofthestorm"
+        },{
+            "title" :   "League of Legends",
+            "id"    :   "leagueoflegends"
+        },{
+            "title" :   "Overwatch",
+            "id"    :   "overwatch"
+        },{
+            "title" :   "StarCraft II",
+            "id"    :   "starcraft2"
+        },{
+            "title" :   "Street Fighter V",
+            "id"    :   "streetfighter5"
+        },{
+            "title" :   "Warframe",
+            "id"    :   "warframe"
+        },{
+            "title" :   "World of Warcraft",
+            "id"    :   "worldofwarcraft"
+        }
+    ]
+}

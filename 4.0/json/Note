@@ -1,0 +1,2 @@
+Games.json
+    - The 'id' field also corresponds to the last part of the url to get to the page, so if it's changed to something else or something simpler, the folder and css rule needs to match.
