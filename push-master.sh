@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+echo ""
+echo ">>>  PUSHING TO MASTER"
+echo ""
+
 echo ""
 echo ">>>  GIT ADD ."
 echo ""

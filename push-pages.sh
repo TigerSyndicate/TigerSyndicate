@@ -1,6 +1,11 @@
 #!/bin/bash
 #works in master branch only!
 
+
+echo ""
+echo ">>>  PUSHING TO GH-PAGES"
+echo ""
+
 echo ""
 echo ">>> GIT BRANCH GH-PAGES MASTER -F"
 echo ""
