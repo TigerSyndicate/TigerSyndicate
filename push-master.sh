@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git add .
-echo ">>>  GIT ADD."
+echo ">>>  GIT ADD ."
 
 git status
 echo ">>>  GIT STATUS"
@@ -16,12 +16,6 @@ elif [ "$#" -gt 0 ]
 then
     git commit -m "$*"
     echo ">>>  GIT COMMIT -M 'CMDLINE MSG'"
-    
-else
-    echo " "
-    echo ">>>  ILLEGAL CMDLINE ARGUMENT."
-    echo ">>>  ./PUSH-MASTER"
-    echo ">>>  OR ./PUSH-MASTER 'MSG'"
 fi
 
 
