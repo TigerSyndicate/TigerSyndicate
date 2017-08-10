@@ -22,7 +22,7 @@ elif [ "$#" -gt 0 ]
 then
     git commit -m "$*"
     echo ""
-    echo ">>>  GIT COMMIT -M 'CMDLINE MSG'"
+    echo ">>>  GIT COMMIT -M '"$*"'"
     echo ""
 fi
 
