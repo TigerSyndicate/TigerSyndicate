@@ -1,9 +1,32 @@
 #!/bin/bash
-#use only in master branch!
+#use in grandmaster branch only!
+
 
 echo ""
-echo ">>>  PUSHING TO MASTER"
+echo ">>>  PUSHING TO MASTER (TO DISPLAY ON tigersyndicate.github.io)"
 echo ""
+
+echo ""
+echo ">>> GIT BRANCH MASTER GRANDMASTER -F"
+echo ""
+git branch master grandmaster -f
+
+echo ""
+echo ">>> GIT CHECKOUT MASTER"
+echo ""
+git checkout master
+
+
+echo ""
+echo ">>> REMOVING FILES"
+echo ""
+rm -rf 2.0/ 3.0/ PublishInstructions.txt push-master.sh push-pages.sh README.md
+
+echo ""
+echo ">>> MOVING 4.0/ OUT AND REMOVE FOLDER"
+echo ""
+mv 4.0/* ../*
+rm -r 4.0/
 
 echo ""
 echo ">>>  GIT ADD ."
@@ -33,6 +56,12 @@ fi
 
 
 echo ""
-echo ">>>  GIT PUSH ORIGIN MASTER"
+echo ">>>  GIT PUSH ORIGIN MASTER -F"
 echo ""
-git push origin master
+git push origin master -f
+
+echo ""
+echo ">>>  GIT CHECKOUT GRANDMASTER"
+echo ""
+git checkout grandmaster
+
