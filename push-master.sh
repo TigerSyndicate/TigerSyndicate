@@ -20,7 +20,7 @@ git checkout master
 echo ""
 echo ">>> REMOVING FILES"
 echo ""
-rm -rf 2.0/ 3.0/ PublishInstructions.txt push-grandmaster.sh push-master.sh README.md
+rm -rf 2.0/ 3.0/ PublishInstructions.txt push-both.sh push-grandmaster.sh push-master.sh README.md
 
 echo ""
 echo ">>> MOVING 4.0/ OUT AND REMOVE FOLDER"
