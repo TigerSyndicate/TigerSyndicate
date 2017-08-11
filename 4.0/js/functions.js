@@ -131,7 +131,7 @@ function ListGames(){
 }
 
 
-function makeMemberCardContainer(item, gameign){
+function makeMemberCard(item, gameign){
     var memberCard = '<div class="memberCard">';
     
         memberCard += '<div class="memberImgContainer">';
@@ -236,7 +236,7 @@ function DisplayMembersForTeamPage(id, title){
     var lambdaFunction = function(data){
         $.each(data[id], function(i, item){
             if(item.type == "ranked"){
-                if(id == "bladeandsoul" && item.bladeandsoul != undefined){
+                if(id == "bladeandsoul" && ( item.bladeandsoul != "" || item.bladeandsoul != undefined) ){
                     makeMemberCard(item, item.bladeandsoul);
                 }
                 if(id == "brawlhalla" && item.brawlhalla != undefined){
