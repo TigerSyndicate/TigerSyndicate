@@ -1,3 +1,4 @@
 $(function(){
-    DisplayMembersForTeamPage(bladeandsoul, "bladeandsoul", "Blade & Soul");
+    var test = bladeandsoul;
+    DisplayMembersForTeamPage(test, "bladeandsoul", "Blade & Soul");
 });
