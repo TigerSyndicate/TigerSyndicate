@@ -256,7 +256,6 @@ function DisplayMembersForTeamPage(id, title){
         });
     };
     
-    console.log("before getjson call in dmftp" + lambdaFunction(null));
     GetJson(lambdaFunction, MembersDataFile);
 }
 
