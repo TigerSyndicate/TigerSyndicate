@@ -10,6 +10,7 @@ var innerContent = $("#innerContent");
 
 
 function GetJson(lambdaFunction, dataFile){
+    console.log("in getjson");
     $.getJSON(dataFile, function(data){
         //empty
     }).done(function(data){
@@ -231,9 +232,11 @@ function makeMemberCard(item, gameign){
 }
 
 function DisplayMembersForTeamPage(id, title){
+    console.log("in dmftp");
     ChangeContentTitle("gameTitle", id, title);
     EmptyInnerContent();
     
+    console.log("before lambda func in dmftp");
     var lambdaFunction = function(data){
         $.each(data.Members, function(i, item){
             console.log("before check type" + item.type);
@@ -250,6 +253,7 @@ function DisplayMembersForTeamPage(id, title){
         });
     };
     
+    console.log("before getjson call in dmftp");
     GetJson(lambdaFunction, MembersDataFile);
 }
 
