@@ -1,3 +1,5 @@
+$("#jsRequired").css("display","none");
+    
 $(function(){
     $("#preloaderBg").css("display","none");
     
