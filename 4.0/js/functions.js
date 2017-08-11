@@ -11,11 +11,11 @@ var innerContent = $("#innerContent");
 
 function GetJson(lambdaFunction, dataFile){
     console.log("in getjson");
-    console.log(dataFile);
-    console.log(lambdaFunction);
     $.getJSON(dataFile, function(data){
+        console.log("in .getjson");
         //empty
     }).done(function(data){
+        console.log("in .done");
         lambdaFunction(data);
     });
 }
