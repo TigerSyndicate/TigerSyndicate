@@ -137,7 +137,7 @@ function DisplayMembersForTeamPage(gameign, id, title){
     
     var lambdaFunction = function(data){
         $.each(data[id], function(i, item){
-            if(item.type == "ranked" && (gameign != undefined || gameign != "") ){
+            if(item.type == "ranked" && (item.gameign != undefined || item.gameign != "") ){
                 var memberCard = '<div class="memberCard">';
                 
                     memberCard += '<div class="memberImgContainer">';
@@ -151,7 +151,7 @@ function DisplayMembersForTeamPage(gameign, id, title){
                     
                     memberCard += '<div class="memberContentContainer">';
                     
-                        memberCard += '<ign>' + gameign + '</ign>';
+                        memberCard += '<ign>' + item.gameign + '</ign>';
                         /*
                         if(id === "bladeandsoul"){
                             memberCard += '<ign>' + item.bladeandsoul + '</ign>';

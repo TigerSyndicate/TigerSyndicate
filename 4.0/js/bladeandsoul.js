@@ -1,3 +1,3 @@
 $(function(){
-    DisplayMembersForTeamPage(item.bladeandsoul, "bladeandsoul", "Blade & Soul");
+    DisplayMembersForTeamPage(bladeandsoul, "bladeandsoul", "Blade & Soul");
 });
