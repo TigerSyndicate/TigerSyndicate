@@ -12,7 +12,7 @@ var innerContent = $("#innerContent");
 function GetJson(lambdaFunction, dataFile){
     console.log("in getjson");
     console.log(dataFile);
-    console.log(lamdaFunction);
+    console.log(lambdaFunction);
     $.getJSON(dataFile, function(data){
         //empty
     }).done(function(data){
