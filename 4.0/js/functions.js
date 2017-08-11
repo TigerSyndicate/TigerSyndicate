@@ -11,6 +11,8 @@ var innerContent = $("#innerContent");
 
 function GetJson(lambdaFunction, dataFile){
     console.log("in getjson");
+    console.log(dataFile);
+    console.log(lamdaFunction);
     $.getJSON(dataFile, function(data){
         //empty
     }).done(function(data){
