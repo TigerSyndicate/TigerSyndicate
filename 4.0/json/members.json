@@ -1,7 +1,7 @@
 {
     "Members":[
         {
-            "type"      :   "ranked"
+            "type"      :   "ranked",
             "name"      :   "Calvin",
             "img_path"  :   "/imgs/members/calvin.png",
             "bladeandsoul"      :   "Borealis (BladeAndSoul ign)",
@@ -39,7 +39,7 @@
             "discord"   :   "https://discordapp.com/",
             "desc"      :   "Example: This member does not have a steam link. Member of Blade and Souls and Brawlhalla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. Integer vulputate odio ut gravida accumsan. Maecenas facilisis sed ante non condimentum. Donec egestas orci in ligula bibendum, et sodales lorem egestas. Integer in tincidunt nulla, eu porttitor nibh."
         },{
-            "type"      :   "casual"
+            "type"      :   "casual",
             "name"      :   "Bob",
             "img_path"  :   "",
             "bladeandsoul"      :   "Mob",
@@ -49,7 +49,7 @@
             "discord"   :   "https://discordapp.com/",
             "desc"      :   "Example: This member does not have profile picture, twitch account, nor twitter account."
         },{
-            "type"      :   "ranked"
+            "type"      :   "ranked",
             "name"      :   "Bob without member info and no img/profile/avatar",
             "img_path"  :   "",
             "bladeandsoul"      :   "Mob without member info",

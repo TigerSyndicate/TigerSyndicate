@@ -243,7 +243,7 @@ function DisplayMembersForTeamPage(id, title){
         console.log("in lambda definition");
         $.each(data.Members, function(i, item){
             console.log("before check type" + item.type);
-            /*if(item.type == "ranked"){
+            if(item.type == "ranked"){
                 console.log("in ranked" + item.type);
                 console.log(item.bladeandsoul);
                 if(id == "bladeandsoul" && ( item.bladeandsoul != "" || item.bladeandsoul != undefined) ){
@@ -252,7 +252,7 @@ function DisplayMembersForTeamPage(id, title){
                 if(id == "brawlhalla" && item.brawlhalla != undefined){
                     makeMemberCard(item, item.brawlhalla);
                 }
-            }*/
+            }
         });
     };
     
