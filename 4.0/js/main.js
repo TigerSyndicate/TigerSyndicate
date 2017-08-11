@@ -1,4 +1,4 @@
-$("#jsRequired").css("display","none");
+$("#jsBg").css("display","none");
     
 $(function(){
     $("#preloaderBg").css("display","none");
