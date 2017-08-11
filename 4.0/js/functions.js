@@ -240,9 +240,10 @@ function DisplayMembersForTeamPage(id, title){
     
     console.log("before lambda func in dmftp");
     var lambdaFunction = function(data){
+        console.log("in lambda definition");
         $.each(data.Members, function(i, item){
             console.log("before check type" + item.type);
-            if(item.type == "ranked"){
+            /*if(item.type == "ranked"){
                 console.log("in ranked" + item.type);
                 console.log(item.bladeandsoul);
                 if(id == "bladeandsoul" && ( item.bladeandsoul != "" || item.bladeandsoul != undefined) ){
@@ -251,11 +252,11 @@ function DisplayMembersForTeamPage(id, title){
                 if(id == "brawlhalla" && item.brawlhalla != undefined){
                     makeMemberCard(item, item.brawlhalla);
                 }
-            }
+            }*/
         });
     };
     
-    console.log("before getjson call in dmftp");
+    console.log("before getjson call in dmftp" + lambdaFunction(null));
     GetJson(lambdaFunction, MembersDataFile);
 }
 
