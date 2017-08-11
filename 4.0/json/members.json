@@ -1,37 +1,58 @@
 {
     "Members":[
         {
-            "type"      :   "Ranked"
+            "type"      :   "ranked"
             "name"      :   "Calvin",
             "img_path"  :   "/imgs/members/calvin.png",
-            "ign"       :   "Borealis (BladeAndSoul ign)",
+            "bladeandsoul"      :   "Borealis (BladeAndSoul ign)",
+            "brawlhalla"        :   "Borealis 2",
+            "companyofheroes"   :   "Borealis 3",
+            "counterstrikego"   :   "Borealis 4",
+            "darksouls3"        :   "Borealis 5",
+            "destiny"           :   "Borealis 6",
+            "dota2"             :   "Borealis 7",
+            "hearthstone"       :   "Borealis 8",
+            "heroesofthestorm"  :   "Borealis 9",
+            "leagueoflegends"   :   "Borealis 10",
+            "overwatch"         :   "Borealis 11",
+            "starcraft2"        :   "Borealis 12",
+            "streetfighter5"    :   "Borealis 13",
+            "warframe"          :   "Borealis 14",
+            "worldofwarcraft"   :   "Borealis 15",
             "twitch"    :   "https://www.twitch.tv/",
             "twitter"   :   "https://twitter.com/",
             "steam"     :   "http://steamcommunity.com/profiles/76561198020009988/",
             "discord"   :   "https://discordapp.com/",
-            "desc"      :   "Supports different ign's in different games; look at Brawlhalla members. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. "
+            "desc"      :   "Supports different ign's in different games; look at all other team pages. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. "
         },{
+            "type"      :   "amateur",
             "name"      :   "Hobbes",
             "img_path"  :   "/imgs/members/hobbes.png",
-            "ign"       :   "Hobble",
+            "bladeandsoul"      :   "Hobble",
+            "brawlhalla"        :   "Hobble10",
+            "companyofheroes"   :   "",
+            "counterstrikego"   :   "",
+            "darksouls3"        :   "",
             "twitch"    :   "https://www.twitch.tv/",
             "twitter"   :   "https://twitter.com/",
             "steam"     :   "",
             "discord"   :   "https://discordapp.com/",
-            "desc"      :   "Example: This member does not have a steam link. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. Integer vulputate odio ut gravida accumsan. Maecenas facilisis sed ante non condimentum. Donec egestas orci in ligula bibendum, et sodales lorem egestas. Integer in tincidunt nulla, eu porttitor nibh."
+            "desc"      :   "Example: This member does not have a steam link. Member of Blade and Souls and Brawlhalla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. Integer vulputate odio ut gravida accumsan. Maecenas facilisis sed ante non condimentum. Donec egestas orci in ligula bibendum, et sodales lorem egestas. Integer in tincidunt nulla, eu porttitor nibh."
         },{
+            "type"      :   "casual"
             "name"      :   "Bob",
             "img_path"  :   "",
-            "ign"       :   "Mob",
+            "bladeandsoul"      :   "Mob",
             "twitch"    :   "",
             "twitter"   :   "",
             "steam"     :   "http://steamcommunity.com/",
             "discord"   :   "https://discordapp.com/",
             "desc"      :   "Example: This member does not have profile picture, twitch account, nor twitter account."
         },{
-            "name"      :   "Bob without member info",
+            "type"      :   "ranked"
+            "name"      :   "Bob without member info and no img/profile/avatar",
             "img_path"  :   "",
-            "ign"       :   "Mob without member info",
+            "bladeandsoul"      :   "Mob without member info",
             "twitch"    :   "",
             "twitter"   :   "",
             "steam"     :   "http://steamcommunity.com/",

@@ -1,2 +1,5 @@
-Games.json
-    - The 'id' field also corresponds to the last part of the url to get to the page, so if it's changed to something else or something simpler, the folder and css rule needs to match.
+games.json
+    - The 'id' field also corresponds to the last part of the url to get to the page, so if it's changed to something else or something simpler, the folder and css rule needs to match. It also corresponds to the css rules and how the javascript finds members for each team page.
+    
+members.json
+    -
