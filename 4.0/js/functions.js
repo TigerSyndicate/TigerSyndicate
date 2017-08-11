@@ -132,6 +132,7 @@ function ListGames(){
 
 
 function makeMemberCard(item, gameign){
+    console.log("in makeMemberCard");
     var memberCard = '<div class="memberCard">';
     
         memberCard += '<div class="memberImgContainer">';
@@ -235,7 +236,10 @@ function DisplayMembersForTeamPage(id, title){
     
     var lambdaFunction = function(data){
         $.each(data[id], function(i, item){
+            console.log("before check type" + item.type);
             if(item.type == "ranked"){
+                console.log("in ranked" + item.type);
+                console.log(item.bladeandsoul);
                 if(id == "bladeandsoul" && ( item.bladeandsoul != "" || item.bladeandsoul != undefined) ){
                     makeMemberCard(item, item.bladeandsoul);
                 }
