@@ -235,7 +235,7 @@ function DisplayMembersForTeamPage(id, title){
     EmptyInnerContent();
     
     var lambdaFunction = function(data){
-        $.each(data[id], function(i, item){
+        $.each(data.Members, function(i, item){
             console.log("before check type" + item.type);
             if(item.type == "ranked"){
                 console.log("in ranked" + item.type);
