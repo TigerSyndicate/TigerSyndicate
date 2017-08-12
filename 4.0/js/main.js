@@ -9,8 +9,8 @@ $(function(){
     });
     
     var url = window.location.pathname;
-    var filename = url.substring(url.lastIndexOf('/')+1);
-    alert(filename);
+    var filename = url.split('/');
+    console.log(url.substring(url[url.length - 1]));
     
     //Nav links
     /*
