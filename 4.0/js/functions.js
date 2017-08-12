@@ -22,12 +22,11 @@ function DisplayAllMembers(){
     console.log("in DAM");
     var lambdaFunction = function(data){
         console.log("in lambdafunc def");
-        console.log(data);
-        console.log(data.typeof);
+        console.log(data.Members);
         
         if(SortedMembersData === null){
             //sort data first
-            data.sort(function (a, b){
+            data.Members.sort(function (a, b){
                 if(b.name < a.name){
                     return 1;
                 }
@@ -38,9 +37,9 @@ function DisplayAllMembers(){
                     return 0;
                 }
             });
-            SortedMembersData = data;
+            SortedMembersData = data.Members;
             console.log("sorted data:");
-            console.log(data);
+            console.log(data.Members);
         }
         
         //loop 
