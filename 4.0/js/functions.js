@@ -61,7 +61,7 @@ function DisplayAllMembers(){
         }
         
         if(SortedCasualMembers === null){
-            SortedAmateurMembers = SortedMembersData.filter(function(item){
+            SortedCasualMembers = SortedMembersData.filter(function(item){
                 return (item.type === "casual");
             });
         }
