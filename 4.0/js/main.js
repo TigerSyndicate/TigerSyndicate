@@ -10,15 +10,21 @@ $(function(){
     
     var url = window.location.pathname.split('/');
     var foldername = url[url.length - 2];
-    console.log(foldername);
     
     if(foldername == "teams"){
         ListGames();
     }
-    else if(false){
+    else if(foldername == "members"){
         
     }
-    else{
+    else if(foldername == "contact"){
+        
+    }
+    else if(foldername == "faq"){
+        
+    }
+    else if(foldername != ""){
+        
         var title, isGamePage = true;
         switch(foldername){
             case "bladeandsoul":
@@ -75,6 +81,9 @@ $(function(){
         if(isGamePage){
             DisplayMembersForTeamPage(foldername, title);
         }
+    }
+    else{
+        //do nothing
     }
     
     

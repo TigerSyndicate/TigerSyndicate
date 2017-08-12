@@ -53,6 +53,7 @@
             "name"      :   "Bob without member info and no img/profile/avatar",
             "img_path"  :   "",
             "bladeandsoul"      :   "Mob without member info",
+            "brawlhalla"        :   "",
             "twitch"    :   "",
             "twitter"   :   "",
             "steam"     :   "http://steamcommunity.com/",
