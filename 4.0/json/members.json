@@ -25,21 +25,18 @@
             "discord"   :   "https://discordapp.com/",
             "desc"      :   "Supports different ign's in different games; look at all other team pages. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. "
         },{
-            "type"      :   "amateur",
+            "type"      :   "ranked",
             "name"      :   "Hobbes",
             "img_path"  :   "/imgs/members/hobbes.png",
             "bladeandsoul"      :   "Hobble",
             "brawlhalla"        :   "Hobble10",
-            "companyofheroes"   :   "",
-            "counterstrikego"   :   "",
-            "darksouls3"        :   "",
             "twitch"    :   "https://www.twitch.tv/",
             "twitter"   :   "https://twitter.com/",
             "steam"     :   "",
             "discord"   :   "https://discordapp.com/",
             "desc"      :   "Example: This member does not have a steam link. Member of Blade and Souls and Brawlhalla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. Integer vulputate odio ut gravida accumsan. Maecenas facilisis sed ante non condimentum. Donec egestas orci in ligula bibendum, et sodales lorem egestas. Integer in tincidunt nulla, eu porttitor nibh."
         },{
-            "type"      :   "casual",
+            "type"      :   "ranked",
             "name"      :   "Bob",
             "img_path"  :   "",
             "bladeandsoul"      :   "Mob",
@@ -53,12 +50,31 @@
             "name"      :   "Bob without member info and no img/profile/avatar",
             "img_path"  :   "",
             "bladeandsoul"      :   "Mob without member info",
-            "brawlhalla"        :   "",
             "twitch"    :   "",
             "twitter"   :   "",
             "steam"     :   "http://steamcommunity.com/",
             "discord"   :   "https://discordapp.com/",
             "desc"      :   ""
+        },{
+            "type"      :   "amateur",
+            "name"      :   "Billy",
+            "img_path"  :   "",
+            "bladeandsoul"      :   "billyyyyy",
+            "twitch"    :   "",
+            "twitter"   :   "",
+            "steam"     :   "http://steamcommunity.com/",
+            "discord"   :   "https://discordapp.com/",
+            "desc"      :   "This is billy and is an amateur player and plays blade and soul."
+        },{
+            "type"      :   "casual",
+            "name"      :   "Callie",
+            "img_path"  :   "",
+            "bladeandsoul"      :   "Calliee",
+            "twitch"    :   "",
+            "twitter"   :   "",
+            "steam"     :   "http://steamcommunity.com/",
+            "discord"   :   "https://discordapp.com/",
+            "desc"      :   "Callie is a casual player and plays blade and soul."
         }
     ]
 }

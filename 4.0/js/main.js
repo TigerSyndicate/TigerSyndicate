@@ -18,10 +18,10 @@ $(function(){
         
     }
     else if(foldername == "contact"){
-        
+        DisplayContact();
     }
     else if(foldername == "faq"){
-        
+        DisplayFAQ();
     }
     else if(foldername != ""){
         
