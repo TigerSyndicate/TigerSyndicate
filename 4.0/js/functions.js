@@ -8,18 +8,40 @@ var content = $("#content");
 var contentTitle = $("#contentTitle");
 var innerContent = $("#innerContent");
 
+var SortedMembersData = null;
 
 function GetJson(lambdaFunction, dataFile){
     $.getJSON(dataFile, function(data){
         //empty
     }).done(function(data){
-        console.log(data);
         lambdaFunction(data);
     });
 }
 
 function DisplayAllMembers(){
-    
+    var lambdaFunction = function(data){
+        if(SortedMembersData == null){
+            //sort data first
+            data.sort(function (a, b){
+                if(b.name < a.name){
+                    return 1;
+                }
+                else if(a.name < b.name){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+            });
+            SortedMembersData = data;
+            console.log("sorted data:");
+            console.log(data);
+        }
+        
+        
+        
+        
+    };
 }
 
 function DisplayFAQ(){
