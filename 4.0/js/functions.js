@@ -19,6 +19,7 @@ function ParseJson(lambdaFunction, dataFile){
 }
 
 function DisplayAllMembers(){
+    console.log("in DAM");
     var lambdaFunction = function(data){
         if(SortedMembersData == null){
             //sort data first
