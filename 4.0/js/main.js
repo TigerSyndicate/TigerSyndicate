@@ -10,7 +10,7 @@ $(function(){
     
     var url = window.location.pathname;
     var filename = url.split('/');
-    console.log(url.substring(url[url.length - 1]));
+    console.log(url.substring(url[url.length]));
     
     //Nav links
     /*

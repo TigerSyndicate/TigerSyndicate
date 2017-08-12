@@ -10,12 +10,9 @@ var innerContent = $("#innerContent");
 
 
 function GetJson(lambdaFunction, dataFile){
-    console.log("in getjson");
     $.getJSON(dataFile, function(data){
-        console.log("in .getjson");
         //empty
     }).done(function(data){
-        console.log("in .done");
         lambdaFunction(data);
     });
 }
@@ -135,7 +132,6 @@ function ListGames(){
 
 
 function makeMemberCard(item, gameign){
-    console.log("in makeMemberCard");
     var memberCard = '<div class="memberCard">';
     
         memberCard += '<div class="memberImgContainer">';
@@ -234,18 +230,12 @@ function makeMemberCard(item, gameign){
 }
 
 function DisplayMembersForTeamPage(id, title){
-    console.log("in dmftp");
     ChangeContentTitle("gameTitle", id, title);
     EmptyInnerContent();
     
-    console.log("before lambda func in dmftp");
     var lambdaFunction = function(data){
-        console.log("in lambda definition");
         $.each(data.Members, function(i, item){
-            console.log("before check type" + item.type);
             if(item.type == "ranked"){
-                console.log("in ranked" + item.type);
-                console.log(item.bladeandsoul);
                 if(id == "bladeandsoul" && ( item.bladeandsoul != "" || item.bladeandsoul != undefined) ){
                     makeMemberCard(item, item.bladeandsoul);
                 }
