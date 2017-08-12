@@ -37,7 +37,7 @@
             "desc"      :   "Example: This member does not have a steam link. Member of Blade and Souls and Brawlhalla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. Integer vulputate odio ut gravida accumsan. Maecenas facilisis sed ante non condimentum. Donec egestas orci in ligula bibendum, et sodales lorem egestas. Integer in tincidunt nulla, eu porttitor nibh."
         },{
             "type"      :   "ranked",
-            "name"      :   "Bob",
+            "name"      :   "Bobby",
             "img_path"  :   "",
             "bladeandsoul"      :   "Mob",
             "twitch"    :   "",
@@ -47,9 +47,9 @@
             "desc"      :   "Example: This member does not have profile picture, twitch account, nor twitter account."
         },{
             "type"      :   "ranked",
-            "name"      :   "Bob without member info and no img/profile/avatar",
+            "name"      :   "Rick",
             "img_path"  :   "",
-            "bladeandsoul"      :   "Mob without member info",
+            "bladeandsoul"      :   "Rickkkyyytundo without member info and no img/profile/avatar",
             "twitch"    :   "",
             "twitter"   :   "",
             "steam"     :   "http://steamcommunity.com/",
