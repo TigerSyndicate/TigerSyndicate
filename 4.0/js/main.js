@@ -15,7 +15,7 @@ $(function(){
         ListGames();
     }
     else if(foldername == "members"){
-        
+        DisplayAllMembers();
     }
     else if(foldername == "contact"){
         DisplayContact();
