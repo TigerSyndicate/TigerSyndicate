@@ -22,7 +22,7 @@ function DisplayAllMembers(){
     console.log("in DAM");
     var lambdaFunction = function(data){
         console.log("in lambdafunc def");
-        if(SortedMembersData == null){
+        if(SortedMembersData === null){
             //sort data first
             data.sort(function (a, b){
                 if(b.name < a.name){
@@ -42,10 +42,9 @@ function DisplayAllMembers(){
         
         //loop 
         
-        ParseJson(lambdaFunction, MembersDataFile);
     };
     
-    
+    ParseJson(lambdaFunction, MembersDataFile);
 }
 
 function DisplayFAQ(){
