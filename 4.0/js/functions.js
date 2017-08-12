@@ -131,7 +131,7 @@ function ListGames(){
 }
 
 
-function makeMemberCard(item, gameign){
+function makeMemberCard(item, ign){
     var memberCard = '<div class="memberCard">';
     
         memberCard += '<div class="memberImgContainer">';
@@ -145,55 +145,7 @@ function makeMemberCard(item, gameign){
         
         memberCard += '<div class="memberContentContainer">';
         
-            memberCard += '<ign>' + gameign + '</ign>';
-            /*
-            if(id === "bladeandsoul"){
-                memberCard += '<ign>' + item.bladeandsoul + '</ign>';
-            }
-            if(id === "brawlhalla"){
-                memberCard += '<ign>' + item.brawlhalla + '</ign>';
-            }
-            if(id === "companyofheroes"){
-                memberCard += '<ign>' + item.companyofheroes + '</ign>';
-            }
-            if(id === "counterstrikego"){
-                memberCard += '<ign>' + item.counterstrikego + '</ign>';
-            }
-            if(id === "darksouls3"){
-                memberCard += '<ign>' + item.darksouls3 + '</ign>';
-            }
-            if(id === "destiny"){
-                memberCard += '<ign>' + item.destiny + '</ign>';
-            }
-            if(id === "dota2"){
-                memberCard += '<ign>' + item.dota2 + '</ign>';
-            }
-            if(id === "hearthstone"){
-                memberCard += '<ign>' + item.hearthstone + '</ign>';
-            }
-            if(id === "heroesofthestorm"){
-                memberCard += '<ign>' + item.heroesofthestorm + '</ign>';
-            }
-            if(id === "leagueoflegends"){
-                memberCard += '<ign>' + item.leagueoflegends + '</ign>';
-            }
-            if(id === "overwatch"){
-                memberCard += '<ign>' + item.overwatch + '</ign>';
-            }
-            if(id === "starcraft2"){
-                memberCard += '<ign>' + item.starcraft2 + '</ign>';
-            }
-            if(id === "streetfighter5"){
-                memberCard += '<ign>' + item.streetfighter5 + '</ign>';
-            }
-            if(id === "warframe"){
-                memberCard += '<ign>' + item.warframe + '</ign>';
-            }
-            if(id === "worldofwarcraft"){
-                memberCard += '<ign>' + item.worldofwarcraft + '</ign>';
-            }
-            */
-            
+            memberCard += '<ign>' + ign + '</ign>';
             
             memberCard += '<name>' + item.name + '</name>';
             if(item.desc != "" || item.desc === undefined){
