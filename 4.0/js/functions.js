@@ -51,26 +51,27 @@ function DisplayAllMembers(){
         if(SortedRankedMembers === null){
             SortedRankedMembers = SortedMembersData;
             SortedRankedMembers.filter(function(item){
-                return (item.type == "ranked");
+                return (item.type === "ranked");
             });
         }
         
         if(SortedAmateurMembers === null){
             SortedAmateurMembers = SortedMembersData;
             SortedAmateurMembers.filter(function(item){
-                return (item.type == "amateur");
+                return (item.type === "amateur");
             });
         }
         
         if(SortedCasualMembers === null){
             SortedAmateurMembers = SortedMembersData;
             SortedAmateurMembers.filter(function(item){
-                return (item.type == "casual");
+                return (item.type === "casual");
             });
         }
         
         console.log("before loops");
         $.each(SortedRankedMembers, function(i, item){
+            console.log(SortedRankedMembers);
             console.log("before makeMiniMemberCard call");
             makeMiniMemberCard(item, RankedImgPath);
         });
@@ -206,7 +207,7 @@ function makeMiniMemberCard(item, imgPath){
     var miniMemberCard = '<div class="miniMemberCard" member-id="' + item.id + '">';
         
             miniMemberCard += '<div class="miniMemberImgContainer">';
-                miniMemberCard += '<img class="miniMemberCard" src="' + imgPath + '"/>';
+                miniMemberCard += '<img class="miniMemberImg" src="' + imgPath + '"/>';
             miniMemberCard += '</div>';//end of miniMemberImgContainer
             
             miniMemberCard += '<div class="miniMemberContentContainer">';
