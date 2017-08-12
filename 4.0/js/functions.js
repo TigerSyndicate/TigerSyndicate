@@ -1,6 +1,6 @@
-var RankedImgPath = "/imgs/rankedAvatar";
-var AmateurImgPath = "/imgs/amateurAvatar";
-var CasualImgPath = "/imgs/casualAvatar";
+var RankedImgPath = "/imgs/rankedAvatar.jpg";
+var AmateurImgPath = "/imgs/amateurAvatar.jpg";
+var CasualImgPath = "/imgs/casualAvatar.jpg";
 
 var GamesDataFile = "/json/games.json";
 var FAQDataFile = "/json/faq.json";
@@ -26,7 +26,7 @@ function GetJson(lambdaFunction, dataFile){
 }
 
 function DisplayAllMembers(){
-    console.log("in DAM");
+    
     var lambdaFunction = function(data){
         console.log("in lambdafunc def");
         console.log(data.Members);
@@ -49,22 +49,19 @@ function DisplayAllMembers(){
         }
         
         if(SortedRankedMembers === null){
-            SortedRankedMembers = SortedMembersData;
-            SortedRankedMembers.filter(function(item){
+            SortedRankedMembers = SortedMembersData.filter(function(item){
                 return (item.type === "ranked");
             });
         }
         
         if(SortedAmateurMembers === null){
-            SortedAmateurMembers = SortedMembersData;
-            SortedAmateurMembers.filter(function(item){
+            SortedAmateurMembers = SortedMembersData.filter(function(item){
                 return (item.type === "amateur");
             });
         }
         
         if(SortedCasualMembers === null){
-            SortedAmateurMembers = SortedMembersData;
-            SortedAmateurMembers.filter(function(item){
+            SortedAmateurMembers = SortedMembersData.filter(function(item){
                 return (item.type === "casual");
             });
         }
@@ -216,7 +213,7 @@ function makeMiniMemberCard(item, imgPath){
         
         miniMemberCard += '</div>';//end of miniMemberCard
         
-    innerContent.append(miniMemberCard);
+    $("#miniMemberCardContainer").append(miniMemberCard);
 }
 
 function makeMemberCard(item, ign){

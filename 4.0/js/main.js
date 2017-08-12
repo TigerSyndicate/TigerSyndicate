@@ -15,7 +15,6 @@ $(function(){
         ListGames();
     }
     else if(foldername == "members"){
-        console.log("in main members");
         DisplayAllMembers();
     }
     else if(foldername == "contact"){
