@@ -8,6 +8,10 @@ $(function(){
         ToggleNavOverlay();
     });
     
+    var url = window.location.pathname;
+    var filename = url.substring(url.lastIndexOf('/')+1);
+    alert(filename);
+    
     //Nav links
     /*
     $(".navbtn").click(function(){

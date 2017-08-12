@@ -140,7 +140,7 @@ function makeMemberCard(item, gameign){
     
         memberCard += '<div class="memberImgContainer">';
         if(item.img_path === "" || item.img_path === undefined){
-            memberCard += '<img class="memberImg" src="imgs/black.png"/>';
+            memberCard += '<img class="memberImg" src="/imgs/black.png"/>';
         }
         else{
             memberCard += '<img class="memberImg" src="' + item.img_path + '"/>';
