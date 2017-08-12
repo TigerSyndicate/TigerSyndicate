@@ -1,6 +1,7 @@
 {
     "Members":[
         {
+            "id"        :   "1",
             "type"      :   "ranked",
             "name"      :   "Calvin",
             "img_path"  :   "/imgs/members/calvin.png",
@@ -25,6 +26,7 @@
             "discord"   :   "https://discordapp.com/",
             "desc"      :   "Supports different ign's in different games; look at all other team pages. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. "
         },{
+            "id"        :   "2",
             "type"      :   "ranked",
             "name"      :   "Hobbes",
             "img_path"  :   "/imgs/members/hobbes.png",
@@ -36,6 +38,7 @@
             "discord"   :   "https://discordapp.com/",
             "desc"      :   "Example: This member does not have a steam link. Member of Blade and Souls and Brawlhalla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum lorem quis posuere consectetur. Integer vulputate odio ut gravida accumsan. Maecenas facilisis sed ante non condimentum. Donec egestas orci in ligula bibendum, et sodales lorem egestas. Integer in tincidunt nulla, eu porttitor nibh."
         },{
+            "id"        :   "3",
             "type"      :   "ranked",
             "name"      :   "Bobby",
             "img_path"  :   "",
@@ -46,6 +49,7 @@
             "discord"   :   "https://discordapp.com/",
             "desc"      :   "Example: This member does not have profile picture, twitch account, nor twitter account."
         },{
+            "id"        :   "4",
             "type"      :   "ranked",
             "name"      :   "Rick",
             "img_path"  :   "",
@@ -56,6 +60,7 @@
             "discord"   :   "https://discordapp.com/",
             "desc"      :   ""
         },{
+            "id"        :   "5",
             "type"      :   "amateur",
             "name"      :   "Billy",
             "img_path"  :   "",
@@ -66,6 +71,7 @@
             "discord"   :   "https://discordapp.com/",
             "desc"      :   "This is billy and is an amateur player and plays blade and soul."
         },{
+            "id"        :   "6",
             "type"      :   "casual",
             "name"      :   "Callie",
             "img_path"  :   "",

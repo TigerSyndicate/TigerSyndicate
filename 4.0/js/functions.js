@@ -1,3 +1,7 @@
+var RankedImgPath = "/imgs/rankedAvatar";
+var AmateurImgPath = "/imgs/amateurAvatar";
+var CasualImgPath = "/imgs/casualAvatar";
+
 var GamesDataFile = "/json/games.json";
 var FAQDataFile = "/json/faq.json";
 var OrgInfoDataFile = "/json/organization-info.json";
@@ -66,15 +70,15 @@ function DisplayAllMembers(){
         }
         
         $.each(SortedRankedMembers, function(i, item){
-            
+            makeMiniMemberCard(item, RankedImgPath);
         });
         
         $.each(SortedAmateurMembers, function(i, item){
-            
+            makeMiniMemberCard(item, AmateurImgPath);
         });
         
         $.each(SortedCasualMembers, function(i, item){
-            
+            makeMiniMemberCard(item, CasualImgPath);
         });
         
     };
@@ -193,6 +197,20 @@ function ListGames(){
    };
    
    GetJson(lambdaFunction, GamesDataFile);
+}
+
+function makeMiniMemberCard(item, imgPath){
+    var miniMemberCard = '<div class="miniMemberCard" member-id="' + item.id + '">';
+        
+            miniMemberCard += '<div class="miniMemberImgContainer">';
+                miniMemberCard += '<img class="miniMemberCard" src="' + imgPath + '"/>';
+            miniMemberCard += '</div>';//end of miniMemberImgContainer
+            
+            miniMemberCard += '<div class="miniMemberContentContainer">';
+                miniMemberCard += '<name>' + item.name + '</name>';
+            miniMemberCard += '</div>';//end of miniMemberContentContainer
+        
+        miniMemberCard += '</div>';//end of miniMemberCard
 }
 
 function makeMemberCard(item, ign){
