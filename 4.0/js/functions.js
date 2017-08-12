@@ -214,6 +214,8 @@ function makeMiniMemberCard(item, imgPath){
             miniMemberCard += '</div>';//end of miniMemberContentContainer
         
         miniMemberCard += '</div>';//end of miniMemberCard
+        
+    innerContent.append(miniMemberCard);
 }
 
 function makeMemberCard(item, ign){
