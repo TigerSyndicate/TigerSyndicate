@@ -69,7 +69,9 @@ function DisplayAllMembers(){
             });
         }
         
+        console.log("before loops");
         $.each(SortedRankedMembers, function(i, item){
+            console.log("before makeMiniMemberCard call");
             makeMiniMemberCard(item, RankedImgPath);
         });
         
@@ -200,6 +202,7 @@ function ListGames(){
 }
 
 function makeMiniMemberCard(item, imgPath){
+    console.log("in makeMiniMemberCard");
     var miniMemberCard = '<div class="miniMemberCard" member-id="' + item.id + '">';
         
             miniMemberCard += '<div class="miniMemberImgContainer">';
