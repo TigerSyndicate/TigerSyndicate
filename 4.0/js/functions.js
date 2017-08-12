@@ -9,6 +9,9 @@ var contentTitle = $("#contentTitle");
 var innerContent = $("#innerContent");
 
 var SortedMembersData = null;
+var SortedRankedMembers = null;
+var SortedAmateurMembers = null;
+var SortedCasualMembers = null;
 
 function GetJson(lambdaFunction, dataFile){
     $.getJSON(dataFile, function(data){
@@ -25,7 +28,6 @@ function DisplayAllMembers(){
         console.log(data.Members);
         
         if(SortedMembersData === null){
-            //sort data first
             data.Members.sort(function (a, b){
                 if(b.name < a.name){
                     return 1;
@@ -42,7 +44,38 @@ function DisplayAllMembers(){
             console.log(data.Members);
         }
         
-        //loop 
+        if(SortedRankedMembers === null){
+            SortedRankedMembers = SortedMembersData;
+            SortedRankedMembers.filter(function(item){
+                return (item.type == "ranked");
+            });
+        }
+        
+        if(SortedAmateurMembers === null){
+            SortedAmateurMembers = SortedMembersData;
+            SortedAmateurMembers.filter(function(item){
+                return (item.type == "amateur");
+            });
+        }
+        
+        if(SortedCasualMembers === null){
+            SortedAmateurMembers = SortedMembersData;
+            SortedAmateurMembers.filter(function(item){
+                return (item.type == "casual");
+            });
+        }
+        
+        $.each(SortedRankedMembers, function(i, item){
+            
+        });
+        
+        $.each(SortedAmateurMembers, function(i, item){
+            
+        });
+        
+        $.each(SortedCasualMembers, function(i, item){
+            
+        });
         
     };
     
