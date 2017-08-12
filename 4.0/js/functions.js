@@ -10,7 +10,7 @@ var innerContent = $("#innerContent");
 
 var SortedMembersData = null;
 
-function ParseJson(lambdaFunction, dataFile){
+function GetJson(lambdaFunction, dataFile){
     $.getJSON(dataFile, function(data){
         //empty
     }).done(function(data){
@@ -22,6 +22,9 @@ function DisplayAllMembers(){
     console.log("in DAM");
     var lambdaFunction = function(data){
         console.log("in lambdafunc def");
+        console.log(data);
+        console.log(data.typeof);
+        
         if(SortedMembersData === null){
             //sort data first
             data.sort(function (a, b){
@@ -44,7 +47,7 @@ function DisplayAllMembers(){
         
     };
     
-    ParseJson(lambdaFunction, MembersDataFile);
+    GetJson(lambdaFunction, MembersDataFile);
 }
 
 function DisplayFAQ(){
@@ -64,7 +67,7 @@ function DisplayFAQ(){
         innerContent.append(faqContainer);
     }
     
-    ParseJson(lambdaFunction, FAQDataFile);
+    GetJson(lambdaFunction, FAQDataFile);
 }
 
 
@@ -132,7 +135,7 @@ function DisplayContact(){
         innerContent.append(connectWithUsContainer);
     };
     
-    ParseJson(lambdaFunction, OrgInfoDataFile);
+    GetJson(lambdaFunction, OrgInfoDataFile);
 }
 
 function isGamesBtn(element){
@@ -157,7 +160,7 @@ function ListGames(){
         });
    };
    
-   ParseJson(lambdaFunction, GamesDataFile);
+   GetJson(lambdaFunction, GamesDataFile);
 }
 
 function makeMemberCard(item, ign){
@@ -266,7 +269,7 @@ function DisplayMembersForTeamPage(id, title){
         });
     };
     
-    ParseJson(lambdaFunction, MembersDataFile);
+    GetJson(lambdaFunction, MembersDataFile);
 }
 
 function ToggleNavOverlay(){
