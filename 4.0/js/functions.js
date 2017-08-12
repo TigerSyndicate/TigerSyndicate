@@ -13,8 +13,13 @@ function GetJson(lambdaFunction, dataFile){
     $.getJSON(dataFile, function(data){
         //empty
     }).done(function(data){
+        console.log(data);
         lambdaFunction(data);
     });
+}
+
+function DisplayAllMembers(){
+    
 }
 
 function DisplayFAQ(){
