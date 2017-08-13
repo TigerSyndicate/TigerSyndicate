@@ -7,7 +7,6 @@ var FAQDataFile = "/json/faq.json";
 var OrgInfoDataFile = "/json/organization-info.json";
 var MembersDataFile = "/json/members.json";
 
-var DataFile = "/json/data.json";
 var content = $("#content");
 var contentTitle = $("#contentTitle");
 var innerContent = $("#innerContent");
@@ -30,48 +29,39 @@ function ExitPopUp(){
 }
 
 function DisplayAllMembers(){
-    
     var lambdaFunction = function(data){
-        console.log("in lambdafunc def");
-        console.log(data.Members);
-        
         if(SortedMembersData === null){
             SortedMembersData = data.Members;
             SortedMembersData = SortedMembersData.sort(function (a, b){
-                if(b.name < a.name){
+                if(b.name < a.name)
                     return 1;
-                }
-                else if(a.name < b.name){
+                else if(a.name < b.name)
                     return -1;
-                }
-                else{
+                else
                     return 0;
-                }
             });
         }
         
         if(SortedRankedMembers === null){
             SortedRankedMembers = SortedMembersData.filter(function(item){
-                return (item.type === "ranked");
+                return item.type === "ranked";
             });
         }
         
         if(SortedAmateurMembers === null){
             SortedAmateurMembers = SortedMembersData.filter(function(item){
-                return (item.type === "amateur");
+                return item.type === "amateur";
             });
         }
         
         if(SortedCasualMembers === null){
             SortedCasualMembers = SortedMembersData.filter(function(item){
-                return (item.type === "casual");
+                return item.type === "casual";
             });
         }
         
-        console.log("before loops");
+        
         $.each(SortedRankedMembers, function(i, item){
-            console.log(SortedRankedMembers);
-            console.log("before makeMiniMemberCard call");
             makeMiniMemberCard(item, RankedImgPath);
         });
         
@@ -82,17 +72,35 @@ function DisplayAllMembers(){
         $.each(SortedCasualMembers, function(i, item){
             makeMiniMemberCard(item, CasualImgPath);
         });
-        
-    };
+    };//end lambda function
     
     GetJson(lambdaFunction, MembersDataFile);
 }
 
 function DisplayFAQ(){
-    ChangeContentTitle("", "logo2", "Tiger Syndicate");
-    EmptyInnerContent();
-    
     var lambdaFunction = function(data){
+        var faqContainer = document.createElement("div");
+        faqContainer.id = "faqContainer";
+        
+            var h2 = document.createElement("h2");
+            var h2Text = document.createTextNode("Frequently Asked Questions");
+            h2.appendChild(h2Text);
+            faqContainer.appendChild(h2);
+        
+            $.each(data.FAQ, function(i, item){
+                var pQ = document.createElement("p");
+                var pQText = document.createTextNode(item.Q);
+                faqContainer.appendChild(pQ);
+                
+                var pA = document.createElement("p");
+                var pAText = document.createTextNode(item.A);
+                faqContainer.appendChild(pA);
+            });
+            
+        innerContent.appendChild(faqContainer);
+        
+        //====
+        /*
         var faqContainer = '<div id="faqContainer">';
         faqContainer += '<h2>Frequently Asked Questions</h2>';
         
@@ -103,32 +111,61 @@ function DisplayFAQ(){
         faqContainer += '</div>';
         
         innerContent.append(faqContainer);
-    }
+        */
+    };//end of lambda function
     
     GetJson(lambdaFunction, FAQDataFile);
 }
 
-
 function DisplayContact(){
-    ChangeContentTitle("", "logo2", "Tiger Syndicate");
-    EmptyInnerContent();
-  
     var lambdaFunction = function(data){
-        var TSI = data.TigerSyndicateInfo;
+        var OrgInfo = data.TigerSyndicateInfo
         
+        var contactUsContainer = document.createElement("div");
+        contactUsContainer.id = "contactContainer";
+        
+            var h2 = document.createElement("h2");
+            var h2Text = document.createTextNode("Contact us");
+            h2.appendChild(h2Text);
+            contactUsContainer.appendChild(h2);
+            
+            var pEmail = document.createElement("p");
+            var pEmailText = document.createTextNode("Email us at ");
+                var aEmail = document.createElement("a");
+                
+                var ahref = "mailto:" + OrgInfo.contact_email;
+                aEmail.setAttribute("href", ahref);
+                
+                aEmail.setAttribute("target", "_top");
+                
+                var aEmailText = document.createTextNode(OrgInfo.contact_email);
+                aEmail.appendChild(aEmailText);
+            pEmailText.appendChild(aEmail);
+            pEmail.appendChild(pEmailText);
+            contactUsContainer.appendChild(pEmail);
+            
+        innerContent.appendChild(contactUsContainer);
+        
+        
+        var paypal = '<form id="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="5CD74KDYJJ7Y6"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></form>';
+        innerContent.append(paypal);
+        
+        
+        //===
+        /*
         var contactUsContainer = '<div id="contactContainer">';
         contactUsContainer += '<h2>Contact us</h2>';
-        contactUsContainer += '<p>Email us at <a href="mailto:' + TSI.contact_email + '" target="_top">' + TSI.contact_email + '</a></p>';
+        contactUsContainer += '<p>Email us at <a href="mailto:' + OrgInfo.contact_email + '" target="_top">' + OrgInfo.contact_email + '</a></p>';
         contactUsContainer += '</div>';
         innerContent.append(contactUsContainer);
+        */
         
-        
+        /*
         //paypal's donate button
-        //to-do
-        var paypal_temporary = '<div class="donateContainer"><h2>Donate</h2><p>*"Need paypal\'s donate html button code through the account.**</p></div>';
-        innerContent.append(paypal_temporary);
+        var paypal = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="W5QEEKGGKUX3C"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></form>';
+        innerContent.append(paypal);
         //innerContent.append(*paypal string*);
-        
+        */
         
         var connectWithUsContainer = '<div id="connectWithUsContainer">';
         connectWithUsContainer += '<h2>Connect with us</h2>';
@@ -171,7 +208,7 @@ function DisplayContact(){
         connectWithUsContainer += socialIcons;
         connectWithUsContainer += '</div>';
         innerContent.append(connectWithUsContainer);
-    };
+    };//end of lambda function
     
     GetJson(lambdaFunction, OrgInfoDataFile);
 }
