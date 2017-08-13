@@ -201,12 +201,10 @@ function ListGames(){
 
 function makeMiniMemberCard(item, imgPath){
     console.log("in makeMiniMemberCard");
-    var miniMemberCard = '<div class="miniMemberCard" member-id="' + item.id + '">';
-        
-            //miniMemberCard += '<div class="miniMemberImgContainer">';
-                miniMemberCard += '<img class="miniMemberImg" src="' + imgPath + '"/>';
-            //miniMemberCard += '</div>';//end of miniMemberImgContainer
-            
+    var miniMemberCard = '<div class="miniMemberCard" onclick="IndepthMemberCardPopup(' + item.id + ')">';
+
+            miniMemberCard += '<img class="miniMemberImg" src="' + imgPath + '"/>';
+
             miniMemberCard += '<div class="miniMemberContentContainer">';
                 miniMemberCard += '<name>' + item.name + '</name>';
             miniMemberCard += '</div>';//end of miniMemberContentContainer
