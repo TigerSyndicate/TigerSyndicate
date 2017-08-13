@@ -227,13 +227,13 @@ function IndepthMemberCardPopup(id){
 
 function makeIndepthMemberCard(selectedMember){
     var indepthMemberCard = document.createElement("div");
-    indepthMemberCard.className("memberCard");
+    indepthMemberCard.className = "memberCard";
     
     var memberImgContainer = document.createElement("div");
-    memberImgContainer.className("memberImgContainer");
+    memberImgContainer.className = "memberImgContainer";
     
         var img = document.createElement("img");
-        img.className("memberImg");
+        img.className = "memberImg";
         if(selectedMember.img_path === "" || selectedMember.img_path === undefined){
             img.setAttribute("src", "/imgs/black.png");
         }
@@ -245,7 +245,7 @@ function makeIndepthMemberCard(selectedMember){
     indepthMemberCard.append(memberImgContainer);
     
     var memberContentContainer = document.createElement("div");
-    memberContentContainer.className("memberContentContainer");
+    memberContentContainer.className = "memberContentContainer";
     
         //todo: how to display all the igns
         
