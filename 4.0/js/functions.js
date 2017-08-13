@@ -240,9 +240,9 @@ function makeIndepthMemberCard(selectedMember){
         else{
             img.setAttribute("src", selectedMember.img_path);
         }
-        memberImgContainer.append(img);
+        memberImgContainer.appendChild(img);
         
-    indepthMemberCard.append(memberImgContainer);
+    indepthMemberCard.appendChild(memberImgContainer);
     
     var memberContentContainer = document.createElement("div");
     memberContentContainer.className = "memberContentContainer";
@@ -250,11 +250,12 @@ function makeIndepthMemberCard(selectedMember){
         //todo: how to display all the igns
         
         var name = document.createElement("name");
-        name.createTextNode(selectedMember.name);
-        memberContentContainer.append(name);
+        var nameText = document.createTextNode(selectedMember.name);
+        name.appendChild(nameText);
+        memberContentContainer.appendChild(name);
     
     
-    indepthMemberCard.append(memberContentContainer);
+    indepthMemberCard.appendChild(memberContentContainer);
     
     return indepthMemberCard;
 }
