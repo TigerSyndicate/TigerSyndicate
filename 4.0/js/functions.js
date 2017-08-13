@@ -200,8 +200,9 @@ function ListGames(){
 }
 
 function IndepthMemberCardPopup(id){
+    console.log("in IMCP");
     var selectedMember = SortedMembersData.find(function(item){
-        return (item.id === id);
+        return (item.id === id.string);
     });
     
     console.log(selectedMember);
@@ -209,7 +210,7 @@ function IndepthMemberCardPopup(id){
 
 function makeMiniMemberCard(item, imgPath){
     console.log("in makeMiniMemberCard");
-    var miniMemberCard = '<div class="miniMemberCard" onclick="IndepthMemberCardPopup(' + item.id + ')">';
+    var miniMemberCard = '<div class="miniMemberCard" onclick="IndepthMemberCardPopup(\'' + item.id + '\')">';
 
             miniMemberCard += '<img class="miniMemberImg" src="' + imgPath + '"/>';
 
