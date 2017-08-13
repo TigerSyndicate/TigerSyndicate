@@ -9,7 +9,7 @@ var MembersDataFile = "/json/members.json";
 
 var content = $("#content");
 var contentTitle = $("#contentTitle");
-var innerContent = $("#innerContent");
+var innerContent = document.getElementById("#innerContent");
 
 var SortedMembersData = null;
 var SortedRankedMembers = null;
