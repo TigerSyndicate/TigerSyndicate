@@ -201,8 +201,9 @@ function ListGames(){
 
 function IndepthMemberCardPopup(id){
     console.log("in IMCP");
+    console.log(SortedMembersData);
     var selectedMember = SortedMembersData.find(function(item){
-        return (item.id === id.string);
+        return (item.id === id.toString());
     });
     
     console.log(selectedMember);
