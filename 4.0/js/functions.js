@@ -214,7 +214,7 @@ function IndepthMemberCardPopup(id){
     
     indepthMemberCardPopUpBg += '</div>';//end of indepthMemberCardPopUpBg
     
-    innerContent.append(indepthMemberCardPopUpBg);
+    $("body").append(indepthMemberCardPopUpBg);
 }
 
 function makeMiniMemberCard(item, imgPath){
