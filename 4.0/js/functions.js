@@ -26,7 +26,7 @@ function GetJson(lambdaFunction, dataFile){
 }
 
 function ExitPopUp(){
-    console.log(this);
+    $(".indepthMemberCardPopUpBg").remove();
 }
 
 function DisplayAllMembers(){
