@@ -131,17 +131,16 @@ function DisplayContact(){
             
             var pEmail = document.createElement("p");
             var pEmailText = document.createTextNode("Email us at ");
-                var aEmail = document.createElement("a");
-                
-                var ahref = "mailto:" + OrgInfo.contact_email;
-                aEmail.setAttribute("href", ahref);
-                
-                aEmail.setAttribute("target", "_top");
-                
-                var aEmailText = document.createTextNode(OrgInfo.contact_email);
-                aEmail.appendChild(aEmailText);
-            pEmailText.appendChild(aEmail);
+            
+            var aEmail = document.createElement("a");
+            var ahref = "mailto:" + OrgInfo.contact_email;
+            aEmail.setAttribute("href", ahref);
+            aEmail.setAttribute("target", "_top");
+            var aEmailText = document.createTextNode(OrgInfo.contact_email);
+            aEmail.appendChild(aEmailText);
+            
             pEmail.appendChild(pEmailText);
+            pEmail.appendChild(aEmail);
             contactUsContainer.appendChild(pEmail);
             
         innerContent.appendChild(contactUsContainer);
