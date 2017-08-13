@@ -228,7 +228,7 @@ function IndepthMemberCardPopup(id){
         div_spacer2.className = "col-1";
         indepthMemberCardPopUpBg.appendChild(div_spacer2);
     
-    $("body").appendChild(indepthMemberCardPopUpBg);
+    $("body").append(indepthMemberCardPopUpBg);
     
     console.log(indepthMemberCard);
 }
