@@ -199,6 +199,14 @@ function ListGames(){
    GetJson(lambdaFunction, GamesDataFile);
 }
 
+function IndepthMemberCardPopup(id){
+    var selectedMember = SortedMembersData.find(function(item){
+        return (item.id === id);
+    });
+    
+    console.log(selectedMember);
+}
+
 function makeMiniMemberCard(item, imgPath){
     console.log("in makeMiniMemberCard");
     var miniMemberCard = '<div class="miniMemberCard" onclick="IndepthMemberCardPopup(' + item.id + ')">';
