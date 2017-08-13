@@ -221,6 +221,10 @@ function IndepthMemberCardPopup(id){
     $("body").append(indepthMemberCardPopUpBg);
 }
 
+function makeIndepthMemberCard(selectedMember){
+    
+}
+
 function makeMiniMemberCard(item, imgPath){
     console.log("in makeMiniMemberCard");
     var miniMemberCard = '<div class="miniMemberCard" onclick="IndepthMemberCardPopup(\'' + item.id + '\')">';
