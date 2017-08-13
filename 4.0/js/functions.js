@@ -25,6 +25,10 @@ function GetJson(lambdaFunction, dataFile){
     });
 }
 
+function ExitPopUp(){
+    console.log(this);
+}
+
 function DisplayAllMembers(){
     
     var lambdaFunction = function(data){
@@ -208,7 +212,7 @@ function IndepthMemberCardPopup(id){
     console.log("selected member");
     console.log(selectedMember);
     
-    var indepthMemberCardPopUpBg = '<div class="indepthMemberCardPopUpBg">';
+    var indepthMemberCardPopUpBg = '<div class="indepthMemberCardPopUpBg" onclick="ExitPopUp()">';
     
         indepthMemberCardPopUpBg += '<p>' + selectedMember.id + ' ' + selectedMember.name + '</p>';
     
