@@ -213,6 +213,8 @@ function IndepthMemberCardPopup(id){
         indepthMemberCardPopUpBg += '<p>' + selectedMember.id + ' ' + selectedMember.name + '</p>';
     
     indepthMemberCardPopUpBg += '</div>';//end of indepthMemberCardPopUpBg
+    
+    innerContent.append(indepthMemberCardPopUpBg);
 }
 
 function makeMiniMemberCard(item, imgPath){
