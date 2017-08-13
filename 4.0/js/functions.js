@@ -202,9 +202,6 @@ function ListGames(){
 }
 
 function IndepthMemberCardPopup(id){
-    console.log("in IMCP");
-    console.log(SortedMembersData);
-    console.log(id);
     var selectedMember = SortedMembersData.find(function(item){
         return (item.id === id.toString());
     });
@@ -212,17 +209,28 @@ function IndepthMemberCardPopup(id){
     console.log("selected member");
     console.log(selectedMember);
     
-    var indepthMemberCardPopUpBg = '<div class="indepthMemberCardPopUpBg" onclick="ExitPopUp()">';
-    indepthMemberCardPopUpBg += '<div class="col-1"></div>';
-    indepthMemberCardPopUpBg += '<div class="col-10">';
+    var indepthMemberCardPopUpBg = document.createElement("div");
+    indepthMemberCardPopUpBg.className = "indepthMemberCardPopUpBg";
+    indepthMemberCardPopUpBg.setAttribute("onclick", "ExitPopUp()");
     
-    indepthMemberCardPopUpBg += '</div>';
-    indepthMemberCardPopUpBg += '<div class="col-1"></div>';
-    indepthMemberCardPopUpBg += '</div>';//end of indepthMemberCardPopUpBg
+        var div_spacer1 = document.createElement("div");
+        div_spacer1.className = "col-1";
+        indepthMemberCardPopUpBg.appendChild(div_spacer1);
+        
+        var div_col_10 = document.createElement("div");
+        div_col_10.className = "col-10";
+        
+            var indepthMemberCard = makeIndepthMemberCard(selectedMember);
+            div_col_10.appendChild(indepthMemberCard);
+            indepthMemberCardPopUpBg.appendChild(div_col_10);
+        
+        var div_spacer2 = document.createElement("div");
+        div_spacer2.className = "col-1";
+        indepthMemberCardPopUpBg.appendChild(div_spacer2);
     
-    $("body").append(indepthMemberCardPopUpBg);
+    $("body").appendChild(indepthMemberCardPopUpBg);
     
-    console.log(makeIndepthMemberCard(selectedMember));
+    console.log(indepthMemberCard);
 }
 
 function makeIndepthMemberCard(selectedMember){
