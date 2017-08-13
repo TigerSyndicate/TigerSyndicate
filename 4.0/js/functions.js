@@ -32,7 +32,8 @@ function DisplayAllMembers(){
         console.log(data.Members);
         
         if(SortedMembersData === null){
-            data.Members.sort(function (a, b){
+            SortedMembersData = data.Members;
+            SortedMembersData = SortedMembersData.sort(function (a, b){
                 if(b.name < a.name){
                     return 1;
                 }
@@ -43,9 +44,6 @@ function DisplayAllMembers(){
                     return 0;
                 }
             });
-            SortedMembersData = data.Members;
-            console.log("sorted data:");
-            console.log(data.Members);
         }
         
         if(SortedRankedMembers === null){
@@ -207,7 +205,14 @@ function IndepthMemberCardPopup(id){
         return (item.id === id.toString());
     });
     
+    console.log("selected member");
     console.log(selectedMember);
+    
+    var indepthMemberCardPopUpBg = '<div class="indepthMemberCardPopUpBg">';
+    
+        indepthMemberCardPopUpBg += '<p>' + selectedMember.id + ' ' + selectedMember.name + '</p>';
+    
+    indepthMemberCardPopUpBg += '</div>';//end of indepthMemberCardPopUpBg
 }
 
 function makeMiniMemberCard(item, imgPath){
