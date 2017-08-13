@@ -213,16 +213,50 @@ function IndepthMemberCardPopup(id){
     console.log(selectedMember);
     
     var indepthMemberCardPopUpBg = '<div class="indepthMemberCardPopUpBg" onclick="ExitPopUp()">';
+    indepthMemberCardPopUpBg += '<div class="col-1"></div>';
+    indepthMemberCardPopUpBg += '<div class="col-10">';
     
-        indepthMemberCardPopUpBg += '<p>' + selectedMember.id + ' ' + selectedMember.name + '</p>';
-    
+    indepthMemberCardPopUpBg += '</div>';
+    indepthMemberCardPopUpBg += '<div class="col-1"></div>';
     indepthMemberCardPopUpBg += '</div>';//end of indepthMemberCardPopUpBg
     
     $("body").append(indepthMemberCardPopUpBg);
+    
+    console.log(makeIndepthMemberCard(selectedMember));
 }
 
 function makeIndepthMemberCard(selectedMember){
+    var indepthMemberCard = document.createElement("div");
+    indepthMemberCard.className("memberCard");
     
+    var memberImgContainer = document.createElement("div");
+    memberImgContainer.className("memberImgContainer");
+    
+        var img = document.createElement("img");
+        img.className("memberImg");
+        if(selectedMember.img_path === "" || selectedMember.img_path === undefined){
+            img.setAttribute("src", "/imgs/black.png");
+        }
+        else{
+            img.setAttribute("src", selectedMember.img_path);
+        }
+        memberImgContainer.append(img);
+        
+    indepthMemberCard.append(memberImgContainer);
+    
+    var memberContentContainer = document.createElement("div");
+    memberContentContainer.className("memberContentContainer");
+    
+        //todo: how to display all the igns
+        
+        var name = document.createElement("name");
+        name.createTextNode(selectedMember.name);
+        memberContentContainer.append(name);
+    
+    
+    indepthMemberCard.append(memberContentContainer);
+    
+    return indepthMemberCard;
 }
 
 function makeMiniMemberCard(item, imgPath){
