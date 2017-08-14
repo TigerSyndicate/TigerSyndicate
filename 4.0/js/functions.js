@@ -189,8 +189,8 @@ function IndepthMemberCardPopup(id){
     
     var indepthMemberCardPopUpBg = document.createElement("div");
     indepthMemberCardPopUpBg.className = "indepthMemberCardPopUpBg";
-    //indepthMemberCardPopUpBg.setAttribute("onclick", "ExitPopUp()");
-    Popup = indepthMemberCardPopUpBg;
+    indepthMemberCardPopUpBg.setAttribute("onclick", "ExitPopUp()");
+    //Popup = indepthMemberCardPopUpBg;
     
         var div_spacer1 = document.createElement("div");
         div_spacer1.className = "col-1";

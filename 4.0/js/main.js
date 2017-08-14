@@ -8,11 +8,6 @@ $(function(){
         $("#navOverlay").toggle();
     });
     
-    Popup.click(function(){
-        Popup.remove();
-    });
-    
-    
     var url = window.location.pathname.split('/');
     var foldername = url[url.length - 2];
     
