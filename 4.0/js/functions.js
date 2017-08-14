@@ -270,10 +270,12 @@ function makeMemberCard(item, ign){
         memberImgContainer.className = "memberImgContainer";
         
             var img = document.createElement("img");
-            if(item.img_path != "" || item.img_path != undefined)
+            if(item.img_path != "" || item.img_path != undefined){
                 img.setAttribute("src", item.img_path);
-            else
+            }
+            else{
                 img.setAttribute("src", "/imgs/black.png");
+            }
             memberImgContainer.appendChild(img);
             
         memberCard.appendChild(memberImgContainer);
