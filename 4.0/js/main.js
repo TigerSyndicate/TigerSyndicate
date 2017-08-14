@@ -5,8 +5,15 @@ $(function(){
     
     //Toggle open nav panel
     $("#nav, #exitNav").click(function(){
-        ToggleNavOverlay();
+        $("#navOverlay").toggle();
     });
+    
+    if(Popup != null){
+        Popup.click(function(){
+            Popup.remove();
+        });
+    }
+    
     
     var url = window.location.pathname.split('/');
     var foldername = url[url.length - 2];
@@ -85,30 +92,6 @@ $(function(){
     else{
         //do nothing
     }
-    
-    
-    
-    
-    //Nav links
-    /*
-    $(".navbtn").click(function(){
-        var clickedNavBtn = $(".navbtn:focus").data("page");
-        ToggleNavOverlay();
-        
-        if(clickedNavBtn === "teams"){
-            ListGames();
-        }
-        else if(clickedNavBtn === "merch"){
-            alert("not implemented");
-        }
-        else if(clickedNavBtn === "contact"){
-            DisplayContact();
-        }
-        else if(clickedNavBtn === "faq"){
-            DisplayFAQ();
-        }
-    });
-    */
 });
 
     

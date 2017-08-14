@@ -10,6 +10,7 @@ var MembersDataFile = "/json/members.json";
 var content = $("#content");
 //var contentTitle = $("#contentTitle");
 var innerContent = document.getElementById("innerContent");
+var Popup = null;
 
 var SortedMembersData = null;
 var SortedRankedMembers = null;
@@ -186,12 +187,10 @@ function IndepthMemberCardPopup(id){
         return (item.id === id.toString());
     });
     
-    console.log("selected member");
-    console.log(selectedMember);
-    
     var indepthMemberCardPopUpBg = document.createElement("div");
     indepthMemberCardPopUpBg.className = "indepthMemberCardPopUpBg";
-    indepthMemberCardPopUpBg.setAttribute("onclick", "ExitPopUp()");
+    //indepthMemberCardPopUpBg.setAttribute("onclick", "ExitPopUp()");
+    Popup = indepthMemberCardPopUpBg;
     
         var div_spacer1 = document.createElement("div");
         div_spacer1.className = "col-1";
@@ -209,8 +208,6 @@ function IndepthMemberCardPopup(id){
         indepthMemberCardPopUpBg.appendChild(div_spacer2);
     
     $("body").append(indepthMemberCardPopUpBg);
-    
-    console.log(indepthMemberCard);
 }
 
 function makeIndepthMemberCard(selectedMember){
@@ -271,21 +268,6 @@ function makeMiniMemberCard(item, imgPath){
         
     //$("#miniMemberCardContainer").append(miniMemberCard);
     innerContent.appendChild(miniMemberCard);
-    
-    //===
-    /*
-    var miniMemberCard = '<div class="miniMemberCard" onclick="IndepthMemberCardPopup(\'' + item.id + '\')">';
-
-            miniMemberCard += '<img class="miniMemberImg" src="' + imgPath + '"/>';
-
-            miniMemberCard += '<div class="miniMemberContentContainer">';
-                miniMemberCard += '<name>' + item.name + '</name>';
-            miniMemberCard += '</div>';//end of miniMemberContentContainer
-        
-        miniMemberCard += '</div>';//end of miniMemberCard
-        
-    $("#miniMemberCardContainer").append(miniMemberCard);
-    */
 }
 
 function makeMemberCard(item, ign){
@@ -460,8 +442,4 @@ function DisplayMembersForTeamPage(id, title){
     };
     
     GetJson(lambdaFunction, MembersDataFile);
-}
-
-function ToggleNavOverlay(){
-    $("#navOverlay").toggle();
 }
