@@ -1,6 +1,6 @@
-var RankedImgPath = "/imgs/rankedAvatar.jpg";
-var AmateurImgPath = "/imgs/amateurAvatar.jpg";
-var CasualImgPath = "/imgs/casualAvatar.jpg";
+var RankedImgPath = "/imgs/logo/rankedAvatar.jpg";
+var AmateurImgPath = "/imgs/logo/amateurAvatar.jpg";
+var CasualImgPath = "/imgs/logo/casualAvatar.jpg";
 
 var GamesDataFile = "/json/games.json";
 var FAQDataFile = "/json/faq.json";
@@ -229,17 +229,128 @@ function makeIndepthMemberCard(selectedMember){
     var memberContentContainer = document.createElement("div");
     memberContentContainer.className = "memberContentContainer";
     
-        //todo: how to display all the igns
+        //igns
+        addMiniIconAndIgn("miniBladeAndSoul", selectedMember.bladeandsoul, "Blade & Soul");
+        addMiniIconAndIgn("miniBrawhalla", selectedMember.brawlhalla, "Brawlhalla");
+        addMiniIconAndIgn("miniCompanyOfHeroes", selectedMember.companyofheroes, "Company of Heroes");
+        addMiniIconAndIgn("miniCSGo", selectedMember.counterstrikego, "Counter-Strike: GO");
+        addMiniIconAndIgn("miniDarkSouls3", selectedMember.darksouls3, "Dark Souls III");
+        addMiniIconAndIgn("miniDestiny", selectedMember.destiny, "Destiny");
+        addMiniIconAndIgn("miniDota2", selectedMember.dota2, "Dota 2");
+        addMiniIconAndIgn("miniHearthstone", selectedMember.hearthstone, "Hearthstone");
+        addMiniIconAndIgn("miniHOTS", selectedMember.heroesofthestorm, "Heroes of the Storm");
+        addMiniIconAndIgn("miniLOL", selectedMember.leagueoflegends, "League of Legends");
+        addMiniIconAndIgn("miniOverwatch", selectedMember.overwatch, "Overwatch");
+        addMiniIconAndIgn("miniSC2", selectedMember.starcraft2, "StarCraft II");
+        addMiniIconAndIgn("miniStreetFighter5", selectedMember.streetfighter5, "Street Fighter V");
+        addMiniIconAndIgn("miniWarframe", selectedMember.warframe, "Warframe");
+        addMiniIconAndIgn("miniWOW", selectedMember.worldofwarcraft, "World of Warcraft");
         
         var name = document.createElement("name");
         var nameText = document.createTextNode(selectedMember.name);
         name.appendChild(nameText);
         memberContentContainer.appendChild(name);
-    
+        
+        //===============================
+        var desc = document.createElement("desc");
+        var descText = document.createTextNode(selectedMember.desc);
+        desc.appendChild(descText);
+        memberContentContainer.appendChild(desc);
+            
+            var memberLinksContainer = document.createElement("div");
+            memberLinksContainer.classList = "memberLinksContainer";
+            
+                if(selectedMember.twitch === "" || selectedMember.twitch === undefined){
+                    //empty
+                }
+                else{
+                    var a = document.createElement("a");
+                    a.setAttribute("href", selectedMember.twitch);
+                    a.setAttribute("target", "_blank");
+                    
+                        var i = document.createElement("i");
+                        i.className = "fa fa-twitch twitchIcon";
+                        i.setAttribute("title", "Twitch");
+                        i.setAttribute("aria-hidden", "true");
+                        a.appendChild(i);
+                        
+                    memberLinksContainer.appendChild(a);
+                }
+                
+                if(selectedMember.twitter === "" || selectedMember.twitter === undefined){
+                    //empty
+                }
+                else{
+                    var a = document.createElement("a");
+                    a.setAttribute("href", selectedMember.twitter);
+                    a.setAttribute("target", "_blank");
+                    
+                        var i = document.createElement("i");
+                        i.className = "fa fa-twitter twitterIcon";
+                        i.setAttribute("title", "Twitter");
+                        i.setAttribute("aria-hidden", "true");
+                        a.appendChild(i);
+                        
+                    memberLinksContainer.appendChild(a);
+                }
+                
+                if(selectedMember.steam === "" || selectedMember.steam === undefined){
+                    //empty
+                }
+                else{
+                    var a = document.createElement("a");
+                    a.setAttribute("href", selectedMember.steam);
+                    a.setAttribute("target", "_blank");
+                    
+                        var i = document.createElement("i");
+                        i.className = "fa fa-steam steamIcon";
+                        i.setAttribute("title", "Steam");
+                        i.setAttribute("aria-hidden", "true");
+                        a.appendChild(i);
+                        
+                    memberLinksContainer.appendChild(a);
+                }
+                
+                if(selectedMember.discord === "" || selectedMember.discord === undefined){
+                    //empty
+                }
+                else{
+                    var a = document.createElement("a");
+                    a.setAttribute("href", selectedMember.discord);
+                    a.setAttribute("target", "_blank");
+                    
+                        var div = document.createElement("div");
+                        div.className = "discordIcon";
+                        div.setAttribute("title", "Discord");
+                        div.setAttribute("aria-hidden", "true");
+                        a.appendChild(div);
+                        
+                    memberLinksContainer.appendChild(a);
+                }
+                
+        memberContentContainer.appendChild(memberLinksContainer);
+        //===============================
     
     indepthMemberCard.appendChild(memberContentContainer);
     
     return indepthMemberCard;
+}
+
+function addMiniIconAndIgn(id, ign, title){
+    var span = document.createElement("span");
+    span.setAttribute("title", title);
+    
+        var div = document.createElement("div");
+        div.className = "miniIcon";
+        div.id = id;
+        span.appendChild(div);
+        
+        var ignNode = document.createElement("ign");
+        var ignText = document.createTextNode(ign);
+        ignNode.appendChild(ignText);
+        span.appendChild(ignNode);
+        
+    return span;
 }
 
 function makeMiniMemberCard(item, imgPath){
