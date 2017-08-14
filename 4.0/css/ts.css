@@ -392,57 +392,58 @@ ign {
   justify-content: center; }
 
 .memberContentContainer > span {
-  display: inline-block;
+  display: inline-flex;
   margin: 0 10px; }
 
 .miniIcon {
-  width: 16px;
-  height: 16px; }
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 5px; }
 
 #miniBladeAndSoul {
-  background-image: url("imgs/games/favicon/bladeandsoul.ico"); }
+  background-image: url("/imgs/games/favicon/bladeandsoul.ico"); }
 
 #miniBrawhalla {
-  background-image: url("imgs/games/favicon/brawlhalla.png"); }
+  background-image: url("/imgs/games/favicon/brawlhalla.png"); }
 
 #miniCompanyOfHeroes {
-  background-image: url("imgs/games/favicon/companyofheroes.ico"); }
+  background-image: url("/imgs/games/favicon/companyofheroes.ico"); }
 
 #miniCSGo {
-  background-image: url("imgs/games/favicon/csgo.ico"); }
+  background-image: url("/imgs/games/favicon/csgo.ico"); }
 
 #miniDarkSouls3 {
-  background-image: url("imgs/games/favicon/darksouls3.png"); }
+  background-image: url("/imgs/games/favicon/darksouls3.png"); }
 
 #miniDestiny {
-  background-image: url("imgs/games/favicon/destiny.ico"); }
+  background-image: url("/imgs/games/favicon/destiny.ico"); }
 
 #miniDota2 {
-  background-image: url("imgs/games/favicon/dota2.ico"); }
+  background-image: url("/imgs/games/favicon/dota2.ico"); }
 
 #miniHearthstone {
-  background-image: url("imgs/games/favicon/hearthstone.ico"); }
+  background-image: url("/imgs/games/favicon/hearthstone.ico"); }
 
 #miniHOTS {
-  background-image: url("imgs/games/favicon/heroesofthestorm.ico"); }
+  background-image: url("/imgs/games/favicon/heroesofthestorm.ico"); }
 
 #miniLOL {
-  background-image: url("imgs/games/favicon/leagueoflegends.ico"); }
+  background-image: url("/imgs/games/favicon/leagueoflegends.ico"); }
 
 #miniOverwatch {
-  background-image: url("imgs/games/favicon/overwatch.ico"); }
+  background-image: url("/imgs/games/favicon/overwatch.ico"); }
 
 #miniSC2 {
-  background-image: url("imgs/games/favicon/sc2.png"); }
+  background-image: url("/imgs/games/favicon/sc2.png"); }
 
 #miniStreetFighter5 {
-  background-image: url("imgs/games/favicon/streetfighter5.png"); }
+  background-image: url("/imgs/games/favicon/streetfighter5.png"); }
 
 #miniWarframe {
-  background-image: url("imgs/games/favicon/warframe.ico"); }
+  background-image: url("/imgs/games/favicon/warframe.ico"); }
 
 #miniWOW {
-  background-image: url("imgs/games/favicon/wow.png"); }
+  background-image: url("/imgs/games/favicon/wow.png"); }
 
 /*Mobiles - screen width less than 880px */
 @media screen and (max-width: 880px) {
