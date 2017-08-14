@@ -373,6 +373,67 @@ function makeMemberCard(item, ign){
     innerContent.append(memberCard);*/
 }
 
+function DisplayMembersForTeamPage(id, title){
+    var logo2 = getElementById("logo2");
+    logo2.className = "gameTitle";
+    logo2.id = id;
+    logo2.setAttribute("title", title);
+    
+    var lambdaFunction = function(data){
+        $.each(data.Members, function(i, item){
+            if(item.type == "ranked"){
+                if(id == "bladeandsoul" && item.bladeandsoul != undefined){
+                    makeMemberCard(item, item.bladeandsoul);
+                }
+                else if(id == "brawlhalla" && item.brawlhalla != undefined){
+                    makeMemberCard(item, item.brawlhalla);
+                }
+                else if(id == "companyofheroes" && item.companyofheroes != undefined){
+                    makeMemberCard(item, item.companyofheroes);
+                }
+                else if(id == "counterstrikego" && item.counterstrikego != undefined){
+                    makeMemberCard(item, item.counterstrikego);
+                }
+                else if(id == "darksouls3" && item.darksouls3 != undefined){
+                    makeMemberCard(item, item.darksouls3);
+                }
+                else if(id == "destiny" && item.destiny != undefined){
+                    makeMemberCard(item, item.destiny);
+                }
+                else if(id == "dota2" && item.dota2 != undefined){
+                    makeMemberCard(item, item.dota2);
+                }
+                else if(id == "hearthstone" && item.hearthstone != undefined){
+                    makeMemberCard(item, item.hearthstone);
+                }
+                else if(id == "heroesofthestorm" && item.heroesofthestorm != undefined){
+                    makeMemberCard(item, item.heroesofthestorm);
+                }
+                else if(id == "leagueoflegends" && item.leagueoflegends != undefined){
+                    makeMemberCard(item, item.leagueoflegends);
+                }
+                else if(id == "overwatch" && item.overwatch != undefined){
+                    makeMemberCard(item, item.overwatch);
+                }
+                else if(id == "starcraft2" && item.starcraft2 != undefined){
+                    makeMemberCard(item, item.starcraft2);
+                }
+                else if(id == "streetfighter5" && item.streetfighter5 != undefined){
+                    makeMemberCard(item, item.streetfighter5);
+                }
+                else if(id == "warframe" && item.warframe != undefined){
+                    makeMemberCard(item, item.warframe);
+                }
+                else if(id == "worldofwarcraft" && item.worldofwarcraft != undefined){
+                    makeMemberCard(item, item.worldofwarcraft);
+                }
+            }
+        });
+    };
+    
+    GetJson(lambdaFunction, MembersDataFile);
+}
+
 function socialMediaLink(item_social, class_name, title){
     if(item_social != "" || item_social != undefined){
         var a = document.createAttribute("a");
