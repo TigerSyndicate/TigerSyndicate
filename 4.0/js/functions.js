@@ -8,7 +8,7 @@ var OrgInfoDataFile = "/json/organization-info.json";
 var MembersDataFile = "/json/members.json";
 
 var content = $("#content");
-var contentTitle = $("#contentTitle");
+//var contentTitle = $("#contentTitle");
 var innerContent = document.getElementById("innerContent");
 
 var SortedMembersData = null;
@@ -166,15 +166,17 @@ function DisplayContact(){
 }
 
 function ChangeContentTitle(className, id, title){
-    EmptyContentTitle();
+    //EmptyContentTitle();
     //contentTitle.append('<div class="' + className +'" id="' + id + '" title="' + title + '"></div>');
+    
+    $("#contentTitle").empty();
     
     var div = document.createElement("div");
     div.className = className;
     div.id = id;
     div.setAttribute("title", title.toString());
     
-    contentTitle.appendChild(div);
+    document.getElementById("contentTitle").appendChild(div);
     
     /*document.getElementById("contentTitle").className = className;
     document.getElementById("contentTitle").id = id;
@@ -395,9 +397,11 @@ function EmptyContent(){
     content.empty();
 }
 */
+/*
 function EmptyContentTitle(){
     contentTitle.empty();
 }
+*/
 /*
 function EmptyInnerContent(){
     innerContent.empty();
