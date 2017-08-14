@@ -436,7 +436,7 @@ function DisplayMembersForTeamPage(id, title){
 
 function socialMediaLink(item_social, class_name, title){
     if(item_social != "" || item_social != undefined){
-        var a = document.createAttribute("a");
+        var a = document.createElement("a");
         a.setAttribute("href", item_social);
         a.setAttribute("target", "_blank");
         
