@@ -362,7 +362,7 @@ function makeMemberCard(item, ign){
                 
                 if(item.steam === "" || item.steam === undefined){
                     //empty
-                    
+                }
                 else{
                     var a = document.createElement("a");
                     a.setAttribute("href", item.steam);
