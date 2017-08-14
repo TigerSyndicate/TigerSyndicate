@@ -374,7 +374,7 @@ function makeMemberCard(item, ign){
 }
 
 function DisplayMembersForTeamPage(id, title){
-    var logo2 = getElementById("logo2");
+    var logo2 = document.getElementById("logo2");
     logo2.className = "gameTitle";
     logo2.id = id;
     logo2.setAttribute("title", title);
