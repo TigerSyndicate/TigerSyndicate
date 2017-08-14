@@ -301,7 +301,13 @@ function makeMemberCard(item, ign){
             memberLinksContainer.classList = "memberLinksContainer";
             
                 //memberLinksContainer.appendChild(socialMediaLink(item.twitch, "fa fa-twitch twitchIcon", "Twitch"));
-                if(item.twitch !== "" || item.twitch !== undefined){
+                //memberLinksContainer.appendChild(socialMediaLink(item.twitter, "fa fa-twitter twitterIcon", "Twitter"));
+                //memberLinksContainer.appendChild(socialMediaLink(item.steam, "fa fa-steam steamIcon", "Steam"));
+                
+                if(item.twitch === "" || item.twitch === undefined){
+                    //empty
+                }
+                else{
                     var a = document.createElement("a");
                     a.setAttribute("href", item.twitch);
                     a.setAttribute("target", "_blank");
@@ -315,10 +321,10 @@ function makeMemberCard(item, ign){
                     memberLinksContainer.appendChild(a);
                 }
                 
-                //memberLinksContainer.appendChild(socialMediaLink(item.twitter, "fa fa-twitter twitterIcon", "Twitter"));
-                //memberLinksContainer.appendChild(socialMediaLink(item.steam, "fa fa-steam steamIcon", "Steam"));
-                
-                if(item.twitter !== "" || item.twitter !== undefined){
+                if(item.twitter === "" || item.twitter === undefined){
+                    //empty
+                }
+                else{
                     var a = document.createElement("a");
                     a.setAttribute("href", item.twitter);
                     a.setAttribute("target", "_blank");
@@ -332,7 +338,10 @@ function makeMemberCard(item, ign){
                     memberLinksContainer.appendChild(a);
                 }
                 
-                if(item.steam !== "" || item.steam !== undefined){
+                if(item.steam === "" || item.steam === undefined){
+                    //empty
+                }
+                else{
                     var a = document.createElement("a");
                     a.setAttribute("href", item.steam);
                     a.setAttribute("target", "_blank");
@@ -346,8 +355,10 @@ function makeMemberCard(item, ign){
                     memberLinksContainer.appendChild(a);
                 }
                 
-                
-                if(item.discord != "" || item.discord != undefined){
+                if(item.discord === "" || item.discord === undefined){
+                    //empty
+                }
+                else{
                     var a = document.createElement("a");
                     a.setAttribute("href", item.discord);
                     a.setAttribute("target", "_blank");
@@ -360,6 +371,8 @@ function makeMemberCard(item, ign){
                         
                     memberLinksContainer.appendChild(a);
                 }
+                
+                
             memberContentContainer.appendChild(memberLinksContainer);
             
         memberCard.appendChild(memberContentContainer);
