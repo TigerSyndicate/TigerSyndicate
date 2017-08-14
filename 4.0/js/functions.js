@@ -270,6 +270,7 @@ function makeMemberCard(item, ign){
         memberImgContainer.className = "memberImgContainer";
         
             var img = document.createElement("img");
+            img.className = "memberImg";
             if(item.img_path === "" || item.img_path === undefined)
                 img.setAttribute("src", "/imgs/black.png");
             else
@@ -299,9 +300,52 @@ function makeMemberCard(item, ign){
             var memberLinksContainer = document.createElement("div");
             memberLinksContainer.classList = "memberLinksContainer";
             
-                memberLinksContainer.appendChild(socialMediaLink(item.twitch, "fa fa-twitch twitchIcon", "Twitch"));
-                memberLinksContainer.appendChild(socialMediaLink(item.twitter, "fa fa-twitter twitterIcon", "Twitter"));
-                memberLinksContainer.appendChild(socialMediaLink(item.steam, "fa fa-steam steamIcon", "Steam"));
+                //memberLinksContainer.appendChild(socialMediaLink(item.twitch, "fa fa-twitch twitchIcon", "Twitch"));
+                if(item.twitch !== "" || item.twitch !== undefined){
+                    var a = document.createElement("a");
+                    a.setAttribute("href", item.twitch);
+                    a.setAttribute("target", "_blank");
+                    
+                        var i = document.createElement("i");
+                        i.className = "fa fa-twitch twitchIcon";
+                        i.setAttribute("title", "Twitch");
+                        i.setAttribute("aria-hidden", "true");
+                        a.appendChild(i);
+                        
+                    memberLinksContainer.appendChild(a);
+                }
+                
+                //memberLinksContainer.appendChild(socialMediaLink(item.twitter, "fa fa-twitter twitterIcon", "Twitter"));
+                //memberLinksContainer.appendChild(socialMediaLink(item.steam, "fa fa-steam steamIcon", "Steam"));
+                
+                if(item.twitter !== "" || item.twitter !== undefined){
+                    var a = document.createElement("a");
+                    a.setAttribute("href", item.twitter);
+                    a.setAttribute("target", "_blank");
+                    
+                        var i = document.createElement("i");
+                        i.className = "fa fa-twiter twitterIcon";
+                        i.setAttribute("title", "Twitter");
+                        i.setAttribute("aria-hidden", "true");
+                        a.appendChild(i);
+                        
+                    memberLinksContainer.appendChild(a);
+                }
+                
+                if(item.steam !== "" || item.steam !== undefined){
+                    var a = document.createElement("a");
+                    a.setAttribute("href", item.steam);
+                    a.setAttribute("target", "_blank");
+                    
+                        var i = document.createElement("i");
+                        i.className = "fa fa-steam steamIcon";
+                        i.setAttribute("title", "Steam");
+                        i.setAttribute("aria-hidden", "true");
+                        a.appendChild(i);
+                        
+                    memberLinksContainer.appendChild(a);
+                }
+                
                 
                 if(item.discord != "" || item.discord != undefined){
                     var a = document.createElement("a");
@@ -435,19 +479,7 @@ function DisplayMembersForTeamPage(id, title){
 }
 
 function socialMediaLink(item_social, class_name, title){
-    if(item_social != "" || item_social != undefined){
-        var a = document.createElement("a");
-        a.setAttribute("href", item_social);
-        a.setAttribute("target", "_blank");
-        
-            var i = document.createElement("i");
-            i.className = class_name;
-            i.setAttribute("title", title);
-            i.setAttribute("aria-hidden", "true");
-            a.appendChild(i);
-            
-        return a;
-    }
+    
 }
 
 
