@@ -89,11 +89,13 @@ function DisplayFAQ(){
         
             $.each(data.FAQ, function(i, item){
                 var pQ = document.createElement("p");
-                var pQText = document.createTextNode(item.Q);
+                var Qtext = "Q: " + item.Q;
+                var pQText = document.createTextNode(Qtext);
                 faqContainer.appendChild(pQ);
                 
                 var pA = document.createElement("p");
-                var pAText = document.createTextNode(item.A);
+                var Atext = "A: " + item.A;
+                var pAText = document.createTextNode(Atext);
                 faqContainer.appendChild(pA);
             });
             
@@ -120,128 +122,13 @@ function DisplayFAQ(){
 function DisplayContact(){
     var lambdaFunction = function(data){
         var OrgInfo = data.TigerSyndicateInfo
-        /*
-        var contactUsContainer = document.createElement("div");
-        contactUsContainer.id = "contactContainer";
         
-            var h2 = document.createElement("h2");
-            var h2Text = document.createTextNode("Contact us");
-            h2.appendChild(h2Text);
-            contactUsContainer.appendChild(h2);
-            
-            var pEmail = document.createElement("p");
-            var pEmailText = document.createTextNode("Email us at ");
-            
-            var aEmail = document.createElement("a");
-            var ahref = "mailto:" + OrgInfo.contact_email;
-            aEmail.setAttribute("href", ahref);
-            aEmail.setAttribute("target", "_top");
-            var aEmailText = document.createTextNode(OrgInfo.contact_email);
-            aEmail.appendChild(aEmailText);
-            
-            pEmail.appendChild(pEmailText);
-            pEmail.appendChild(aEmail);
-            contactUsContainer.appendChild(pEmail);
-            
-        innerContent.appendChild(contactUsContainer);
-        */
-        
-        
-        var ahref = "mailto: " + OrgInfo.contact_email;
+        var href = "mailto: " + OrgInfo.contact_email;
         var contactLink = document.getElementById("contactLink");
-        contactLink.setAttribute("href", ahref);
+        contactLink.setAttribute("href", href);
+        var contactLinkText = document.createTextNode(OrgInfo.contact_email);
+        contactLink.appendChild(contactLinkText);
         
-        
-        /*
-        var paypalForm = document.createElement("form");
-        paypalForm.id = "donate";
-        paypalForm.setAttribute("action", "https://www.paypal.com/cgi-bin/webscr");
-        paypalForm.setAttribute("method", "post");
-        paypalForm.setAttribute("target", "_top");
-        
-        var paypalInput1 = document.createElement("input");
-        paypalInput1.setAttribute("type", "hidden");
-        paypalInput1.setAttribute("name", "cmd");
-        paypalInput1.setAttribute("value", "_s-xclick");
-        paypalForm.appendChild(paypalInput1);
-        
-        var paypalInput2 = document.createElement("input");
-        paypalInput2.setAttribute("type", "hidden");
-        paypalInput2.setAttribute("name", "hosted_button_id");
-        paypalInput2.setAttribute("value", "5CD74KDYJJ7Y6");
-        paypalForm.appendChild(paypalInput2);
-        
-        var paypalInput3 = document.createElement("input");
-        paypalInput3.setAttribute("type", "image");
-        paypalInput3.setAttribute("src", "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif");
-        paypalInput3.setAttribute("border", "0");
-        paypalInput3.setAttribute("name", "submit");
-        paypalInput3.setAttribute("alt", "PayPal - The safer, easier way to pay online!");
-        paypalForm.appendChild(paypalInput3);
-        
-        var paypalImg = document.createE
-        
-        var paypal = '';
-        innerContent.append(paypal);
-        */
-        
-        //===
-        /*
-        var contactUsContainer = '<div id="contactContainer">';
-        contactUsContainer += '<h2>Contact us</h2>';
-        contactUsContainer += '<p>Email us at <a href="mailto:' + OrgInfo.contact_email + '" target="_top">' + OrgInfo.contact_email + '</a></p>';
-        contactUsContainer += '</div>';
-        innerContent.append(contactUsContainer);
-        */
-        
-        /*
-        //paypal's donate button
-        var paypal = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="W5QEEKGGKUX3C"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></form>';
-        innerContent.append(paypal);
-        //innerContent.append(*paypal string*);
-        */
-        /*
-        var connectWithUsContainer = '<div id="connectWithUsContainer">';
-        connectWithUsContainer += '<h2>Connect with us</h2>';
-        var socialIcons = "";
-        if(TSI.twitch != ""){
-            socialIcons += '<a href="' + TSI.twitch + '" target="_blank">';
-                socialIcons += '<i class="fa fa-twitch" title="Twitch" class="twitchIcon" aria-hidden="true"></i>';
-            socialIcons += '</a>';
-        }
-        if(TSI.twitter != ""){
-            socialIcons += '<a href="' + TSI.twitter + '" target="_blank">';
-                socialIcons += '<i class="fa fa-twitter" title="Twitter" class="twitterIcon" aria-hidden="true"></i>';
-            socialIcons += '</a>';
-        }
-        if(TSI.facebook != ""){
-            socialIcons += '<a href="' + TSI.facebook + '" target="_blank">';
-                socialIcons += '<i class="fa fa-facebook" title="Facebook" class="facebookIcon" aria-hidden="true"></i>';
-            socialIcons += '</a>';
-        }
-        if(TSI.discord != ""){
-            socialIcons += '<a href="' + TSI.discord + '" target="_blank">';
-                socialIcons += '<div title="Discord" class="discordIcon" aria-hidden="true"></div>';
-            socialIcons += '</a>';
-        }
-        if(TSI.youtube != ""){
-            socialIcons += '<a href="' + TSI.youtube + '" target="_blank">';
-                socialIcons += '<i class="fa fa-youtube-play" title="Youtube" class="youtubeIcon" aria-hidden="true"></i>';
-            socialIcons += '</a>';
-        }
-        if(TSI.steam != ""){
-            socialIcons += '<a href="' + TSI.steam + '" target="_blank">';
-                socialIcons += '<i class="fa fa-steam-square" title="Steam" class="steamIcon" aria-hidden="true"></i>';
-            socialIcons += '</a>';
-        }
-        if(TSI.google_plus != ""){
-            socialIcons += '<a href="' + TSI.google_plus + '" target="_blank">';
-                socialIcons += '<i class="fa fa-google-plus" title="Google+" class="google_plusIcon" aria-hidden="true"></i>';
-            socialIcons += '</a>';
-        }
-        connectWithUsContainer += socialIcons;
-        connectWithUsContainer += '</div>';
-        innerContent.append(connectWithUsContainer);*/
         
         
         var twitchLink = document.getElementById("twitchLink");
@@ -285,18 +172,11 @@ function DisplayContact(){
             google_plusLink.setAttribute("href", OrgInfo.google_plus);
         else
             google_plusLink.remove();
-        
     };//end of lambda function
     
     GetJson(lambdaFunction, OrgInfoDataFile);
 }
-/*
-function isGamesBtn(element){
-    if(element.className === "gamesbtn")
-        return true;
-    return false;
-}
-*/
+
 function ChangeContentTitle(className, id, title){
     EmptyContentTitle();
     contentTitle.append('<div class="' + className +'" id="' + id + '" title="' + title + '"></div>');
