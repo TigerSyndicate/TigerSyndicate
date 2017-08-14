@@ -336,7 +336,9 @@ a {
   margin: 10px; }
 
 .memberImg {
-  border: 1px solid #ffc70e; }
+  border: 1px solid #ffc70e;
+  max-width: 200px;
+  max-height: 200px; }
 
 .memberContentContainer {
   margin: 20px; }
