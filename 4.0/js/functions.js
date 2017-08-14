@@ -165,31 +165,6 @@ function DisplayContact(){
     GetJson(lambdaFunction, OrgInfoDataFile);
 }
 
-function ChangeContentTitle(className, id, title){
-    //EmptyContentTitle();
-    //contentTitle.append('<div class="' + className +'" id="' + id + '" title="' + title + '"></div>');
-    
-    
-    document.getElementById("logo2").className = className;
-    document.getElementById("logo2").id = id;
-    document.getElementById("logo2").setAttribute("title", title.toString());
-    
-    /*$("#contentTitle").empty();
-    
-    var div = document.createElement("div");
-    div.className = className;
-    div.id = id;
-    div.setAttribute("title", title.toString());
-    
-    document.getElementById("contentTitle").appendChild(div);
-    */
-    
-    /*document.getElementById("contentTitle").className = className;
-    document.getElementById("contentTitle").id = id;
-    document.getElementById("contentTitle").setAttribute("title", title.toString());*/
-}
-
-    
 function ListGames(){
     var lambdaFunction = function(data){
         $.each(data.GameList, function(i, item){
@@ -288,6 +263,60 @@ function makeMiniMemberCard(item, imgPath){
 }
 
 function makeMemberCard(item, ign){
+    var memberCard = document.createElement("div");
+    memberCard.className = "memberCard";
+    
+        var memberImgContainer = document.createElement("div");
+        memberImgContainer.className = "memberImgContainer";
+        
+            var img = document.createElement("img");
+            if(item.img_path != "" || item.img_path != undefined)
+                img.setAttribute("src", item.img_path);
+            else
+                img.setAttribute("src", "/imgs/black.png");
+            memberImgContainer.appendChild(img);
+            
+        memberCard.appendChild(memberImgContainer);
+            
+        var memberContentContainer = document.createElement("div");
+        memberContentContainer.className = "memberContentContainer";
+            
+            var ign = document.createElement("ign");
+            var ignText = document.createTextNode(ign);
+            ign.appendChild(ignText);
+            memberContentContainer.appendChild(ign);
+            
+            var name = document.createElement("name");
+            var nameText = document.createTextNode(item.name);
+            name.appendChild(nameText);
+            memberContentContainer.appendChild(name);
+            
+            var desc = document.createElement("desc");
+            var descText = document.createTextNode(item.desc);
+            desc.appendChild(descText);
+            memberContentContainer.appendChild(desc);
+            
+            var memberLinksContainer = document.createElement("div");
+            memberLinksContainer.classList = "memberLinksContainer";
+            
+                if(item.twitch != "" || item.twitch != undefined){
+                    var a = document.createAttribute("a");
+                    a.setAttribute("href", item.twitch);
+                    a.setAttribute("target", "_blank");
+                    
+                        var i = document.createAttribute("i");
+                        i.className = "fa fa-twitch twitchIcon";
+                        i.setAttribute("title", "Twitch");
+                        i.setAttribute("aria-hidden", "true");
+                        a.appendChild(i);
+                        
+                    memberLinksContainer.appendChild(a);
+                }
+            
+        memberCard.appendChild(memberContentContainer);
+            
+    
+    //===
     var memberCard = '<div class="memberCard">';
     
         memberCard += '<div class="memberImgContainer">';
@@ -337,79 +366,8 @@ function makeMemberCard(item, ign){
     innerContent.append(memberCard);
 }
 
-function DisplayMembersForTeamPage(id, title){
-    ChangeContentTitle("gameTitle", id, title);
-    
-    var lambdaFunction = function(data){
-        $.each(data.Members, function(i, item){
-            if(item.type == "ranked"){
-                if(id == "bladeandsoul" && item.bladeandsoul != undefined){
-                    makeMemberCard(item, item.bladeandsoul);
-                }
-                else if(id == "brawlhalla" && item.brawlhalla != undefined){
-                    makeMemberCard(item, item.brawlhalla);
-                }
-                else if(id == "companyofheroes" && item.companyofheroes != undefined){
-                    makeMemberCard(item, item.companyofheroes);
-                }
-                else if(id == "counterstrikego" && item.counterstrikego != undefined){
-                    makeMemberCard(item, item.counterstrikego);
-                }
-                else if(id == "darksouls3" && item.darksouls3 != undefined){
-                    makeMemberCard(item, item.darksouls3);
-                }
-                else if(id == "destiny" && item.destiny != undefined){
-                    makeMemberCard(item, item.destiny);
-                }
-                else if(id == "dota2" && item.dota2 != undefined){
-                    makeMemberCard(item, item.dota2);
-                }
-                else if(id == "hearthstone" && item.hearthstone != undefined){
-                    makeMemberCard(item, item.hearthstone);
-                }
-                else if(id == "heroesofthestorm" && item.heroesofthestorm != undefined){
-                    makeMemberCard(item, item.heroesofthestorm);
-                }
-                else if(id == "leagueoflegends" && item.leagueoflegends != undefined){
-                    makeMemberCard(item, item.leagueoflegends);
-                }
-                else if(id == "overwatch" && item.overwatch != undefined){
-                    makeMemberCard(item, item.overwatch);
-                }
-                else if(id == "starcraft2" && item.starcraft2 != undefined){
-                    makeMemberCard(item, item.starcraft2);
-                }
-                else if(id == "streetfighter5" && item.streetfighter5 != undefined){
-                    makeMemberCard(item, item.streetfighter5);
-                }
-                else if(id == "warframe" && item.warframe != undefined){
-                    makeMemberCard(item, item.warframe);
-                }
-                else if(id == "worldofwarcraft" && item.worldofwarcraft != undefined){
-                    makeMemberCard(item, item.worldofwarcraft);
-                }
-            }
-        });
-    };
-    
-    GetJson(lambdaFunction, MembersDataFile);
-}
+function 
 
 function ToggleNavOverlay(){
     $("#navOverlay").toggle();
 }
-/*
-function EmptyContent(){
-    content.empty();
-}
-*/
-/*
-function EmptyContentTitle(){
-    contentTitle.empty();
-}
-*/
-/*
-function EmptyInnerContent(){
-    innerContent.empty();
-}
-*/
