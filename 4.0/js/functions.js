@@ -304,11 +304,11 @@ function makeMemberCard(item, ign){
                 memberLinksContainer.appendChild(socialMediaLink(item.steam, "fa fa-steam steamIcon", "Steam"));
                 
                 if(item.discord != "" || item.discord != undefined){
-                    var a = document.createAttribute("a");
+                    var a = document.createElement("a");
                     a.setAttribute("href", item.discord);
                     a.setAttribute("target", "_blank");
                     
-                        var div = document.createAttribute("div");
+                        var div = document.createElement("div");
                         div.className = "discordIcon";
                         div.setAttribute("title", "Discord");
                         div.setAttribute("aria-hidden", "true");
@@ -440,7 +440,7 @@ function socialMediaLink(item_social, class_name, title){
         a.setAttribute("href", item_social);
         a.setAttribute("target", "_blank");
         
-            var i = document.createAttribute("i");
+            var i = document.createElement("i");
             i.className = class_name;
             i.setAttribute("title", title);
             i.setAttribute("aria-hidden", "true");
