@@ -538,7 +538,7 @@ ign {
     height: 43px;
     background-position: -1840px; }
 
-  .memberCard {
+  .memberCard, .memberCardPopUp {
     display: block;
     margin: 30px 20px;
     padding: 15px; }
@@ -553,4 +553,8 @@ ign {
 
   .memberImg {
     width: 100px;
-    height: 100px; } }
+    height: 100px; }
+
+  ign {
+    font-size: 1.2em;
+    margin: 0 5px 5px; } }
