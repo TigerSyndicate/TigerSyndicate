@@ -393,7 +393,7 @@ ign {
 
 .memberCardPopUp {
   max-height: 80vh;
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 .memberContentContainer > span {
   display: inline-flex;
@@ -553,8 +553,4 @@ ign {
 
   .memberImg {
     width: 100px;
-    height: 100px; }
-
-  ign {
-    font-size: 1.2em;
-    margin: 0 0 5px; } }
+    height: 100px; } }
