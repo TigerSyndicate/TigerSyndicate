@@ -391,7 +391,11 @@ ign {
   align-items: center;
   justify-content: center; }
 
-#miniIcon {
+.memberContentContainer > span {
+  display: inline-block;
+  margin: 0 10px; }
+
+.miniIcon {
   width: 16px;
   height: 16px; }
 

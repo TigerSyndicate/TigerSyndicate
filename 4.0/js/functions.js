@@ -230,21 +230,51 @@ function makeIndepthMemberCard(selectedMember){
     memberContentContainer.className = "memberContentContainer";
     
         //igns
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniBladeAndSoul", selectedMember.bladeandsoul, "Blade & Soul"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniBrawhalla", selectedMember.brawlhalla, "Brawlhalla"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniCompanyOfHeroes", selectedMember.companyofheroes, "Company of Heroes"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniCSGo", selectedMember.counterstrikego, "Counter-Strike: GO"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniDarkSouls3", selectedMember.darksouls3, "Dark Souls III"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniDestiny", selectedMember.destiny, "Destiny"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniDota2", selectedMember.dota2, "Dota 2"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniHearthstone", selectedMember.hearthstone, "Hearthstone"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniHOTS", selectedMember.heroesofthestorm, "Heroes of the Storm"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniLOL", selectedMember.leagueoflegends, "League of Legends"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniOverwatch", selectedMember.overwatch, "Overwatch"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniSC2", selectedMember.starcraft2, "StarCraft II"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniStreetFighter5", selectedMember.streetfighter5, "Street Fighter V"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniWarframe", selectedMember.warframe, "Warframe"));
-        memberContentContainer.appendChild(makeMiniIconAndIgn("miniWOW", selectedMember.worldofwarcraft, "World of Warcraft"));
+        if(selectedMember.bladeandsoul != "" || selectedMember.bladeandsoul != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniBladeAndSoul", selectedMember.bladeandsoul, "Blade & Soul"));
+        
+        if(selectedMember.brawlhalla != "" || selectedMember.brawlhalla != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniBrawhalla", selectedMember.brawlhalla, "Brawlhalla"));
+        
+        if(selectedMember.companyofheroes != "" || selectedMember.companyofheroes != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniCompanyOfHeroes", selectedMember.companyofheroes, "Company of Heroes"));
+        
+        if(selectedMember.counterstrikego != "" || selectedMember.counterstrikego != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniCSGo", selectedMember.counterstrikego, "Counter-Strike: GO"));
+        
+        if(selectedMember.darksouls3 != "" || selectedMember.darksouls3 != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniDarkSouls3", selectedMember.darksouls3, "Dark Souls III"));
+        
+        if(selectedMember.destiny != "" || selectedMember.destiny != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniDestiny", selectedMember.destiny, "Destiny"));
+        
+        if(selectedMember.dota2 != "" || selectedMember.dota2 != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniDota2", selectedMember.dota2, "Dota 2"));
+        
+        if(selectedMember.hearthstone != "" || selectedMember.hearthstone != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniHearthstone", selectedMember.hearthstone, "Hearthstone"));
+        
+        if(selectedMember.heroesofthestorm != "" || selectedMember.heroesofthestorm != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniHOTS", selectedMember.heroesofthestorm, "Heroes of the Storm"));
+        
+        if(selectedMember.leagueoflegends != "" || selectedMember.leagueoflegends != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniLOL", selectedMember.leagueoflegends, "League of Legends"));
+        
+        if(selectedMember.overwatch != "" || selectedMember.overwatch != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniOverwatch", selectedMember.overwatch, "Overwatch"));
+        
+        if(selectedMember.starcraft2 != "" || selectedMember.starcraft2 != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniSC2", selectedMember.starcraft2, "StarCraft II"));
+        
+        if(selectedMember.streetfighter5 != "" || selectedMember.streetfighter5 != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniStreetFighter5", selectedMember.streetfighter5, "Street Fighter V"));
+        
+        if(selectedMember.warframe != "" || selectedMember.warframe != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniWarframe", selectedMember.warframe, "Warframe"));
+        
+        if(selectedMember.worldofwarcraft != "" || selectedMember.worldofwarcraft != undefined)
+            memberContentContainer.appendChild(makeMiniIconAndIgn("miniWOW", selectedMember.worldofwarcraft, "World of Warcraft"));
+        
         
         var name = document.createElement("name");
         var nameText = document.createTextNode(selectedMember.name);
