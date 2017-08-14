@@ -299,24 +299,31 @@ function makeMemberCard(item, ign){
             var memberLinksContainer = document.createElement("div");
             memberLinksContainer.classList = "memberLinksContainer";
             
-                if(item.twitch != "" || item.twitch != undefined){
+                memberLinksContainer.appendChild(socialMediaLink(item.twitch, "fa fa-twitch twitchIcon", "Twitch"));
+                memberLinksContainer.appendChild(socialMediaLink(item.twitter, "fa fa-twitter twitterIcon", "Twitter"));
+                memberLinksContainer.appendChild(socialMediaLink(item.steam, "fa fa-steam steamIcon", "Steam"));
+                
+                if(item.discord != "" || item.discord != undefined){
                     var a = document.createAttribute("a");
-                    a.setAttribute("href", item.twitch);
+                    a.setAttribute("href", item.discord);
                     a.setAttribute("target", "_blank");
                     
-                        var i = document.createAttribute("i");
-                        i.className = "fa fa-twitch twitchIcon";
-                        i.setAttribute("title", "Twitch");
-                        i.setAttribute("aria-hidden", "true");
-                        a.appendChild(i);
+                        var div = document.createAttribute("div");
+                        div.className = "discordIcon";
+                        div.setAttribute("title", "Discord");
+                        div.setAttribute("aria-hidden", "true");
+                        a.appendChild(div);
                         
                     memberLinksContainer.appendChild(a);
                 }
+            memberContentContainer.appendChild(memberLinksContainer);
             
         memberCard.appendChild(memberContentContainer);
             
+    innerContent.appendChild(memberCard);
     
     //===
+    /*
     var memberCard = '<div class="memberCard">';
     
         memberCard += '<div class="memberImgContainer">';
@@ -363,10 +370,25 @@ function makeMemberCard(item, ign){
     
     memberCard += '</div>';//end of memberCard div
     
-    innerContent.append(memberCard);
+    innerContent.append(memberCard);*/
 }
 
-function 
+function socialMediaLink(item_social, class_name, title){
+    if(item_social != "" || item_social != undefined){
+        var a = document.createAttribute("a");
+        a.setAttribute("href", item_social);
+        a.setAttribute("target", "_blank");
+        
+            var i = document.createAttribute("i");
+            i.className = class_name;
+            i.setAttribute("title", title);
+            i.setAttribute("aria-hidden", "true");
+            a.appendChild(i);
+            
+        return a;
+    }
+}
+
 
 function ToggleNavOverlay(){
     $("#navOverlay").toggle();
