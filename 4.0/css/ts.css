@@ -557,4 +557,7 @@ ign {
 
   ign {
     font-size: 1.2em;
-    margin: 0 5px 5px; } }
+    margin: 0 5px 5px; }
+
+  .memberContentContainer > span {
+    margin: 0; } }
