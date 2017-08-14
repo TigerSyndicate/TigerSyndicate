@@ -8,11 +8,9 @@ $(function(){
         $("#navOverlay").toggle();
     });
     
-    if(Popup != null){
-        Popup.click(function(){
-            Popup.remove();
-        });
-    }
+    Popup.click(function(){
+        Popup.remove();
+    });
     
     
     var url = window.location.pathname.split('/');
