@@ -7,10 +7,7 @@ var FAQDataFile = "/json/faq.json";
 var OrgInfoDataFile = "/json/organization-info.json";
 var MembersDataFile = "/json/members.json";
 
-var content = $("#content");
-//var contentTitle = $("#contentTitle");
 var innerContent = document.getElementById("innerContent");
-var Popup = null;
 
 var SortedMembersData = null;
 var SortedRankedMembers = null;
@@ -26,7 +23,7 @@ function GetJson(lambdaFunction, dataFile){
 }
 
 function ExitPopUp(){
-    $(".indepthMemberCardPopUpBg").remove();
+    document.getElementById("indepthMemberCardPopUpBg").remove();
 }
 
 function DisplayAllMembers(){
@@ -188,17 +185,11 @@ function IndepthMemberCardPopup(id){
     });
     
     var indepthMemberCardPopUpBg = document.createElement("div");
-    indepthMemberCardPopUpBg.className = "indepthMemberCardPopUpBg";
+    indepthMemberCardPopUpBg.id = "indepthMemberCardPopUpBg";
     indepthMemberCardPopUpBg.setAttribute("onclick", "ExitPopUp()");
-    //Popup = indepthMemberCardPopUpBg;
-    //$("body").append(indepthMemberCardPopUpBg);
-    
-    //var indepthMemberCardPopUpContainer = document.createElement("div");
-    //indepthMemberCardPopUpContainer.className = "indepthMemberCardPopUpContainer";
     
         var div_spacer1 = document.createElement("div");
         div_spacer1.className = "col-1";
-        //indepthMemberCardPopUpContainer.appendChild(div_spacer1);
         indepthMemberCardPopUpBg.appendChild(div_spacer1);
         
         var div_col_10 = document.createElement("div");
@@ -207,16 +198,13 @@ function IndepthMemberCardPopup(id){
             var indepthMemberCard = makeIndepthMemberCard(selectedMember);
             indepthMemberCard.setAttribute("onclick", "event.stopPropagation()");
             div_col_10.appendChild(indepthMemberCard);
-            //indepthMemberCardPopUpContainer.appendChild(div_col_10);
             indepthMemberCardPopUpBg.appendChild(div_col_10);
         
         var div_spacer2 = document.createElement("div");
         div_spacer2.className = "col-1";
-        //indepthMemberCardPopUpContainer.appendChild(div_spacer2);
         indepthMemberCardPopUpBg.appendChild(div_spacer2);
     
     $("body").append(indepthMemberCardPopUpBg);
-    //$("body").append(indepthMemberCardPopUpContainer);
 }
 
 function makeIndepthMemberCard(selectedMember){
