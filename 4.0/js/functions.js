@@ -167,7 +167,18 @@ function DisplayContact(){
 
 function ChangeContentTitle(className, id, title){
     EmptyContentTitle();
-    contentTitle.append('<div class="' + className +'" id="' + id + '" title="' + title + '"></div>');
+    //contentTitle.append('<div class="' + className +'" id="' + id + '" title="' + title + '"></div>');
+    
+    var div = document.createElement("div");
+    div.className = className;
+    div.id = id;
+    div.setAttribute("title", title.toString());
+    
+    contentTitle.appendChild(div);
+    
+    /*document.getElementById("contentTitle").className = className;
+    document.getElementById("contentTitle").id = id;
+    document.getElementById("contentTitle").setAttribute("title", title.toString());*/
 }
 
     
