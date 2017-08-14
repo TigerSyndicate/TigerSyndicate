@@ -169,7 +169,12 @@ function ChangeContentTitle(className, id, title){
     //EmptyContentTitle();
     //contentTitle.append('<div class="' + className +'" id="' + id + '" title="' + title + '"></div>');
     
-    $("#contentTitle").empty();
+    
+    document.getElementById("logo2").className = className;
+    document.getElementById("logo2").id = id;
+    document.getElementById("logo2").setAttribute("title", title.toString());
+    
+    /*$("#contentTitle").empty();
     
     var div = document.createElement("div");
     div.className = className;
@@ -177,6 +182,7 @@ function ChangeContentTitle(className, id, title){
     div.setAttribute("title", title.toString());
     
     document.getElementById("contentTitle").appendChild(div);
+    */
     
     /*document.getElementById("contentTitle").className = className;
     document.getElementById("contentTitle").id = id;
