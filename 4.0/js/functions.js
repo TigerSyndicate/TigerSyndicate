@@ -290,13 +290,13 @@ function DisplayContact(){
     
     GetJson(lambdaFunction, OrgInfoDataFile);
 }
-
+/*
 function isGamesBtn(element){
     if(element.className === "gamesbtn")
         return true;
     return false;
 }
-
+*/
 function ChangeContentTitle(className, id, title){
     EmptyContentTitle();
     contentTitle.append('<div class="' + className +'" id="' + id + '" title="' + title + '"></div>');
@@ -304,12 +304,15 @@ function ChangeContentTitle(className, id, title){
 
     
 function ListGames(){
-    ChangeContentTitle("", "logo2", "Tiger Syndicate");
-    EmptyInnerContent();
-    
     var lambdaFunction = function(data){
         $.each(data.GameList, function(i, item){
-            innerContent.append('<a class="gamesbtn" id="' + item.id + '" title="' + item.title + '" href="/teams/' + item.id + '/"/>');
+            var a = document.createElement("a");
+            a.className = "gamesbtn";
+            a.id = item.id;
+            a.setAttribute("title", item.title);
+            var href = "/teams/" + item.id + "/";
+            a.setAttribute("href", href);
+            innerContent.appendChild(a);
         });
    };
    
@@ -384,7 +387,6 @@ function makeIndepthMemberCard(selectedMember){
 }
 
 function makeMiniMemberCard(item, imgPath){
-    console.log("in makeMiniMemberCard");
     var miniMemberCard = '<div class="miniMemberCard" onclick="IndepthMemberCardPopup(\'' + item.id + '\')">';
 
             miniMemberCard += '<img class="miniMemberImg" src="' + imgPath + '"/>';
@@ -450,7 +452,6 @@ function makeMemberCard(item, ign){
 
 function DisplayMembersForTeamPage(id, title){
     ChangeContentTitle("gameTitle", id, title);
-    EmptyInnerContent();
     
     var lambdaFunction = function(data){
         $.each(data.Members, function(i, item){
@@ -510,15 +511,16 @@ function DisplayMembersForTeamPage(id, title){
 function ToggleNavOverlay(){
     $("#navOverlay").toggle();
 }
-
+/*
 function EmptyContent(){
     content.empty();
 }
-
+*/
 function EmptyContentTitle(){
     contentTitle.empty();
 }
-
+/*
 function EmptyInnerContent(){
     innerContent.empty();
 }
+*/
