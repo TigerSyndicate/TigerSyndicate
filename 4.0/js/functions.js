@@ -230,50 +230,80 @@ function makeIndepthMemberCard(selectedMember){
     memberContentContainer.className = "memberContentContainer";
     
         //igns
-        if(selectedMember.bladeandsoul != "" || selectedMember.bladeandsoul != undefined)
+        if(selectedMember.bladeandsoul === "" || selectedMember.bladeandsoul === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniBladeAndSoul", selectedMember.bladeandsoul, "Blade & Soul"));
+        }
         
-        if(selectedMember.brawlhalla != "" || selectedMember.brawlhalla != undefined)
+        if(selectedMember.brawlhalla === "" || selectedMember.brawlhalla === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniBrawhalla", selectedMember.brawlhalla, "Brawlhalla"));
+        }
         
-        if(selectedMember.companyofheroes != "" || selectedMember.companyofheroes != undefined)
+        if(selectedMember.companyofheroes === "" || selectedMember.companyofheroes === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniCompanyOfHeroes", selectedMember.companyofheroes, "Company of Heroes"));
+        }
         
-        if(selectedMember.counterstrikego != "" || selectedMember.counterstrikego != undefined)
+        if(selectedMember.counterstrikego == "" || selectedMember.counterstrikego === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniCSGo", selectedMember.counterstrikego, "Counter-Strike: GO"));
+        }
         
-        if(selectedMember.darksouls3 != "" || selectedMember.darksouls3 != undefined)
+        if(selectedMember.darksouls3 === "" || selectedMember.darksouls3 === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniDarkSouls3", selectedMember.darksouls3, "Dark Souls III"));
+        }
         
-        if(selectedMember.destiny != "" || selectedMember.destiny != undefined)
+        if(selectedMember.destiny === "" || selectedMember.destiny === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniDestiny", selectedMember.destiny, "Destiny"));
+        }
         
-        if(selectedMember.dota2 != "" || selectedMember.dota2 != undefined)
+        if(selectedMember.dota2 === "" || selectedMember.dota2 === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniDota2", selectedMember.dota2, "Dota 2"));
+        }
         
-        if(selectedMember.hearthstone != "" || selectedMember.hearthstone != undefined)
+        if(selectedMember.hearthstone === "" || selectedMember.hearthstone === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniHearthstone", selectedMember.hearthstone, "Hearthstone"));
+        }
         
-        if(selectedMember.heroesofthestorm != "" || selectedMember.heroesofthestorm != undefined)
+        if(selectedMember.heroesofthestorm === "" || selectedMember.heroesofthestorm === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniHOTS", selectedMember.heroesofthestorm, "Heroes of the Storm"));
+        }
         
-        if(selectedMember.leagueoflegends != "" || selectedMember.leagueoflegends != undefined)
+        if(selectedMember.leagueoflegends === "" || selectedMember.leagueoflegends === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniLOL", selectedMember.leagueoflegends, "League of Legends"));
+        }
         
-        if(selectedMember.overwatch != "" || selectedMember.overwatch != undefined)
+        if(selectedMember.overwatch === "" || selectedMember.overwatch === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniOverwatch", selectedMember.overwatch, "Overwatch"));
+        }
         
-        if(selectedMember.starcraft2 != "" || selectedMember.starcraft2 != undefined)
+        if(selectedMember.starcraft2 === "" || selectedMember.starcraft2 === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniSC2", selectedMember.starcraft2, "StarCraft II"));
+        }
         
-        if(selectedMember.streetfighter5 != "" || selectedMember.streetfighter5 != undefined)
+        if(selectedMember.streetfighter5 === "" || selectedMember.streetfighter5 === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniStreetFighter5", selectedMember.streetfighter5, "Street Fighter V"));
+        }
         
-        if(selectedMember.warframe != "" || selectedMember.warframe != undefined)
+        if(selectedMember.warframe === "" || selectedMember.warframe === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniWarframe", selectedMember.warframe, "Warframe"));
+        }
         
-        if(selectedMember.worldofwarcraft != "" || selectedMember.worldofwarcraft != undefined)
+        if(selectedMember.worldofwarcraft === "" || selectedMember.worldofwarcraft === undefined){}
+        else{
             memberContentContainer.appendChild(makeMiniIconAndIgn("miniWOW", selectedMember.worldofwarcraft, "World of Warcraft"));
+        }
         
         
         var name = document.createElement("name");
