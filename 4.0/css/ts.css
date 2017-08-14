@@ -398,7 +398,10 @@ ign {
 .miniIcon {
   width: 1.5em;
   height: 1.5em;
-  margin: 0 5px; }
+  margin: 0 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
 
 #miniBladeAndSoul {
   background-image: url("/imgs/games/favicon/bladeandsoul.ico"); }
