@@ -209,7 +209,8 @@ function IndepthMemberCardPopup(id){
 
 function makeIndepthMemberCard(selectedMember){
     var indepthMemberCard = document.createElement("div");
-    indepthMemberCard.className = "memberCardPopUp";
+    //indepthMemberCard.className = "memberCardPopUp";
+    indepthMemberCard.className = "memberCard";
     
     var memberImgContainer = document.createElement("div");
     memberImgContainer.className = "memberImgContainer";
