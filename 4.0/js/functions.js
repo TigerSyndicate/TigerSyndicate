@@ -283,7 +283,7 @@ function makeMemberCard(item, ign){
         var memberContentContainer = document.createElement("div");
         memberContentContainer.className = "memberContentContainer";
             
-            var ign = document.createElement("div");
+            var ign = document.createElement("name");
             ign.className = "ign";
             var ignText = document.createTextNode(ign);
             ign.appendChild(ignText);
