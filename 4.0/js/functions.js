@@ -249,6 +249,31 @@ function makeIndepthMemberCard(selectedMember){
 }
 
 function makeMiniMemberCard(item, imgPath){
+    var miniMemberCard = document.createElement("div");
+    miniMemberCard.className = "miniMemberCard";
+    var onclick = "IndepthMemberCardPopup('" + item.id + "')";
+    miniMemberCard.setAttribute("onclick", onclick);
+    
+        var img = document.createElement("img");
+        img.className = "miniMemberImg";
+        img.setAttribute("src", imgPath);
+        miniMemberCard.appendChild(img);
+        
+        var miniMemberContentContainer = document.createElement("div");
+        miniMemberContentContainer.className = "miniMemberContentContainer";
+            
+            var name = document.createElement("name");
+            var nameText = document.createTextNode(item.name);
+            name.appendChild(nameText);
+            miniMemberContentContainer.appendChild(name);
+            
+        miniMemberCard.appendChild(miniMemberContentContainer);
+        
+    //$("#miniMemberCardContainer").append(miniMemberCard);
+    innerContent.appendChild(miniMemberCard);
+    
+    //===
+    /*
     var miniMemberCard = '<div class="miniMemberCard" onclick="IndepthMemberCardPopup(\'' + item.id + '\')">';
 
             miniMemberCard += '<img class="miniMemberImg" src="' + imgPath + '"/>';
@@ -260,6 +285,7 @@ function makeMiniMemberCard(item, imgPath){
         miniMemberCard += '</div>';//end of miniMemberCard
         
     $("#miniMemberCardContainer").append(miniMemberCard);
+    */
 }
 
 function makeMemberCard(item, ign){
@@ -300,10 +326,6 @@ function makeMemberCard(item, ign){
             var memberLinksContainer = document.createElement("div");
             memberLinksContainer.classList = "memberLinksContainer";
             
-                //memberLinksContainer.appendChild(socialMediaLink(item.twitch, "fa fa-twitch twitchIcon", "Twitch"));
-                //memberLinksContainer.appendChild(socialMediaLink(item.twitter, "fa fa-twitter twitterIcon", "Twitter"));
-                //memberLinksContainer.appendChild(socialMediaLink(item.steam, "fa fa-steam steamIcon", "Steam"));
-                
                 if(item.twitch === "" || item.twitch === undefined){
                     //empty
                 }
@@ -330,7 +352,7 @@ function makeMemberCard(item, ign){
                     a.setAttribute("target", "_blank");
                     
                         var i = document.createElement("i");
-                        i.className = "fa fa-twiter twitterIcon";
+                        i.className = "fa fa-twitter twitterIcon";
                         i.setAttribute("title", "Twitter");
                         i.setAttribute("aria-hidden", "true");
                         a.appendChild(i);
@@ -340,7 +362,7 @@ function makeMemberCard(item, ign){
                 
                 if(item.steam === "" || item.steam === undefined){
                     //empty
-                }
+                    
                 else{
                     var a = document.createElement("a");
                     a.setAttribute("href", item.steam);
@@ -372,62 +394,11 @@ function makeMemberCard(item, ign){
                     memberLinksContainer.appendChild(a);
                 }
                 
-                
             memberContentContainer.appendChild(memberLinksContainer);
             
         memberCard.appendChild(memberContentContainer);
             
     innerContent.appendChild(memberCard);
-    
-    //===
-    /*
-    var memberCard = '<div class="memberCard">';
-    
-        memberCard += '<div class="memberImgContainer">';
-        if(item.img_path === "" || item.img_path === undefined){
-            memberCard += '<img class="memberImg" src="/imgs/black.png"/>';
-        }
-        else{
-            memberCard += '<img class="memberImg" src="' + item.img_path + '"/>';
-        }
-        memberCard += '</div>';//end of memberImgContainer div
-        
-        memberCard += '<div class="memberContentContainer">';
-        
-            memberCard += '<ign>' + ign + '</ign>';
-            
-            memberCard += '<name>' + item.name + '</name>';
-            if(item.desc != "" || item.desc === undefined){
-                memberCard += '<desc>' + item.desc + '</desc>';
-            }
-        
-            memberCard += '<div class="memberLinksContainer">';
-            if(item.twitch != "" || item.twitch === undefined){
-                memberCard += '<a href="' + item.twitch + '" target="_blank">';
-                    memberCard += '<i class="fa fa-twitch" title="Twitch" class="twitchIcon" aria-hidden="true"></i>';
-                memberCard += '</a>';
-            }
-            if(item.twitter != "" || item.twitter === undefined){
-                memberCard += '<a href="' + item.twitter + '" target="_blank">';
-                    memberCard += '<i class="fa fa-twitter" title="Twitter" class="twitterIcon" aria-hidden="true"></i>';
-                memberCard += '</a>';
-            }
-            if(item.steam != "" || item.steam === undefined){
-                memberCard += '<a href="' + item.steam + '" target="_blank">';
-                    memberCard += '<i class="fa fa-steam" title="Steam" class="steamIcon aria-hidden="true""></i>';
-                memberCard += '</a>';
-            }
-            if(item.discord != "" || item.discord === undefined){
-                memberCard += '<a href="' + item.discord + '" target="_blank">';
-                    memberCard += '<div title="Discord" class="discordIcon" aria-hidden="true"></div>';
-                memberCard += '</a>';
-            }
-            memberCard += '</div>';//end of memberLinksContainer div
-        memberCard += '</div>';//end of memberContentContainer div
-    
-    memberCard += '</div>';//end of memberCard div
-    
-    innerContent.append(memberCard);*/
 }
 
 function DisplayMembersForTeamPage(id, title){
@@ -490,11 +461,6 @@ function DisplayMembersForTeamPage(id, title){
     
     GetJson(lambdaFunction, MembersDataFile);
 }
-
-function socialMediaLink(item_social, class_name, title){
-    
-}
-
 
 function ToggleNavOverlay(){
     $("#navOverlay").toggle();
