@@ -347,10 +347,10 @@ a {
 .memberContentContainer {
   margin: 20px; }
 
-.ign, name, desc {
+ign, name, desc {
   display: flex; }
 
-.ign {
+ign {
   font-size: 1.5em;
   margin: 0 0 10px; }
 

@@ -270,12 +270,10 @@ function makeMemberCard(item, ign){
         memberImgContainer.className = "memberImgContainer";
         
             var img = document.createElement("img");
-            if(item.img_path != "" || item.img_path != undefined){
-                img.setAttribute("src", item.img_path);
-            }
-            else{
+            if(item.img_path === "" || item.img_path === undefined)
                 img.setAttribute("src", "/imgs/black.png");
-            }
+            else
+                img.setAttribute("src", item.img_path);
             memberImgContainer.appendChild(img);
             
         memberCard.appendChild(memberImgContainer);
@@ -283,11 +281,10 @@ function makeMemberCard(item, ign){
         var memberContentContainer = document.createElement("div");
         memberContentContainer.className = "memberContentContainer";
             
-            var ign = document.createElement("name");
-            ign.className = "ign";
+            var ignNode = document.createElement("ign");
             var ignText = document.createTextNode(ign);
-            ign.appendChild(ignText);
-            memberContentContainer.appendChild(ign);
+            ignNode.appendChild(ignText);
+            memberContentContainer.appendChild(ignNode);
             
             var name = document.createElement("name");
             var nameText = document.createTextNode(item.name);
