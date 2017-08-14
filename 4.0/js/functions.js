@@ -91,29 +91,17 @@ function DisplayFAQ(){
                 var pQ = document.createElement("p");
                 var Qtext = "Q: " + item.Q;
                 var pQText = document.createTextNode(Qtext);
+                pQ.appendChild(pQText);
                 faqContainer.appendChild(pQ);
                 
                 var pA = document.createElement("p");
                 var Atext = "A: " + item.A;
                 var pAText = document.createTextNode(Atext);
+                pA.appendChild(pAText);
                 faqContainer.appendChild(pA);
             });
             
         innerContent.appendChild(faqContainer);
-        
-        //====
-        /*
-        var faqContainer = '<div id="faqContainer">';
-        faqContainer += '<h2>Frequently Asked Questions</h2>';
-        
-        $.each(data.FAQ, function(i, item){
-            faqContainer += '<p>Q: ' + item.Q + '</p>';
-            faqContainer += '<p>A: ' + item.A + '</p>';
-        });
-        faqContainer += '</div>';
-        
-        innerContent.append(faqContainer);
-        */
     };//end of lambda function
     
     GetJson(lambdaFunction, FAQDataFile);
