@@ -152,7 +152,7 @@ a {
   display: inline-flex; }
 
 #logo {
-  background-image: url("/imgs/logoGlow.png");
+  background-image: url("/imgs/logo/logoGlow.png");
   background-size: 97px 90px;
   background-position: center;
   background-repeat: no-repeat;
@@ -160,7 +160,7 @@ a {
   height: 90px; }
 
 #logo2 {
-  background-image: url("/imgs/logo2White.png");
+  background-image: url("/imgs/logo/logo2White.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 170px;
@@ -259,7 +259,7 @@ a {
   background-image: url("/imgs/socialmedia/discord-icon-orange.png"); }
 
 .gamesbtn, .gameTitle {
-  background-image: url("/imgs/gameLogos.png");
+  background-image: url("/imgs/games/gameLogos.png");
   background-repeat: no-repeat;
   background-size: 4540px 200px;
   height: 100px;
@@ -391,6 +391,55 @@ ign {
   align-items: center;
   justify-content: center; }
 
+#miniIcon {
+  width: 16px;
+  height: 16px; }
+
+#miniBladeAndSoul {
+  background-image: url("imgs/games/favicon/bladeandsoul.ico"); }
+
+#miniBrawhalla {
+  background-image: url("imgs/games/favicon/brawlhalla.png"); }
+
+#miniCompanyOfHeroes {
+  background-image: url("imgs/games/favicon/companyofheroes.ico"); }
+
+#miniCSGo {
+  background-image: url("imgs/games/favicon/csgo.ico"); }
+
+#miniDarkSouls3 {
+  background-image: url("imgs/games/favicon/darksouls3.png"); }
+
+#miniDestiny {
+  background-image: url("imgs/games/favicon/destiny.ico"); }
+
+#miniDota2 {
+  background-image: url("imgs/games/favicon/dota2.ico"); }
+
+#miniHearthstone {
+  background-image: url("imgs/games/favicon/hearthstone.ico"); }
+
+#miniHOTS {
+  background-image: url("imgs/games/favicon/heroesofthestorm.ico"); }
+
+#miniLOL {
+  background-image: url("imgs/games/favicon/leagueoflegends.ico"); }
+
+#miniOverwatch {
+  background-image: url("imgs/games/favicon/overwatch.ico"); }
+
+#miniSC2 {
+  background-image: url("imgs/games/favicon/sc2.png"); }
+
+#miniStreetFighter5 {
+  background-image: url("imgs/games/favicon/streetfighter5.png"); }
+
+#miniWarframe {
+  background-image: url("imgs/games/favicon/warframe.ico"); }
+
+#miniWOW {
+  background-image: url("imgs/games/favicon/wow.png"); }
+
 /*Mobiles - screen width less than 880px */
 @media screen and (max-width: 880px) {
   body {
@@ -404,7 +453,7 @@ ign {
     margin: 10px; }
 
   #logo {
-    background-image: url("/imgs/m_logoGlow.png");
+    background-image: url("/imgs/logo/m_logoGlow.png");
     background-size: 76px 70px;
     width: 70px;
     height: 70px; }
@@ -427,11 +476,11 @@ ign {
     width: 90%; }
 
   .gamesbtn, .gameTitle {
-    background-image: url("/imgs/m_gameLogos.png");
+    background-image: url("/imgs/games/m_gameLogos.png");
     background-size: 2075px 100px; }
 
   #bladeandsoul, #dota2, #heroesofthestorm, #starcraft2, #streetfighter5, #worldofwarcraft {
-    background-image: url("/imgs/gameLogos.png");
+    background-image: url("/imgs/games/gameLogos.png");
     background-size: 4540px 200px; }
 
   #brawlhalla {
