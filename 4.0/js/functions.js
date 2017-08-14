@@ -191,27 +191,32 @@ function IndepthMemberCardPopup(id){
     indepthMemberCardPopUpBg.className = "indepthMemberCardPopUpBg";
     indepthMemberCardPopUpBg.setAttribute("onclick", "ExitPopUp()");
     //Popup = indepthMemberCardPopUpBg;
-    $("body").append(indepthMemberCardPopUpBg);
+    //$("body").append(indepthMemberCardPopUpBg);
     
-    var indepthMemberCardPopUpContainer = document.createElement("div");
-    indepthMemberCardPopUpContainer.className = "indepthMemberCardPopUpContainer";
+    //var indepthMemberCardPopUpContainer = document.createElement("div");
+    //indepthMemberCardPopUpContainer.className = "indepthMemberCardPopUpContainer";
     
         var div_spacer1 = document.createElement("div");
         div_spacer1.className = "col-1";
-        indepthMemberCardPopUpContainer.appendChild(div_spacer1);
+        //indepthMemberCardPopUpContainer.appendChild(div_spacer1);
+        indepthMemberCardPopUpBg.appendChild(div_spacer1);
         
         var div_col_10 = document.createElement("div");
         div_col_10.className = "col-10";
         
             var indepthMemberCard = makeIndepthMemberCard(selectedMember);
+            indepthMemberCard.setAttribute("onclick", "event.stopPropagation()");
             div_col_10.appendChild(indepthMemberCard);
-            indepthMemberCardPopUpContainer.appendChild(div_col_10);
+            //indepthMemberCardPopUpContainer.appendChild(div_col_10);
+            indepthMemberCardPopUpBg.appendChild(div_col_10);
         
         var div_spacer2 = document.createElement("div");
         div_spacer2.className = "col-1";
-        indepthMemberCardPopUpContainer.appendChild(div_spacer2);
+        //indepthMemberCardPopUpContainer.appendChild(div_spacer2);
+        indepthMemberCardPopUpBg.appendChild(div_spacer2);
     
-    $("body").append(indepthMemberCardPopUpContainer);
+    $("body").append(indepthMemberCardPopUpBg);
+    //$("body").append(indepthMemberCardPopUpContainer);
 }
 
 function makeIndepthMemberCard(selectedMember){
