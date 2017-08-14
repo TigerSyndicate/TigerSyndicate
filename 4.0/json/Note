@@ -9,3 +9,6 @@ members.json
     - If members is not in a team, do not have json include the ign field for that team/game. Keep it undefined not empty.
     - 'id' field is a unique id only used for members page and anyone that looks in json or html can see it.
     - 'type', 'id', and 'name' fields are required!
+    
+organization-info.json
+    - contact email is required!

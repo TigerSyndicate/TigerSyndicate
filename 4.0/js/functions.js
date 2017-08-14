@@ -120,7 +120,7 @@ function DisplayFAQ(){
 function DisplayContact(){
     var lambdaFunction = function(data){
         var OrgInfo = data.TigerSyndicateInfo
-        
+        /*
         var contactUsContainer = document.createElement("div");
         contactUsContainer.id = "contactContainer";
         
@@ -144,11 +144,46 @@ function DisplayContact(){
             contactUsContainer.appendChild(pEmail);
             
         innerContent.appendChild(contactUsContainer);
+        */
         
         
-        var paypal = '<form id="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="5CD74KDYJJ7Y6"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></form>';
+        var ahref = "mailto: " + OrgInfo.contact_email;
+        var contactLink = document.getElementById("contactLink");
+        contactLink.setAttribute("href", ahref);
+        
+        
+        /*
+        var paypalForm = document.createElement("form");
+        paypalForm.id = "donate";
+        paypalForm.setAttribute("action", "https://www.paypal.com/cgi-bin/webscr");
+        paypalForm.setAttribute("method", "post");
+        paypalForm.setAttribute("target", "_top");
+        
+        var paypalInput1 = document.createElement("input");
+        paypalInput1.setAttribute("type", "hidden");
+        paypalInput1.setAttribute("name", "cmd");
+        paypalInput1.setAttribute("value", "_s-xclick");
+        paypalForm.appendChild(paypalInput1);
+        
+        var paypalInput2 = document.createElement("input");
+        paypalInput2.setAttribute("type", "hidden");
+        paypalInput2.setAttribute("name", "hosted_button_id");
+        paypalInput2.setAttribute("value", "5CD74KDYJJ7Y6");
+        paypalForm.appendChild(paypalInput2);
+        
+        var paypalInput3 = document.createElement("input");
+        paypalInput3.setAttribute("type", "image");
+        paypalInput3.setAttribute("src", "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif");
+        paypalInput3.setAttribute("border", "0");
+        paypalInput3.setAttribute("name", "submit");
+        paypalInput3.setAttribute("alt", "PayPal - The safer, easier way to pay online!");
+        paypalForm.appendChild(paypalInput3);
+        
+        var paypalImg = document.createE
+        
+        var paypal = '';
         innerContent.append(paypal);
-        
+        */
         
         //===
         /*
@@ -165,7 +200,7 @@ function DisplayContact(){
         innerContent.append(paypal);
         //innerContent.append(*paypal string*);
         */
-        
+        /*
         var connectWithUsContainer = '<div id="connectWithUsContainer">';
         connectWithUsContainer += '<h2>Connect with us</h2>';
         var socialIcons = "";
@@ -206,7 +241,51 @@ function DisplayContact(){
         }
         connectWithUsContainer += socialIcons;
         connectWithUsContainer += '</div>';
-        innerContent.append(connectWithUsContainer);
+        innerContent.append(connectWithUsContainer);*/
+        
+        
+        var twitchLink = document.getElementById("twitchLink");
+        if(OrgInfo.twitch != "" || OrgInfo.twitch != undefined)
+            twitchLink.setAttribute("href", OrgInfo.twitch);
+        else
+            twitchLink.remove();
+            
+        var twitterLink = document.getElementById("twitterLink");
+        if(OrgInfo.twitter != "" || OrgInfo.twitter != undefined)
+            twitterLink.setAttribute("href", OrgInfo.twitter);
+        else
+            twitterLink.remove();
+            
+        var facebookLink = document.getElementById("facebookLink");
+        if(OrgInfo.facebook != "" || OrgInfo.facebook != undefined)
+            facebookLink.setAttribute("href", OrgInfo.facebook);
+        else
+            facebookLink.remove();
+            
+        var discordLink = document.getElementById("discordLink");
+        if(OrgInfo.discord != "" || OrgInfo.discord != undefined)
+            discordLink.setAttribute("href", OrgInfo.discord);
+        else
+            discordLink.remove();
+            
+        var youtubeLink = document.getElementById("youtubeLink");
+        if(OrgInfo.youtube != "" || OrgInfo.youtube != undefined)
+            youtubeLink.setAttribute("href", OrgInfo.youtube);
+        else
+            youtubeLink.remove();
+            
+        var steamLink = document.getElementById("steamLink");
+        if(OrgInfo.steam != "" || OrgInfo.steam != undefined)
+            steamLink.setAttribute("href", OrgInfo.steam);
+        else
+            steamLink.remove();
+            
+        var google_plusLink = document.getElementById("google_plusLink");
+        if(OrgInfo.google_plus != "" || OrgInfo.google_plus != undefined)
+            google_plusLink.setAttribute("href", OrgInfo.google_plus);
+        else
+            google_plusLink.remove();
+        
     };//end of lambda function
     
     GetJson(lambdaFunction, OrgInfoDataFile);
