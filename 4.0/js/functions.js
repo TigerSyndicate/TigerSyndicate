@@ -230,21 +230,21 @@ function makeIndepthMemberCard(selectedMember){
     memberContentContainer.className = "memberContentContainer";
     
         //igns
-        addMiniIconAndIgn("miniBladeAndSoul", selectedMember.bladeandsoul, "Blade & Soul");
-        addMiniIconAndIgn("miniBrawhalla", selectedMember.brawlhalla, "Brawlhalla");
-        addMiniIconAndIgn("miniCompanyOfHeroes", selectedMember.companyofheroes, "Company of Heroes");
-        addMiniIconAndIgn("miniCSGo", selectedMember.counterstrikego, "Counter-Strike: GO");
-        addMiniIconAndIgn("miniDarkSouls3", selectedMember.darksouls3, "Dark Souls III");
-        addMiniIconAndIgn("miniDestiny", selectedMember.destiny, "Destiny");
-        addMiniIconAndIgn("miniDota2", selectedMember.dota2, "Dota 2");
-        addMiniIconAndIgn("miniHearthstone", selectedMember.hearthstone, "Hearthstone");
-        addMiniIconAndIgn("miniHOTS", selectedMember.heroesofthestorm, "Heroes of the Storm");
-        addMiniIconAndIgn("miniLOL", selectedMember.leagueoflegends, "League of Legends");
-        addMiniIconAndIgn("miniOverwatch", selectedMember.overwatch, "Overwatch");
-        addMiniIconAndIgn("miniSC2", selectedMember.starcraft2, "StarCraft II");
-        addMiniIconAndIgn("miniStreetFighter5", selectedMember.streetfighter5, "Street Fighter V");
-        addMiniIconAndIgn("miniWarframe", selectedMember.warframe, "Warframe");
-        addMiniIconAndIgn("miniWOW", selectedMember.worldofwarcraft, "World of Warcraft");
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniBladeAndSoul", selectedMember.bladeandsoul, "Blade & Soul"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniBrawhalla", selectedMember.brawlhalla, "Brawlhalla"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniCompanyOfHeroes", selectedMember.companyofheroes, "Company of Heroes"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniCSGo", selectedMember.counterstrikego, "Counter-Strike: GO"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniDarkSouls3", selectedMember.darksouls3, "Dark Souls III"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniDestiny", selectedMember.destiny, "Destiny"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniDota2", selectedMember.dota2, "Dota 2"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniHearthstone", selectedMember.hearthstone, "Hearthstone"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniHOTS", selectedMember.heroesofthestorm, "Heroes of the Storm"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniLOL", selectedMember.leagueoflegends, "League of Legends"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniOverwatch", selectedMember.overwatch, "Overwatch"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniSC2", selectedMember.starcraft2, "StarCraft II"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniStreetFighter5", selectedMember.streetfighter5, "Street Fighter V"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniWarframe", selectedMember.warframe, "Warframe"));
+        memberContentContainer.appendChild(makeMiniIconAndIgn("miniWOW", selectedMember.worldofwarcraft, "World of Warcraft"));
         
         var name = document.createElement("name");
         var nameText = document.createTextNode(selectedMember.name);
@@ -336,7 +336,7 @@ function makeIndepthMemberCard(selectedMember){
     return indepthMemberCard;
 }
 
-function addMiniIconAndIgn(id, ign, title){
+function makeMiniIconAndIgn(id, ign, title){
     var span = document.createElement("span");
     span.setAttribute("title", title);
     
