@@ -82,9 +82,6 @@ $(function(){
             DisplayMembersForTeamPage(foldername, title);
         }
     }
-    else{
-        //do nothing
-    }
 });
 
     

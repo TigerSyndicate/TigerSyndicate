@@ -107,7 +107,7 @@ function DisplayFAQ(){
 
 function DisplayContact(){
     var lambdaFunction = function(data){
-        var OrgInfo = data.TigerSyndicateInfo
+        var OrgInfo = data.TigerSyndicateInfo;
         
         var href = "mailto: " + OrgInfo.contact_email;
         var contactLink = document.getElementById("contactLink");
