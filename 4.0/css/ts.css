@@ -103,6 +103,12 @@
   width: 8.33%;
   padding: 1px; }
 
+.col-5 {
+  width: 41.66%; }
+
+.col-7 {
+  width: 58.33%; }
+
 .col-10 {
   width: 83.33%; }
 
@@ -544,6 +550,9 @@ ign {
     margin: auto; } }
 /*Mobiles - screen width less than 450px */
 @media screen and (max-width: 450px) {
+  .col-5 {
+    width: 80%; }
+
   .memberImg {
     width: 100px;
     height: 100px; }
